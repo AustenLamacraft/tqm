@@ -247,8 +247,11 @@ $$
 
 That was easy! The fermion case is harder.
 
-Since the occupation of each level is at most one, the lowest energy is obtained by filling each level with one particle, starting at the bottom. If we have an odd number of particles, this means filling the levels with $n=-(N-1)/2, -(N-3)/2,\ldots, -1, 0, 1 \ldots (N-1)/2$ (for an even number of particles we have to decide whether to put the last particle at $n=\pm N/2$). Introducing the complex variables
+Since the occupation of each level is at most one, the lowest energy is obtained by filling each level with one particle, starting at the bottom. If we have an odd number of particles, this means filling the levels with $n=-(N-1)/2, -(N-3)/2,\ldots, -1, 0, 1 \ldots (N-1)/2$ (for an even number of particles we have to decide whether to put the last particle at $n=\pm N/2$). 
 
+<img src="IMG_0536.jpg" style="zoom:25%;" />
+
+Introducing the complex variables
 $$
 z_{i}=\exp(2 \pi i x_{i}/L),
 $$
