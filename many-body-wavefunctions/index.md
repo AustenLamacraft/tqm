@@ -85,15 +85,8 @@ These operators satisfy $P_{ij}^2=\mathbb{1}$, so their eigenvalues are $\pm 1$,
 
 ### Two Particles
 
-> $\ket{\Psi}$ for quantum states (use a captital for many body states). $\Psi(x_1, x_2)$.
->
-> When introduced $\psi(x)=\bra{x}\ket{\psi}$
->
-> Other point of view: functions _are_ states!
->
-> C.f. a vector could be written $\bv$ or like $v_i$, even though strictly $v_i = \mathbf{e}_i^T\bv=\mathbf{e}\cdot \bv$
-
 A pair of particles is described by a wavefunction $\Psi(\mathbf{x},\mathbf{y})$. If we are dealing with distinguishable particles, the wavefunction of a pair of particles in states $\ket{\varphi_1}$ and $\ket{\varphi_2}$ would be
+
 $$
 \Psi(\br_1,\br_2)=\varphi_1(\br_1)\varphi_2(\br_2).
 \label{quantum_statistics_ProductWavefunction}
@@ -103,10 +96,8 @@ Accounting for indistinguishability, we have either
 
 $$
 \label{quantum_statistics_sym}
- \Psi(\br_1,\br_2)=\frac{1}{\sqrt{2}}[\varphi_1(\br_1)\varphi_2(\br_2)\pm \varphi_2(\br_1)\varphi_1(\br_2)].
+ \Psi(\br_1,\br_2)=\frac{1}{\sqrt{2}}[\varphi_1(\br_1)\varphi_2(\br_2)\pm \varphi_2(\br_1)\varphi_1(\br_2)]
 $$
-
-> Normalization for $\Psi$ means $\int d\br_1 d\br_2 |\Psi(\br_1,\br_1)|^2=1$  
 
 with the upper sign for bosons and the lower for fermions (The $1/\sqrt{2}$ yields a normalized wavefunction if $\varphi_{1,2}(\br)$ are orthonormal.). Note in particular that when $\varphi_1=\varphi_2$ the fermion wavefunction _vanishes_. This illustrates the __Pauli exclusion principle__, that no two identical fermions can be in the same quantum state. There is no such restriction for bosons.
 
@@ -117,8 +108,6 @@ $$
 \label{eq:classicaljoint}
 $$
 
-> Here $\rho_{1,2}(\br)=|\varphi_{1,2}(\br)|^2$.
-
 This also follows from taking the square modulus of $\eqref{quantum_statistics_ProductWavefunction}$. The results implied by the wavefunction $\eqref{quantum_statistics_sym}$ is
 $$
 \begin{align}
@@ -128,33 +117,14 @@ $$
 
 In particular, $\rho_{12}(\br,\br) = 0$ for fermions, and $\rho_{12}(\br,\br) = 2\rho_1(\br)\rho_2(\br)$ for bosons. The first result is natural from the  standpoint of the exclusion principle, while the second is perhaps more surprising. This shows that, because probabilities arise from the squares of amplitudes, identical particles in quantum mechanics are never truly independent.
 
-<a name="HOM"></a>
-![](./HOM.png)
-_Four possible outcomes after the passage of two bosons through a beam splitter._
-
 {{< figure src="HOM.png" title="Four possible outcomes after the passage of two bosons through a beam splitter." numbered="true" lightbox="true" >}}
 
 
 One dramatic illustration of this deviation from our classical intuition is provided by the Hong--Ou--Mandel effect in quantum optics. In simplified terms, we imagine wavepackets describing two photons (bosons) approaching a 50:50 beam splitter from either side.  Because of the unitarity of scattering, the two photons end up in orthogonal states. For example,
 
 $$
-\frac{1}{\sqrt{2}}\left(\ket{\text{Left}}\pm \ket{\text{Right}}\right).
+\frac{1}{\sqrt{2}}\left(\ket{\text{Left}}\pm \ket{\text{Right}}\right)
 $$
-
-
-> Unitarity preserves inner product of states. If two states are initially orthogonal, here states localized on the left and right of the beam splitter, they must remain orthogonal.
->
-> Write down the bosonic two particle state with one particle in each of these states, and show that there is zero probability to have one photon at each output: they both go to the left or both to the right.
->
-> $\ket{\text{Left}}$ is $\varphi_L(\br)$, same for $\ket{\text{Right}}$.
-> $$
-> \begin{aligned}
-> \Psi(\br_1,\br_2)=\frac{1}{\sqrt{2}}\frac{1}{\sqrt{2}}\left[\varphi_L(\br_1)+\varphi_R(\br_1)\right]\frac{1}{\sqrt{2}}\left[\varphi_L(\br_2)-\varphi_R(\br_2)\right]+\\
-> \frac{1}{\sqrt{2}}\frac{1}{\sqrt{2}}\left[\varphi_L(\br_1)-\varphi_R(\br_1)\right]\frac{1}{\sqrt{2}}\left[\varphi_L(\br_2)+\varphi_R(\br_2)\right]\\
-> =\frac{1}{\sqrt{2}}\left[\varphi_L(\br_1)\varphi_L(\br_2)-\varphi_R(\br_1)\varphi_R(\br_2)\right]
-> \end{aligned}
-> $$
->  What happens for fermions?
 
 
 ### Product States
@@ -163,7 +133,7 @@ The Hamiltonian of a system of $N$ identical noninteracting particles is a sum o
 
 $$
 \label{quantum_statistics_SPHamiltonian}
- H = \sum_{i=1}^{N} \left[-\frac{\hbar^{2}}{2m}\nabla_{i}^{2}+V(\mathbf{r_{i}})\right]
+ H = \sum_{i=1}^{N} \left[-\frac{1}{2m}\nabla_{i}^{2}+V(\mathbf{r_{i}})\right]
 $$
 
 where $m$ is the particle mass, and $V(\mathbf{r_{i}})$ is a potential experienced by the particles. Let's denote the eigenstates of the single particle Hamiltonian by $\{\varphi_{\alpha}(\mathbf{r})\}$, and the corresponding eigenenergies by $\{E_{\alpha}\}$, where $\alpha$ is a shorthand for whatever quantum numbers are used to label the states. A set of labels $\{\alpha_{i}\}$ $i=1,2,\ldots N$ tells us the state of each of the particles. Thus we can write an eigenstate of $N$ _distinguishable_ particles with energy $E=\sum_{i=1}^{N}E_{\alpha_{i}}$ as
@@ -196,8 +166,6 @@ $$
 
 The normalization factors yield normalized wavefunctions _if_ the single particle state $\ket{\varphi_\alpha}$ are orthonormal (as the eigenstates of the single particle Hamiltonian are).
 
-> Remember $\int d\br_1\ldots d\br_N |\Psi(\br_1,\ldots,\br_N)|^2$. Both $\Psi$ and $\Psi^*$ have $N!$ terms. Use orthonormality to simplify.
-
 The normalization factor in the boson case involves the __occupation numbers__ $\{N_{\alpha}\}$ giving the number of particles in state $\alpha$. In the fermion case each $N_{\alpha}$ is either $0$ or $1$ so the prefactor simplifies. Since the order of the $\alpha$ indices is irrelevant in the boson case, and amounts only to a sign in the fermion case, states based on a given set of single particle states are more efficiently labeled by the occupation numbers. In terms of these numbers the total energy is
 
 $$
@@ -221,13 +189,9 @@ $$
  \end{vmatrix}
 $$
 
-> Check out the definition of a determinant in terms of a sum over permutations if you haven't seen it before!
-
 The vanishing of a determinant when two rows or two columns are identical means that the wavefunction is zero if two particle coordinates coincide ($\br_{i}=\br_{j}$), or if two particles occupy the same state ($\alpha_{i}=\alpha_{j}$).
 
 ## The 1D Fermi Gas
-
-> Here the Hamiltonian is just $H=\sum_j -\partial_{x_j}^2/2m$
 
 Let's consider perhaps the simplest many particle system one can think of: noninteracting particles on a ring. If the ring has circumference $L$, the single particle eigenstates are
 $$
@@ -236,8 +200,6 @@ $$
 $$
 
 with $k_n=\frac{2\pi n}{L}$, $n\in\mathbb{Z}$. The corresponding energies are $E_{n}=\frac{k_n^2}{2m}$.
-
-> The fact that $\Delta k = \frac{2\pi}{L}$ will become second nature to you!
 
 ### Ground State
 
@@ -313,8 +275,6 @@ z_{1}^{N-1} &  z_{2}^{N-1} & \cdots & z_{N}^{N-1}
 
 Let's take the opportunity to introduce some terminology. The wavevector of the last fermion added is called the __Fermi wavevector__ and denoted $k_\text{F}$. In this case $k_\text{F}=\frac{(N-1)\pi}{L}$. Its energy $E_{F}=\frac{k_\text{F}^{2}}{2m}$ is the __Fermi energy__.
 
-> Remember we are interested in $N\to\infty$, $L\to\infty$ with constant $n=N/L$. The difference between $N$ and $N-1$ isn't important. So in fact $k_\text{F}=n\pi$.
-
 
 ### Density; Density Matrix; Pair Distribution
 
@@ -322,11 +282,9 @@ Having a many particle wave function is one thing, but what to _do_ with it? Bea
 
 $\left\|\Psi(x_1,\ldots,x_N)\right\|^2$ is the probability distribution of the positions of the particles. If we were able to take a photograph of the positions of the particles at an instant in time, this would correspond to taking a sample from the probability distribution. In terms of the complex variables $z_j$, it would look something like this:
 
-<a name="1d_fermion"></a>
-![](./1d_fermions.png)
-![](./poisson_phases.png)
+{{< figure src="1d_fermions.png" title="A sample from the probability distribution $\left\|\Psi(z_1,\ldots,z_N)\right\|^2$ for 50 particles."  numbered="true" lightbox="true" >}}
 
-_A sample from the probability distribution $\left\|\Psi(z_1,\ldots,z_N)\right\|^2$ for 50 particles (top) compared with a Poisson (uncorrelated) sample (bottom)._
+{{< figure src="poisson_phases.png" title="The same for  a Poisson (uncorrelated) sample."  numbered="true" lightbox="true" >}}
 
 Since $\left\|\Psi(x_1,\ldots,x_N)\right\|^2$ is the probability distribution of the positions of the particles, we can use it to find the marginal probability distributions for any subset of the particles. Of course, since the particles are identical, it doesn't matter which ones we choose, just the number.
 
@@ -357,8 +315,6 @@ $$
 \label{many_densityop}
 $$
 so that $\rho_1 = \bra{\Psi}\rho\ket{\Psi}$.
-
-> $\rho_1(x) = \int dx_1\cdots dx_N |\Psi(x_1,x_2,\ldots,x_N)|^2\sum_j \delta(x-x_j)$
 
 We can also consider the __density matrix__ of a single particle. Recall that the density matrix $\varrho$ describes a __mixed state__ of a quantum system, and is the appropriate description when the quantum state is not known. $\varrho$ is a positive definite hermitian operator satisfying $\tr \varrho =1$. Its spectral resolution
 $$
