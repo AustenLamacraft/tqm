@@ -132,8 +132,6 @@ In particular, $\rho_{12}(\br,\br) = 0$ for fermions, and $\rho_{12}(\br,\br) = 
 ![](./HOM.png)
 _Four possible outcomes after the passage of two bosons through a beam splitter._
 
-{{< figure src="HOM.png" title="Four possible outcomes after the passage of two bosons through a beam splitter." numbered="true" lightbox="true" >}}
-
 
 One dramatic illustration of this deviation from our classical intuition is provided by the Hong--Ou--Mandel effect in quantum optics. In simplified terms, we imagine wavepackets describing two photons (bosons) approaching a 50:50 beam splitter from either side.  Because of the unitarity of scattering, the two photons end up in orthogonal states. For example,
 
