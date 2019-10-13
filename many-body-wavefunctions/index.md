@@ -34,6 +34,8 @@ $$
 \newcommand{\cdop}{c^\dagger}
 \newcommand{\bra}[1]{\langle{#1}\rvert}
 \newcommand{\ket}[1]{\lvert{#1}\rangle}
+\newcommand{\inner}[2]{\langle{#1}\rvert #2 \rangle}
+\newcommand{\braket}[3]{\langle{#1}\rvert #2 \lvert #3 \rangle}
 \newcommand{\sgn}{\mathrm{sgn}}
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\E}{\mathbb{E}}
@@ -87,7 +89,7 @@ These operators satisfy $P_{ij}^2=\mathbb{1}$, so their eigenvalues are $\pm 1$,
 
 > $\ket{\Psi}$ for quantum states (use a captital for many body states). $\Psi(x_1, x_2)$.
 >
-> When introduced $\psi(x)=\bra{x}\ket{\psi}$
+> When introduced $\psi(x)=\inner{x}{\psi}$
 >
 > Other point of view: functions _are_ states!
 >
@@ -140,7 +142,7 @@ $$
 $$
 
 
-> Unitarity preserves inner product of states. If two states are initially orthogonal, here states localized on the left and right of the beam splitter, they must remain orthogonal.
+> Unitarity preserves inner product of states. If two states are initially orthogonal — localized on the left and right of the beam splitter in this case — they must remain orthogonal.
 >
 > Write down the bosonic two particle state with one particle in each of these states, and show that there is zero probability to have one photon at each output: they both go to the left or both to the right.
 >
@@ -247,7 +249,7 @@ $$
 
 That was easy! The fermion case is harder.
 
-Since the occupation of each level is at most one, the lowest energy is obtained by filling each level with one particle, starting at the bottom. If we have an odd number of particles, this means filling the levels with $n=-(N-1)/2, -(N-3)/2,\ldots, -1, 0, 1 \ldots (N-1)/2$ (for an even number of particles we have to decide whether to put the last particle at $n=\pm N/2$). 
+Since the occupation of each level is at most one, the lowest energy is obtained by filling each level with one particle, starting at the bottom. If we have an odd number of particles, this means filling the levels with $n=-(N-1)/2, -(N-3)/2,\ldots, -1, 0, 1 \ldots (N-1)/2$ (for an even number of particles we have to decide whether to put the last particle at $n=\pm N/2$).
 
 <img src="IMG_0536.jpg" style="zoom:25%;" />
 
@@ -357,7 +359,7 @@ $$
 \rho(x) = \sum_j \delta(x-x_j),
 \label{many_densityop}
 $$
-so that $\rho_1 = \bra{\Psi}\rho\ket{\Psi}$.
+so that $\rho_1 = \braket{\Psi}{\rho}{\Psi}$.
 
 > $\rho_1(x) = \int dx_1\cdots dx_N |\Psi(x_1,x_2,\ldots,x_N)|^2\sum_j \delta(x-x_j)$
 
