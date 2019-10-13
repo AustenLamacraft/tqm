@@ -58,13 +58,13 @@ A good fraction of this course is devoted to exploring the ramifications of this
 The first question is: what _are_ indistinguishable particles? I'll give a theorist's answer. Indistinguishable particles are those described by Hamiltonians that are invariant under permuting the particle's labels. Thus the sum of single particle Hamiltonians
 
 $$
-H = \sum_{i=1}^{N} \left[-\frac{\nabla_{i}^{2}}{2m}+V(\mathbf{r_{i}})\right]
+H = \sum_{i=1}^{N} \left[-\frac{\nabla_i^{2}}{2m}+V(\mathbf{r_i})\right]
 $$
 
 _[did you remember that $\hbar=1$?]_ describes indistinguishable particles while
 
 $$
-H = \sum_{i=1}^{N} \left[-\frac{\nabla_{i}^{2}}{2m_i}+V(\mathbf{r_{i}})\right]
+H = \sum_{i=1}^{N} \left[-\frac{\nabla_i^{2}}{2m_i}+V(\mathbf{r_i})\right]
 $$
 
 does not, on account of the masses being all different. Any time we have a symmetry operation that commutes with the Hamiltonian, the eigenstates of that symmetry are preserved by time evolution with that Hamiltonian. Thus a symmetric potential $V(x)=V(-x)$ commutes with the parity operation $x\to -x$, so the eigenstates of this operation -- the even and odd wavefunctions -- are preserved by time evolution.
@@ -109,9 +109,16 @@ $$
 $$
 
 This also follows from taking the square modulus of $\eqref{quantum_statistics_ProductWavefunction}$. The results implied by the wavefunction $\eqref{quantum_statistics_sym}$ is
+
+$$
+\rho_{12}(\br_1,\br_2) = \frac{1}{2}\left[\rho_1(\br_1)\rho_2(\br_2)+\rho_1(\br_2)\rho_2(\br_1)\right]
+\pm\frac{1}{2}\left[\varphi_1(\br_1)\varphi^{*}_2(\br_1)\varphi_2(\br_2)\varphi^{*}_1(\br_2)+\varphi_1(\br_2)\varphi^{*}_2(\br_2)\varphi_2(\br_1)\varphi^{*}_1(\br_1)\right]
+$$
+
 $$
 \begin{align}
-\rho_{12}(\br_1,\br_2) &= \frac{1}{2}\left[\rho_1(\br_1)\rho_2(\br_2)+\rho_1(\br_2)\rho_2(\br_1)\right] \\ &\pm \frac{1}{2}\left[\varphi^{}_1(\br_1)\varphi^*_2(\br_1)\varphi^{}_2(\br_2)\varphi^*_1(\br_2)+\varphi^{}_1(\br_2)\varphi^*_2(\br_2)\varphi^{}_2(\br_1)\varphi^*_1(\br_1)\right].
+\rho_{12}(\br_1,\br_2) &= \frac{1}{2}\left[\rho_1(\br_1)\rho_2(\br_2)+\rho_1(\br_2)\rho_2(\br_1)\right] \\
+&\pm\frac{1}{2}\left[\varphi^{}_1(\br_1)\varphi^*_2(\br_1)\varphi^{}_2(\br_2)\varphi^*_1(\br_2)+\varphi^{}_1(\br_2)\varphi^*_2(\br_2)\varphi^{}_2(\br_1)\varphi^*_1(\br_1)\right].
 \end{align}
 $$
 
@@ -132,11 +139,15 @@ $$
 The Hamiltonian of a system of $N$ identical noninteracting particles is a sum of $N$ identical __single particle__ Hamiltonians, that is, with each term acting on a different particle coordinate
 
 $$
-\label{quantum_statistics_SPHamiltonian}
- H = \sum_{i=1}^{N} \left[-\frac{1}{2m}\nabla_{i}^{2}+V(\mathbf{r_{i}})\right]
+ H = \sum_{i=1}^{N} \left[-\frac{\nabla_i^{2}}{2m}+V(\br_i)\right]
+ \label{quantum_statistics_SPHamiltonian}
 $$
 
-where $m$ is the particle mass, and $V(\mathbf{r_{i}})$ is a potential experienced by the particles. Let's denote the eigenstates of the single particle Hamiltonian by $\{\varphi_{\alpha}(\mathbf{r})\}$, and the corresponding eigenenergies by $\{E_{\alpha}\}$, where $\alpha$ is a shorthand for whatever quantum numbers are used to label the states. A set of labels $\{\alpha_{i}\}$ $i=1,2,\ldots N$ tells us the state of each of the particles. Thus we can write an eigenstate of $N$ _distinguishable_ particles with energy $E=\sum_{i=1}^{N}E_{\alpha_{i}}$ as
+where $m$ is the particle mass, and $V(\br)$ is a potential experienced by the particles.
+
+Let's denote the eigenstates of the single particle Hamiltonian by $\{\varphi_\alpha(\br)\}$ , and the corresponding eigenenergies by $\{E_\alpha\}$, where $\alpha$ is a shorthand for whatever quantum numbers are used to label the states.
+
+A set of labels $\{\alpha_{i}\}$ $i=1,2,\ldots N$ tells us the state of each of the particles. Thus we can write an eigenstat\ale of $N$ _distinguishable_ particles with energy $E=\sum_{i=1}^{N}E_{\alpha_{i}}$ as
 
 $$
  \label{quantum_statistics_disting}
@@ -151,7 +162,7 @@ As we've just discussed, however, we should really be dealing with a totally sym
 
 $$
  \label{quantum_statistics_SymAntisym}
-   \mathcal{S}=\frac{1}{N!}\sum_{P} P, \qquad \mathcal{A}=\frac{1}{N!}\sum_{P} \sgn(P)P 	
+   \mathcal{S}=\frac{1}{N!}\sum_{P} P, \qquad \mathcal{A}=\frac{1}{N!}\sum_{P} \sgn(P)P
 $$
 
 The sums are over all $N!$ permutations of $N$ objects, $P$ denotes the corresponding permutation operator, and $\sgn(P)$ is the __signature__ of the permutation, equal to $+1$ for permutations involving an even number of exchanges, and $-1$ for an odd number. This allows us to write the totally symmetric and totally antisymmetric versions of $\eqref{quantum_statistics_disting}$ as
@@ -161,7 +172,7 @@ $$
  \ket{\Psi^{S}_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}}&=\sqrt{\frac{N!}{\prod_{\alpha}N_{\alpha}!}}\mathcal{S}\,\varphi_{\alpha_{1}}(\mathbf{r_{1}})\varphi_{\alpha_{2}}(\mathbf{r_{2}})\cdots\varphi_{\alpha_{N}}(\mathbf{r_{N}}) \nonumber \\
  \ket{\Psi^{A}_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}}&=\sqrt{N!}\mathcal{A}\,\varphi_{\alpha_{1}}(\mathbf{r_{1}})\varphi_{\alpha_{2}}(\mathbf{r_{2}})\cdots\varphi_{\alpha_{N}}(\mathbf{r_{N}})
  \label{quantum_statistics_norm}
-\end{align}	 
+\end{align}
 $$
 
 The normalization factors yield normalized wavefunctions _if_ the single particle state $\ket{\varphi_\alpha}$ are orthonormal (as the eigenstates of the single particle Hamiltonian are).
@@ -249,7 +260,7 @@ The vanishing of the wavefunction when $x_{i}=x_{j}$ is consistent with the Paul
 $\eqref{3particle}$ generalizes for any (odd) $N$ so that the ground state Slater determinant $\eqref{quantum_statistics_1ddet}$ is proportional to
 
 $$
-\Psi_0(x_1,\ldots, x_N)\propto\prod_{i<j}^{N} \sin\left(\frac{\pi[x_{i}-x_{j}]}{L}\right). 	
+\Psi_0(x_1,\ldots, x_N)\propto\prod_{i<j}^{N} \sin\left(\frac{\pi[x_{i}-x_{j}]}{L}\right).
     \label{quantum_statistics_1dFermiGS}
 $$
 
@@ -401,7 +412,7 @@ Just like that, we've solved our first interacting many body system (and with in
 
 Thus the ground state on the ring has the form
 $$
-\Psi_0(x_1,\ldots, x_N) = \prod_{i<j}^{N} \left|\sin\left(\frac{\pi[x_{i}-x_{j}]}{L}\right)\right|. 	
+\Psi_0(x_1,\ldots, x_N) = \prod_{i<j}^{N} \left|\sin\left(\frac{\pi[x_{i}-x_{j}]}{L}\right)\right|.
 $$
 
 > It's not hard to see why this works. For a state to have a finite energy, the wavefunction must vanish whenever two coordinates coincide. But we already have a complete set of eigenstates that obey this condition, namely the free fermion Slater determinants. It remains to make them symmetric functions by taking the modulus.
