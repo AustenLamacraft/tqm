@@ -34,6 +34,8 @@ $$
 \newcommand{\cdop}{c^\dagger}
 \newcommand{\bra}[1]{\langle{#1}\rvert}
 \newcommand{\ket}[1]{\lvert{#1}\rangle}
+\newcommand{\inner}[2]{\langle{#1}\rvert #2 \rangle}
+\newcommand{\braket}[3]{\langle{#1}\rvert #2 \lvert #3 \rangle}
 \newcommand{\sgn}{\mathrm{sgn}}
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\E}{\mathbb{E}}
@@ -108,7 +110,7 @@ $$
 \label{eq:classicaljoint}
 $$
 
-This also follows from taking the square modulus of $\eqref{quantum_statistics_ProductWavefunction}$. The results implied by the wavefunction $\eqref{quantum_statistics_sym}$ is
+This also follows from taking the square modulus of $ \eqref{quantum_statistics_ProductWavefunction}$. The result implied by the wavefunction $\eqref{quantum_statistics_sym}$ is
 $$
 \begin{align}
 \rho_{12}(\br_1,\br_2) &= \frac{1}{2}\left[\rho_1(\br_1)\rho_2(\br_2)+\rho_1(\br_2)\rho_2(\br_1)\right] \\ &\pm \frac{1}{2}\left[\varphi^{}_1(\br_1)\varphi^*_2(\br_1)\varphi^{}_2(\br_2)\varphi^*_1(\br_2)+\varphi^{}_1(\br_2)\varphi^*_2(\br_2)\varphi^{}_2(\br_1)\varphi^*_1(\br_1)\right].
@@ -119,13 +121,11 @@ In particular, $\rho_{12}(\br,\br) = 0$ for fermions, and $\rho_{12}(\br,\br) = 
 
 {{< figure src="HOM.png" title="Four possible outcomes after the passage of two bosons through a beam splitter." numbered="true" lightbox="true" >}}
 
-
 One dramatic illustration of this deviation from our classical intuition is provided by the Hong--Ou--Mandel effect in quantum optics. In simplified terms, we imagine wavepackets describing two photons (bosons) approaching a 50:50 beam splitter from either side.  Because of the unitarity of scattering, the two photons end up in orthogonal states. For example,
 
 $$
 \frac{1}{\sqrt{2}}\left(\ket{\text{Left}}\pm \ket{\text{Right}}\right)
 $$
-
 
 ### Product States
 
@@ -314,7 +314,7 @@ $$
 \rho(x) = \sum_j \delta(x-x_j),
 \label{many_densityop}
 $$
-so that $\rho_1 = \bra{\Psi}\rho\ket{\Psi}$.
+so that $\rho_1(x) = \braket{\Psi}{\rho(x)}{\Psi}$.
 
 We can also consider the __density matrix__ of a single particle. Recall that the density matrix $\varrho$ describes a __mixed state__ of a quantum system, and is the appropriate description when the quantum state is not known. $\varrho$ is a positive definite hermitian operator satisfying $\tr \varrho =1$. Its spectral resolution
 $$
