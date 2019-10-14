@@ -8,6 +8,14 @@ These are the materials for the Part III course Theories of Quantum Matter at th
 
 - Feel free to [submit any issues](https://github.com/AustenLamacraft/tqm/issues) with the notes!
 
-## LaTeX tips
+## Switching between master (for Hugo site) and lecture notes (for Typora)
 
-1. `\label` _after_ the equation!
+- Figures for Hugo follow format: `{{< figure src="HOM.png" title="Four possible outcomes after the passage of two bosons through a beam splitter." numbered="true" lightbox="true" >}}`
+
+- Figures for Typora use standard markdown
+
+## TODOs
+
+- Switch to `clveref`?
+
+- [ ] Make Typora template in the Academic style, allowing for sidenotes. Look into [Tufte CSS](https://edwardtufte.github.io/tufte-css/)
