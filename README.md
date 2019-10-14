@@ -10,7 +10,7 @@ These are the materials for the Part III course Theories of Quantum Matter at th
 
 ## Switching between master (for Hugo site) and lecture notes (for Typora)
 
-- Figures for Hugo follow format: `{{< figure src="HOM.png" title="Four possible outcomes after the passage of two bosons through a beam splitter." numbered="true" lightbox="true" >}}`
+- Figures for Hugo follow the format: `{{< figure src="HOM.png" title="Four possible outcomes after the passage of two bosons through a beam splitter." numbered="true" lightbox="true" >}}`
 
 - Figures for Typora use standard markdown
 
