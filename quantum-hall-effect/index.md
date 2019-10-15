@@ -117,7 +117,7 @@ You may recall that the Landau levels are highly degenerate. In symmetric gauge 
 
 It's often convenient to work with the analytic part $f(z)$ of the wavefunction, with the understanding that the inner product $\bra{f_1}f_2\rangle$ is
 
-> Starting from $\inner{\psi_1}{\psi_2}=\int dx dy \psi_1^*(x,y)\psi_2(x,y)$. 
+> Starting from $\inner{\psi_1}{\psi_2}=\int dx dy \psi_1^*(x,y)\psi_2(x,y)$.
 
 $$
 \bra{f_1}f_2\rangle = \int \frac{d^2z}{2\pi} \overline{f_1(z)}f_2(z) \exp\left(-\left|z\right|^2/2\right),
@@ -139,7 +139,7 @@ V_\text{harm}(x,y) = \frac{v}{2}\left(x^2+y^2\right) = \frac{v}{2}\left|z\right|
 $$
 When this potential acts on a state in the LLL, the result is not a LLL state because of the appearance of $\bar z$ in $V$. Let's suppose that the cyclotron energy $\omega_c$ that gives the spacing between Landau levels is the largest energy scale in the problem. Then we should consider only the action of $V$ in the LLL subspace.
 
->By considering matrix elements $\bra{f_1}V\ket{f_2}$ between LLL states, show (by integrating by parts) that it is possible to replace any occurrence of $\bar z$ in $V$ with $2\partial_z$.
+>By considering matrix elements $\bra{f_1}V\ket{f_2}$ between LLL states, show (by integrating by parts) that it is possible to replace any occurrence of $\bar z$ in $V$ with $2\partial_z$ _acting on the analytic part of the wavefunction_.
 >
 >Note that the order is important: all the $\partial_z$ must stand to the left of the $z$, Thus
 >$$
@@ -159,7 +159,7 @@ $$
 \label{many_LLLdensity}
 > $$
 > Here $\Gamma(s,x) = \int^\infty_x t^{s-1}e^{-t}dt$ is the  <a href="https://en.wikipedia.org/wiki/Incomplete_gamma_function">incomplete gamma function</a>.
-> 
+>
 >Keep track of the numerical factors normalizing the wavefunctions!
 
 ![](LLLdensity.png)
