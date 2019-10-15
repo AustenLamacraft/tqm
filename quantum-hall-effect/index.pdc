@@ -90,8 +90,9 @@ $$
 \partial_z = \frac{1}{2}\left(\partial_x - i\partial_y\right) \quad \partial_{\bar z} = \frac{1}{2}\left(\partial_x + i\partial_y\right).
 $$
 
-We can rewrite the Hamiltonian $\eqref{Landau}$ as
+> Try acting on $z$ and $\bar z$ with these operators!
 
+We can rewrite the Hamiltonian $\eqref{Landau}$ as
 $$
 H = -\frac{2}{m}\left(\partial_z -\frac{qB \bar z}{4}\right)\left(\partial_{\bar z} +\frac{qB z}{4}\right) + \frac{\omega_c}{2}
 $$
@@ -115,6 +116,9 @@ therefore have energy $\omega_c/2$ and belong to the __lowest Landau level__ (LL
 You may recall that the Landau levels are highly degenerate. In symmetric gauge this degeneracy may be seen to result from our freedom to choose the coefficients of this power series, and yet the states are a very special subclass of the possible 2D wavefunctions $\psi(z,\bar z)$.
 
 It's often convenient to work with the analytic part $f(z)$ of the wavefunction, with the understanding that the inner product $\bra{f_1}f_2\rangle$ is
+
+> Starting from $\inner{\psi_1}{\psi_2}=\int dx dy \psi_1^*(x,y)\psi_2(x,y)$. 
+
 $$
 \bra{f_1}f_2\rangle = \int \frac{d^2z}{2\pi} \overline{f_1(z)}f_2(z) \exp\left(-\left|z\right|^2/2\right),
 $$
@@ -124,6 +128,8 @@ A possible orthonormal basis is
 $$
 f_n(z) = \frac{z^n}{\sqrt{2^n n!}}.
 $$
+> Substitute into inner product and do a (Gaussian) integral.
+
 ### Filled LLL of Fermions
 
 Let's imagine filling the LLL with fermions. As it stands, there's no principle to suggest how we do this, as all the states are degenerate. We can lift that degeneracy by adding a rotationally symmetric harmonic potential
@@ -137,7 +143,7 @@ When this potential acts on a state in the LLL, the result is not a LLL state be
 >
 >Note that the order is important: all the $\partial_z$ must stand to the left of the $z$, Thus
 >$$
->V_\text{harm}\longrightarrow v\partial_z z =  v\left(1+z >\partial_z\right).
+>V_\text{harm}\longrightarrow v\partial_z z =  v\left(1+z \partial_z\right).
 >\label{many_HarmonicProject}
 >$$
 
@@ -149,10 +155,12 @@ $$
 
 > Show that the density is
 > $$
-> \rho_1(z,\bar z) = \frac{e^{-|z|^2/2}}{2\pi}\sum_{n=0}^{N-1} >\frac{\left|z\right|^{2n}}{2^n n!} = \frac{1}{2\pi} >\frac{\Gamma(N,|z|^2/2)}{(N-1)!}.
->\label{many_LLLdensity}
->$$
->Here $\Gamma(s,x) = \int^\infty_x t^{s-1}e^{-t}dt$ is the  <a href="https://en.wikipedia.org/wiki/Incomplete_gamma_function">incomplete gamma function</a>.
+> \rho_1(z,\bar z) = \frac{e^{-|z|^2/2}}{2\pi}\sum_{n=0}^{N-1} \frac{\left|z\right|^{2n}}{2^n n!} = \frac{1}{2\pi} \frac{\Gamma(N,|z|^2/2)}{(N-1)!}.
+> \label{many_LLLdensity}
+> $$
+> Here $\Gamma(s,x) = \int^\infty_x t^{s-1}e^{-t}dt$ is the  <a href="https://en.wikipedia.org/wiki/Incomplete_gamma_function">incomplete gamma function</a>.
+>
+> Keep track of the numerical factors normalizing the wavefunctions!
 
 ![](LLLdensity.png)
 _Density of particles in the LLL for $N=100$._
