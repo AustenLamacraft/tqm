@@ -297,22 +297,12 @@ $$
 
 >	Show this using the __Vandermonde determinant__
 >$$
-<<<<<<< HEAD:many-body-wavefunctions/index.md
->	\begin{vmatrix}
-1 & 1 & \cdots & 1 \\
-z_{1} &  z_{2} & \cdots & \cdots  \\
-z_{1}^{2} & z_{2}^{2} & \cdots & \cdots  \\
-\cdots
-z_{1}^{N-1} &  z_{2}^{N-1} & \cdots & z_{N}^{N-1}
-\end{vmatrix}=\prod_{i<j}^{N}(z_{j}-z_{i})
-=======
 >\begin{vmatrix}
 >1 & 1 & \cdots & 1 \\
 >z_{1} &  z_{2} & \cdots & \cdots  \\
 >z_{1}^{2} & z_{2}^{2} & \cdots & \cdots  \\
 >z_{1}^{N-1} &  z_{2}^{N-1} & \cdots & z_{N}^{N-1}
 >\end{vmatrix}=\prod_{i<j}^{N}(z_{j}-z_{i})
->>>>>>> master:many-body-wavefunctions/index.pdc
 >$$
 >which can be proved in a variety of ways. Proving directly that $\eqref{quantum_statistics_1dFermiGS}$ is an eigenstate of the Hamiltonian is not easy, but can be accomplished using the identity
 >
@@ -425,7 +415,7 @@ Note that $g(x,x) = \rho_1(x)$.
 >$$
 >Although we have a double sum over permutations, we can use orthonormality of the wavefunctions. We set $N-1$ equal on these grounds, then set the remaining index on grounds of the exclusion principle. For plane waves, the remaining wavefunction is $\varphi_\alpha(x)=\frac{1}{\sqrt{L}}e^{ikx}$.
 >
->To take the limit $L\to\infty$, we note that the wavevectors get close since $\Delta k=2\pi/L$. 
+>To take the limit $L\to\infty$, we note that the wavevectors get close since $\Delta k=2\pi/L$.
 
 
 
@@ -455,7 +445,7 @@ The prefactor is to account for all pairs of particles.
 >$$
 >-N(N-1)\sum_{k,k'}\frac{1}{L^2} e^{ik(x_1-x_2)}e^{ik'(x_1-x_2)}
 >$$
->The minus sign arises because $\sgn(P)\sgn(P')$ are necessarily different. 
+>The minus sign arises because $\sgn(P)\sgn(P')$ are necessarily different.
 >
 >Take $L\to\infty$ limit and integrate. Notice that this contribution is just $g(x,y)g(y,x)$.  
 
