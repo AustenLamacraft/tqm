@@ -154,7 +154,8 @@ $$
 >$$
 >Here $\Gamma(s,x) = \int^\infty_x t^{s-1}e^{-t}dt$ is the  <a href="https://en.wikipedia.org/wiki/Incomplete_gamma_function">incomplete gamma function</a>.
 
-{{< figure src="LLLdensity.png" title="Density of particles in the LLL for $N=100$" numbered="true" lightbox="true" >}}
+![](LLLdensity.png)
+_Density of particles in the LLL for $N=100$._
 
 At small $\left\|z\right\|$, we can approximate the sum in $\eqref{many_LLLdensity}$ by extending the upper limit to $\infty$, and we have $\rho_1\to \frac{1}{2\pi}$. In fact, the density is fixed at this value until we reach $\sim\sqrt{2N}$, at which point the density falls to zero on the scale of the magnetic length.
 
@@ -182,7 +183,9 @@ Laughlin argued that for electrons with Coulomb interaction $\Psi_{m}(z_1,\ldots
 
 To get more precise information about the behaviour of wavefunctions, Laughlin introduced a powerful analogy between the probability distribution $\lvert\Psi_m(z_1,\ldots, z_N)\rvert^2$ of the particles, and the Boltzmann distribution of particles in a classical 2D plasma. Before doing that, it's useful to actually 'look' at a typical configuration of particles.
 
-{{< figure src="LaughlineMonteCarlo.png" title="Comparison of Monte Carlo samples from an uncorrelated (Poisson) distrubution of points (left) vs. the Laughlin probability distribution $\lvert\Psi_3(z_1,\ldots z_N)\rvert^2$ (right){% cite Girvin:1999 %}." numbered="true" lightbox="true" >}}
+![](LaughlinMonteCarlo.png)
+
+_Comparison of Monte Carlo samples from an uncorrelated (Poisson) distrubution of points (left) vs. the Laughlin probability distribution $\lvert\Psi_3(z_1,\ldots z_N)\rvert^2$ (right){% cite Girvin:1999 %}._
 
 The striking feature of the right hand picture is the _uniformity_ of the particle distribution, in contrast with the sample of uncorrelated particles on the left. The plasma analogy helps us to understand this, and a lot more.
 
@@ -208,7 +211,7 @@ Now we suppose that our plasma is at finite temperature, in which case the Boltz
 $$
 \exp[-\beta V(\brN)] = \left|\Psi_m(\brN)\right|^2,
 $$
-where we set $\beta q^2/(2\pi) = 2m$ and $\beta q\rho_0 = 2$. This observation is Laughlin's plasma analogy. Do bear in mind that we are not talking about _physical_ electrostatic fields -- this is a mathematical identification of two probability distributions. 
+where we set $\beta q^2/(2\pi) = 2m$ and $\beta q\rho_0 = 2$. This observation is Laughlin's plasma analogy. Do bear in mind that we are not talking about _physical_ electrostatic fields -- this is a mathematical identification of two probability distributions.
 
 Of course, we still have to analyze the statistical mechanical problem, which is hard to do exactly. Since we are interested in the large $N$ limit, we can introduce a continuum charge density $\rho(\br)$ and write the electrostatic energy as a functional of $\rho(\br)$ as
 $$
