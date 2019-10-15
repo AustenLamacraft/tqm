@@ -162,7 +162,7 @@ Thus, with the potential $\eqref{many_HarmonicRound}$, the filled LLL is describ
 
 ### The Laughlin Wavefunction
 
-The theory of the fractional quantum Hall effect begins with Robert Laughlin's famous wavefunction {% cite Laughlin:1983aa %} generalizing \eqref{many_nu1}
+The theory of the fractional quantum Hall effect begins with Robert Laughlin's famous wavefunction {% cite Laughlin:1983aa %} generalizing $\eqref{many_nu1}$
 $$
 \Psi_m(z_1,\ldots, z_N) = \prod_{j<k}^N (z_j-z_k)^{m} \exp\left(-\frac{1}{4}\sum_{j=1}^N\left|z_j\right|^2\right).
 \label{many_nu}
@@ -176,7 +176,7 @@ $$
 H_{\text{int}} = g\sum_{j<k}\delta(\br_j-\br_k),\qquad g>0
 \label{many_delta}
 $$
-The Laughlin state \eqref{many_nu} with $m=2$ has zero interaction energy. In fact, any state with zero interaction energy must have $\Psi_2(z_1,\ldots, z_N)$ as a factor. But if a wavefunction has a higher degree, then in the presence of the potential $\eqref{many_HarmonicProject}$ it will have a higher energy than $\Psi_2(z_1,\ldots, z_N)$. Thus $\Psi_2(z_1,\ldots, z_N)$ is the ground state.
+The Laughlin state $\eqref{many_nu}$ with $m=2$ has zero interaction energy. In fact, any state with zero interaction energy must have $\Psi_2(z_1,\ldots, z_N)$ as a factor. But if a wavefunction has a higher degree, then in the presence of the potential $\eqref{many_HarmonicProject}$ it will have a higher energy than $\Psi_2(z_1,\ldots, z_N)$. Thus $\Psi_2(z_1,\ldots, z_N)$ is the ground state.
 
 Laughlin argued that for electrons with Coulomb interaction $\Psi_{m}(z_1,\ldots, z_N)$ with $m$ odd is a good variational wavefunction. The fact that $(z_j-z_k)$ appears in a power higher than one means that the particles tend to stay away from each other more than in the $m=1$ state, thus lowering their interaction.
 
@@ -237,7 +237,7 @@ Laughlin also suggested wavefunctions to describe excited states of the system, 
 $$
 \Psi_\text{hole}(z_1,\ldots, z_N|Z) = \left(\prod_j (Z-z_j)\right)\Psi_m(z_1,\ldots, z_N).
 $$
-In the case of the $m=2$ state with the interaction \eqref{many_delta} discussed above, it's clear that this state still has zero interaction energy, although the harmonic potential \eqref{many_HarmonicProject} acts upon it non-trivially.
+In the case of the $m=2$ state with the interaction $\eqref{many_delta}$ discussed above, it's clear that this state still has zero interaction energy, although the harmonic potential $\eqref{many_HarmonicProject}$ acts upon it non-trivially.
 
 The plasma analogy allows us to see that this state describes a __quasiparticle__ of fractional charge. The concept of a quasiparticle is one that we'll meet repeatedly in this course. It describes a particle-like excitation of a many body system.  __Phonons__ -- quantized lattice vibrations -- are a kind of quasiparticle that you will have met before. In quantum field theory, particles themselves are described as quantized excitations of a system -- fields that pervade spacetime -- so at a _formal_ level there is little difference between the particles of particle physics and the quasiparticles of condensed matter physics. The _physical_ difference is that in the latter case we know what the background medium is made of!
 
