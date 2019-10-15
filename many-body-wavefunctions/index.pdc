@@ -261,14 +261,13 @@ $$
 
 >	Show this using the __Vandermonde determinant__
 >$$
->	\begin{vmatrix}
+>\begin{vmatrix}
 1 & 1 & \cdots & 1 \\
 z_{1} &  z_{2} & \cdots & \cdots  \\
 z_{1}^{2} & z_{2}^{2} & \cdots & \cdots  \\
-\cdots
 z_{1}^{N-1} &  z_{2}^{N-1} & \cdots & z_{N}^{N-1}
-\end{vmatrix}=\prod_{i<j}^{N}(z_{i}-z_{j})
->$$
+\end{vmatrix}=\prod_{i<j}^{N}(z_{j}-z_{i})
+$$
 >which can be proved in a variety of ways. Proving directly that $\eqref{quantum_statistics_1dFermiGS}$ is an eigenstate of the Hamiltonian is not easy, but can be accomplished using the identity
 >
 >$$
@@ -285,17 +284,17 @@ Let's take the opportunity to introduce some terminology. The wavevector of the 
 
 Having a many particle wave function is one thing, but what to _do_ with it? Bear in mind that $\eqref{quantum_statistics_1dFermiGS}$ is just about the simplest fermion state you can imagine, but it's not immediately clear what it is telling us.
 
-$\left\|\Psi(x_1,\ldots,x_N)\right\|^2$ is the probability distribution of the positions of the particles. If we were able to take a photograph of the positions of the particles at an instant in time, this would correspond to taking a sample from the probability distribution. In terms of the complex variables $z_j$, it would look something like this:
+$\vert\Psi(x_1,\ldots,x_N)\rvert^2$ is the probability distribution of the positions of the particles. If we were able to take a photograph of the positions of the particles at an instant in time, this would correspond to taking a sample from the probability distribution. In terms of the complex variables $z_j$, it would look something like this:
 
-{{< figure src="1d_fermions.png" title="A sample from the probability distribution $\left\|\Psi(z_1,\ldots,z_N)\right\|^2$ for 50 particles."  numbered="true" lightbox="true" >}}
+{{< figure src="1d_fermions.png" title="A sample from the probability distribution $\lvert\Psi(z_1,\ldots,z_N)\rvert^2$ for 50 particles."  numbered="true" lightbox="true" >}}
 
 {{< figure src="poisson_phases.png" title="The same for  a Poisson (uncorrelated) sample."  numbered="true" lightbox="true" >}}
 
-Since $\left\|\Psi(x_1,\ldots,x_N)\right\|^2$ is the probability distribution of the positions of the particles, we can use it to find the marginal probability distributions for any subset of the particles. Of course, since the particles are identical, it doesn't matter which ones we choose, just the number.
+Since $\lvert\Psi(x_1,\ldots,x_N)\rvert^2$ is the probability distribution of the positions of the particles, we can use it to find the marginal probability distributions for any subset of the particles. Of course, since the particles are identical, it doesn't matter which ones we choose, just the number.
 
 The one particle distribution is related to the average density of particles, given by
 $$
-\rho_1(x_1) = N \int dx_2\ldots dx_N \,\left|\Psi(x_1,x_2,\ldots,x_N)\right|^2.
+\rho_1(x_1) = N \int dx_2\ldots dx_N \,\lvert\Psi(x_1,x_2,\ldots,x_N)\rvert^2.
 \label{ave_density}
 $$
 Note that although I use the symbol $\rho$, density is always going to be _number_ density (not the mass density).
