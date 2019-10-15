@@ -303,7 +303,7 @@ z_{1} &  z_{2} & \cdots & \cdots  \\
 z_{1}^{2} & z_{2}^{2} & \cdots & \cdots  \\
 \cdots
 z_{1}^{N-1} &  z_{2}^{N-1} & \cdots & z_{N}^{N-1}
-\end{vmatrix}=\prod_{i<j}^{N}(z_{i}-z_{j})
+\end{vmatrix}=\prod_{i<j}^{N}(z_{j}-z_{i})
 >$$
 >which can be proved in a variety of ways. Proving directly that $\eqref{quantum_statistics_1dFermiGS}$ is an eigenstate of the Hamiltonian is not easy, but can be accomplished using the identity
 >
