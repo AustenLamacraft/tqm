@@ -156,6 +156,7 @@ $$
 > Show that the density is
 > $$
 > \rho_1(z,\bar z) = \frac{e^{-|z|^2/2}}{2\pi}\sum_{n=0}^{N-1} \frac{\left|z\right|^{2n}}{2^n n!} = \frac{1}{2\pi} \frac{\Gamma(N,|z|^2/2)}{(N-1)!}.
+<<<<<<< HEAD
 > \label{many_LLLdensity}
 > $$
 > Here $\Gamma(s,x) = \int^\infty_x t^{s-1}e^{-t}dt$ is the  <a href="https://en.wikipedia.org/wiki/Incomplete_gamma_function">incomplete gamma function</a>.
@@ -164,6 +165,13 @@ $$
 
 ![](LLLdensity.png)
 _Density of particles in the LLL for $N=100$._
+=======
+>\label{many_LLLdensity}
+>$$
+>Here $\Gamma(s,x) = \int^\infty_x t^{s-1}e^{-t}dt$ is the  <a href="https://en.wikipedia.org/wiki/Incomplete_gamma_function">incomplete gamma function</a>.
+
+{{< figure src="LLLdensity.png" title="Density of particles in the LLL for $N=100$." numbered="true" lightbox="true" >}}
+>>>>>>> master
 
 At small $\left\|z\right\|$, we can approximate the sum in $\eqref{many_LLLdensity}$ by extending the upper limit to $\infty$, and we have $\rho_1\to \frac{1}{2\pi}$. In fact, the density is fixed at this value until we reach $\sim\sqrt{2N}$, at which point the density falls to zero on the scale of the magnetic length.
 
@@ -191,9 +199,13 @@ Laughlin argued that for electrons with Coulomb interaction $\Psi_{m}(z_1,\ldots
 
 To get more precise information about the behaviour of wavefunctions, Laughlin introduced a powerful analogy between the probability distribution $\lvert\Psi_m(z_1,\ldots, z_N)\rvert^2$ of the particles, and the Boltzmann distribution of particles in a classical 2D plasma. Before doing that, it's useful to actually 'look' at a typical configuration of particles.
 
+<<<<<<< HEAD
 ![](LaughlinMonteCarlo.png)
 
 _Comparison of Monte Carlo samples from an uncorrelated (Poisson) distrubution of points (left) vs. the Laughlin probability distribution $\lvert\Psi_3(z_1,\ldots z_N)\rvert^2$ (right){% cite Girvin:1999 %}._
+=======
+{{< figure src="LaughlinMonteCarlo.png" title="Comparison of Monte Carlo samples from an uncorrelated (Poisson) distrubution of points (left) vs. the Laughlin probability distribution $\lvert\Psi_3(z_1,\ldots z_N)\rvert^2$ (right)." numbered="true" lightbox="true" >}}
+>>>>>>> master
 
 The striking feature of the right hand picture is the _uniformity_ of the particle distribution, in contrast with the sample of uncorrelated particles on the left. The plasma analogy helps us to understand this, and a lot more.
 
