@@ -323,15 +323,15 @@ Let's take the opportunity to introduce some terminology. The wavevector of the 
 
 Having a many particle wave function is one thing, but what to _do_ with it? Bear in mind that $\eqref{quantum_statistics_1dFermiGS}$ is just about the simplest fermion state you can imagine, but it's not immediately clear what it is telling us.
 
-$\left\|\Psi(x_1,\ldots,x_N)\right\|^2$ is the probability distribution of the positions of the particles. If we were able to take a photograph of the positions of the particles at an instant in time, this would correspond to taking a sample from the probability distribution. In terms of the complex variables $z_j$, it would look something like this:
+$\lvert\Psi(x_1,\ldots,x_N)\rvert^2$ is the probability distribution of the positions of the particles. If we were able to take a photograph of the positions of the particles at an instant in time, this would correspond to taking a sample from the probability distribution. In terms of the complex variables $z_j$, it would look something like this:
 
 <a name="1d_fermion"></a>
 ![](./1d_fermions.png)
 ![](./poisson_phases.png)
 
-_A sample from the probability distribution $\left\|\Psi(z_1,\ldots,z_N)\right\|^2$ for 50 particles (top) compared with a Poisson (uncorrelated) sample (bottom)._
+_A sample from the probability distribution $\lvert\Psi(z_1,\ldots,z_N)\rvert^2$ for 50 particles (top) compared with a Poisson (uncorrelated) sample (bottom)._
 
-Since $\left\|\Psi(x_1,\ldots,x_N)\right\|^2$ is the probability distribution of the positions of the particles, we can use it to find the marginal probability distributions for any subset of the particles. Of course, since the particles are identical, it doesn't matter which ones we choose, just the number.
+Since $\lvert\Psi(x_1,\ldots,x_N)\rvert^2$ is the probability distribution of the positions of the particles, we can use it to find the marginal probability distributions for any subset of the particles. Of course, since the particles are identical, it doesn't matter which ones we choose, just the number.
 
 The one particle distribution is related to the average density of particles, given by
 $$
@@ -388,12 +388,37 @@ Note that $g(x,x) = \rho_1(x)$.
 >\bar N_\psi = \int dx dy\, \psi^*(x)g(x,y)\psi(y).
 >\label{many_Nbar}
 >$$
+>Take a product state $\Psi_{\alpha_1\cdots\alpha_N}$ with $\varphi_{\alpha_1}=\psi$. Doesn't matter if we symmetrize or not, as the wavefunction in $g(x,y)$ already symmetrized. Then consider
+>$$
+>\left|\inner{\Psi_{\alpha_1\cdots\alpha_N}}{\Psi}\right|^2
+>$$
+>This probability of finding particles in states $\alpha_1$…$\alpha_N$ for a system in state $\Psi$. Then sum over labels $\alpha_2$… $\alpha_N$. Use completeness of the states
+>$$
+>\sum_\alpha \ket{\psi_\alpha}\bra{\psi_\alpha}=1
+>$$
+>or in coordinates
+>$$
+>\sum_\alpha \psi^*_\alpha(x)\psi_\alpha(y)=\delta(x-y)
+>$$
+> The integrals with the state $\varphi_{\alpha_1}=\psi$ give the result.
 
 >Starting from the Slater determinant $\eqref{quantum_statistics_1ddet}$ (i.e. _not_ from the explicit form $\eqref{quantum_statistics_1dFermiGS}$), show that $g(x,y)$ for the ground state of the Fermi gas is
 >$$
->g(x,y) = \frac{1}{L}\sum_{|k|<k_\text{F}} e^{ik(x-y)} = \int_{-?>k_\text{F}}^{k_\text{F}} \frac{dk}{2\pi} e^{ik(x-y)} = n \frac{\sin >[k_\text{F}(x-y)]}{k_\text{F}(x-y)}
+>g(x,y) = \frac{1}{L}\sum_{|k|<k_\text{F}} e^{ik(x-y)} = \int_{k_\text{F}}^{k_\text{F}} \frac{dk}{2\pi} e^{ik(x-y)} = n \frac{\sin [k_\text{F}(x-y)]}{k_\text{F}(x-y)}
 >$$
 >where $n \equiv \frac{k_\text{F}}{\pi}$ is the average density.
+>$$
+>\begin{aligned}
+>g(x,y) \equiv N\int dx_2\ldots dx_N \,\Psi^{}(x,x_2,\ldots,x_N)\Psi^{*}(y,x_2,\ldots,x_N).&=\\
+>&=N\int dx_2\ldots dx_N \frac{1}{N!}\sum_{P,P'}\sgn(P)\sgn(P')\\
+>& \varphi_{\alpha_{P_1}}(x) \varphi_{\alpha_{P_2}}(x_2)\cdots \varphi^*_{\alpha_{P'_1}}(y) \varphi^*_{\alpha_{P'_2}}(x_2)\cdots
+>\end{aligned}
+>$$
+>Although we have a double sum over permutations, we can use orthonormality of the wavefunctions. We set $N-1$ equal on these grounds, then set the remaining index on grounds of the exclusion principle. For plane waves, the remaining wavefunction is $\varphi_\alpha(x)=\frac{1}{\sqrt{L}}e^{ikx}$.
+>
+>To take the limit $L\to\infty$, we note that the wavevectors get close since $\Delta k=2\pi/L$. 
+
+
 
 >Find the average number of particles in a momentum state $\ket{k}$ using $\eqref{many_Nbar}$
 >$$
@@ -416,6 +441,16 @@ The prefactor is to account for all pairs of particles.
 >\rho_2(x_1,x_2) = n^2\left[1 - \left(\frac{\sin[k_\text{F}(x_1-x_2)]}{k_\text{F}(x_1-x_2)}\right)^2\right].
 >$$
 >This vanishes at $x_1=x_2$, consistent with the Pauli principle.
+>
+>Start from double sum over permutations as before. But we only integrate over $N-2$ coordinates. This means the only pairs of permutations $P$ and $P'$ that survive are either the same or differ by a transpostion. When $P=P'$ there is no $x_1$, $x_2$ dependence. But when $P$ and $P'$ differ by a transpostion (of which we have $N(N-1)/2$). In this case we get a contribution
+>$$
+>-N(N-1)\sum_{k,k'}\frac{1}{L^2} e^{ik(x_1-x_2)}e^{ik'(x_1-x_2)}
+>$$
+>The minus sign arises because $\sgn(P)\sgn(P')$ are necessarily different. 
+>
+>Take $L\to\infty$ limit and integrate. Notice that this contribution is just $g(x,y)g(y,x)$.  
+
+<img src="image-20191015104616501.jpg" alt="image-20191015104616501" style="zoom:25%;" />
 
 A natural question:
 $$
