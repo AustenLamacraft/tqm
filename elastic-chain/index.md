@@ -55,7 +55,7 @@ Reading: {% cite Coleman:2015 %}, Chapter 2.
 
 We study a chain of equal masses connected by springs, moving only in one dimension, along the chain. The Hamiltonian is
 
-{{< figure src="ElasticChain.png" title="" numbered="true" lightbox="true" >}}
+![](ElasticChain.png)
 
 $$
 \label{coll_Hchain}
@@ -403,7 +403,8 @@ $$
 $$
 The dispersion relation $\eqref{coll_Dispersion}$ makes this integral a little difficult.
 
-{{< figure src="disp_fluct.png" title="The integrand in $\eqref{coll_uvar}$ for $j-k=20$. What form does it take for $\left|j-k\right|^{-1}\lesssim\eta\lesssim \pi$?." numbered="true" lightbox="true" >}}
+![](disp_fluct.png)
+_The integrand in $\eqref{coll_uvar}$ for $j-k=20$. What form does it take for $\left|j-k\right|^{-1}\lesssim\eta\lesssim \pi$?._
 
 > When $\left|j-k\right|\gg 1$, the integral is dominated by values of $\left|j-k\right|^{-1}\lesssim\eta\lesssim \pi$. In this limit the dispersion can be linearized
 >
@@ -489,7 +490,9 @@ $$
 \end{split}
 \end{equation}
 $$
-{{< figure src="struct_fact.png" title="Numerical evaluation of $\bra{0} \rho\_q \rho\_{-q} \ket{0}$ for $\ell\_\text{osc}/a=0.2$, $N=51$. Note that the second Bragg peak is hardly visible." numbered="true" lightbox="true" >}}
+
+![](struct_fact.png)
+_Numerical evaluation of $\bra{0} \rho\_q \rho\_{-q} \ket{0}$ for $\ell\_\text{osc}/a=0.2$, $N=51$. Note that the second Bragg peak is hardly visible._
 
 The second exponent modifies the classical prediction of Bragg peaks. We have encountered the expression in exponent before in $\eqref{coll_uvar}$. Taking the $N\to\infty$ limit with $\left\|j-k\right\|\gg 1$ as before, we find that in the vicinity of the first Bragg peak at $q=2\pi/a$ the summand has the form
 $$
