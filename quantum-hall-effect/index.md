@@ -169,6 +169,17 @@ At small $\left\|z\right\|$, we can approximate the sum in $\eqref{many_LLLdensi
 
 Thus, with the potential $\eqref{many_HarmonicRound}$, the filled LLL is described by a circular droplet of fixed density $\rho_1 = 1/(2\pi)$, consistent with one state per flux quantum, which is the known degeneracy of the LLL. This picture is in fact quite general: changing the confining potential would cause the droplet to deform, but the density to remain constant (on the macroscopic scale).
 
+> ## Last time
+>
+> 1. Choosing __symmetric gauge__ allows us to introduce a complex representation $z=x+iy$ 
+> 2. LLL wavefunctions have the form $f(z)\times\text{Gaussian}$ for any analytic $f(z)$.
+> 3. Basis states can be chosen to be the powers $z^m$
+> 4. Inner product $\inner{f_1}{f_2}$ always has a Gaussian weight.
+> 5. To talk about "the" ground state, have to add a potential or (later) interactions
+> 6. Harmonic isotropic potential $\bar z z$. Project into LLL. Action of $\bar z=2\partial_z$ __on the analytic part__.
+> 7. Harmonic potential just counts power in $z^m$. 
+> 8. Really same thing as in 1D gas where $z=e^{2\pi x/L}$. Deduce form of Slater determinant.   
+
 ### The Laughlin Wavefunction
 
 The theory of the fractional quantum Hall effect begins with Robert Laughlin's famous wavefunction {% cite Laughlin:1983aa %} generalizing $\eqref{many_nu1}$
@@ -230,11 +241,13 @@ $$
 >$$
 >-2m\int d^2\br'\, \log\left|\br-\br'\right|\rho(\br') + \frac{1}{2}\left|\br\right|^2 = 0.
 >$$
+>Take the functional derivative $\frac{\delta V}{\delta \rho(\br)}$ 
 
 >Show that applying $\nabla^2$ to both sides gives
 >$$
 >\rho(\br) = \frac{1}{2\pi m}.
 >$$
+>$\nabla^2 \log|\br|=2\pi\delta^{(2)}(\br)$ .
 
 On the basis of this approximation, we conclude that the density is fixed at $1/m$ of the value we found for the $m=1$ case, which seems reasonable. The result applies where the density is non-zero, so we get a uniform droplet as before, this time of radius $\sqrt{2Nm}$. $1/m$ is called the __filling fraction__ of the state.
 
@@ -261,6 +274,9 @@ V(\brN)=&-\frac{q^2}{2\pi m}\sum_j \log\left|\br_j-\mathbf{R}\right|-\frac{q^2}{
 \end{align}
 $$
 This is interpreted as the introduction of a charge $q/m$ at point $\mathbf{R} = (X, Y)$, where $Z=X+iY$. The charges of the plasma will screen this charge, leaving a 'hole' in the density distribution amounting to charge $-q/m$, corresponding to $-1/m$ real particles. The quasiholes have fractional charge! This means that the normalization integral is approximated by the Boltzmann weight corresponding to the interaction of this fractional charge with the background charge density
+
+> <img src="image-20191017114334833.jpg" alt="image-20191017114334833" style="zoom:25%;" />
+
 $$
 \int \prod_{j=1}^N d^2z_j\,\left|\Psi_\text{hole}(z_1,\ldots, z_N|Z)\right|^2 \sim\exp\left(\frac{1}{2m}\left|Z\right|^2\right),
 $$

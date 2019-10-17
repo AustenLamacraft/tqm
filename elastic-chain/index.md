@@ -119,6 +119,9 @@ We'll write $\eta_n\equiv \frac{2\pi n}{N}$, so that the eigenstates have the fo
 >\omega(\eta) = \sqrt{\frac{4k}{m}}\left|\sin\eta/2\right|.
 >\label{coll_Dispersion}
 >$$
+>$-m\omega^2 u_j = (z_n^{-1}+z - 2)u_j$ and cancel $u_j$ to find relationship between $\omega$  and $\eta$.
+>
+><img src="image-20191017114154656.jpg" alt="image-20191017114154656" style="zoom:25%;" />
 
 
 Notice that:
@@ -148,13 +151,31 @@ $$
 p_j(t) = \frac{1}{\sqrt{N}}\sum_{|n| \leq (N-1)/2} \pi_n(t) e^{-i\eta_n j},
 \label{coll_Pexp}
 $$
-If $u_j$, $p_j$ are canonical variables with Poisson Bracket $\\{u_j, p_k\\}=\delta_{jk}$, then it follows that $\\{q_m,\pi_n\\}=\delta_{mn}$.
+If $u_j$, $p_j$ are canonical variables with Poisson Bracket $\{u_j, p_k\}=\delta_{jk}$, then it follows that $\\{q_m,\pi_n\\}=\delta_{mn}$.
 
 >Show that in terms of the Fourier modes the Hamiltonian $\eqref{coll_Hchain}$ is
 >$$
-> H = \sum_{|n| \leq (N-1)/2} \left[\frac{1}{2m}\pi_n \pi_{-n} + k  (1-\cos \eta_n) q_n q_{-n}\right].
-> \label{coll_HDiag}
+>H = \sum_{|n| \leq (N-1)/2} \left[\frac{1}{2m}\pi_n \pi_{-n} + k  (1-\cos \eta_n) q_n q_{-n}\right].
+>\label{coll_HDiag}
 >$$
+>Just substiute into the Hamiltonian. Take the KE
+>$$
+>\sum_j \frac{p_j^2}{2m} = \frac{1}{N}\sum_j\sum_{\eta_1,\eta_2} \pi_{\eta_1} \pi_{\eta_2} e^{-i\eta_1 j}e^{-i\eta_2 j} 
+>$$
+>The sum over $j$ is
+>$$
+>\sum_j e^{-i(\eta_1+\eta_2)j}=N\delta_{\eta_1,-\eta_2}
+>$$
+>For the potential energy
+>$$
+>\sum_j (u_i-u_{i+1})^2
+>$$
+>
+>$$
+>u_j-u_{j+1}=\sum_{\eta_1} (q_{\eta_1} - e^{i\eta_1}q_{\eta_1})e^{i\eta_1 j}
+>$$
+>
+>
 
 This _almost_ looks like a system of harmonic oscillators. Bear in mind that the $q_n$ and $\pi_n$ are complex. One could, for example, split the amplitudes into their real and imaginary parts
 $$
