@@ -228,7 +228,7 @@ a^*_n &= \sqrt{\frac{m\omega(\eta_n)}{2}}\left(q_{-n} - \frac{i}{m\omega(\eta_n)
 \label{coll_adef}
 \end{align}
 $$
-Remember that $q_n = q_{-n}^\*$ and $\pi_n = \pi_{-n}^\*$ in order that $u_j$ and $p_j$ are real. Note that $n=0$ is excluded because $\omega(0)=0$. These coordinates satisfy
+Remember that $q_n = q_{-n}^*$ and $\pi_n = \pi_{-n}^*$ in order that $u_j$ and $p_j$ are real. Note that $n=0$ is excluded because $\omega(0)=0$. These coordinates satisfy
 $$
 \{a_m,a^{*}_n\}=-i\delta_{mn}.
 $$
@@ -247,7 +247,7 @@ with the first term accounting for the (free) centre of mass.
 
 ## Quantum Oscillators
 
-In the quantum theory, the variables $\aop$, $\adop$ satisfy $\[\aop,\adop]=1$ and the Hamiltonian $\eqref{coll_SHO}$ takes the form
+In the quantum theory, the variables $\aop$, $\adop$ satisfy $[\aop,\adop]=1$ and the Hamiltonian $\eqref{coll_SHO}$ takes the form
 $$
 H = \frac{\omega}{2}\left(\adop\aop+\aop\adop\right).
 $$
@@ -310,6 +310,9 @@ $$
 e_0 = \lim_{N\to \infty} \frac{E_0}{N}
 $$
 to exist. The separation of the $\eta_n$ values is $2\pi/N$, so as $N\to\infty$ the sum in ground state energy $\eqref{coll_H0}$ can be replaced with an integral according to the rule
+
+> Spacing of wavevector $\eta$ is $2\pi/N$ i.e. $\Delta \eta=\frac{2\pi}{N}$.
+
 $$
 \sum_{|n| \leq (N-1)/2} \left(\cdots\right) \xrightarrow{N\to\infty} N \int_{-\pi}^\pi \frac{d\eta}{2\pi}\left(\cdots\right).
 $$
@@ -409,7 +412,7 @@ u_j = \frac{1}{\sqrt{N}}\sum_{|n| \leq (N-1)/2} q_n e^{i\eta_n j},
 $$
 and
 $$
-q_n = \sqrt{\frac{1}{2m\omega(\eta_n)}}\left(a_n + a_{-n}^*\right).
+q_n = \sqrt{\frac{1}{2m\omega(\eta_n)}}\left(a_n + a_{-n}^\dagger\right).
 $$
 To evaluate $\eqref{coll_gsfluct}$, we write the two factors $(u_j-u_k)(u_j-u_k)$ in terms of the $\aop_n$ and $\adop_n$. Contributions to the ground state expectation value arise from terms with $\aop_n$ in the left factor and $\adop_n$ in the right for some $n$. All other terms vanish. This gives
 $$
@@ -429,9 +432,9 @@ _The integrand in $\eqref{coll_uvar}$ for $j-k=20$. What form does it take for $
 
 > When $\left|j-k\right|\gg 1$, the integral is dominated by values of $\left|j-k\right|^{-1}\lesssim\eta\lesssim \pi$. In this limit the dispersion can be linearized
 >
->$$
->\omega(\eta) \sim \sqrt{\frac{k}{m}}|\eta|.
->$$
+> $$
+> \omega(\eta) \sim \sqrt{\frac{k}{m}}|\eta|.
+> $$
 
 >Show that we then have
 >
@@ -441,6 +444,8 @@ _The integrand in $\eqref{coll_uvar}$ for $j-k=20$. What form does it take for $
 >$$
 >
 >where we have introduced $\ell_\text{osc}=\left(km\right)^{-1/4}$, the natural length scale of an oscillator.
+>
+>When $|j-k|\gg 1$ the numerator in the integrand averages to 1. 
 
 The result $\eqref{coll_LogFluct}$ shows that the uncertainty in the separation of two masses in the chain increases with their separation. This implies that the ground state of the chain is _not_ a crystal, but more closely resembles a fluid. It turns out that this conclusion depends strongly on the dimensionality of the system. In higher dimensions, crystalline ground states _do_ exist (thankfully).
 
@@ -456,7 +461,7 @@ $$
 $$
 Rather than introducing separate notation for the Fourier components of $f(x)$, it's convenient to denote them by $f_q$, so that
 $$
-f(x) = \sum_{n=-\infty}^\infty f_k \exp(ik_n x), \qquad k_n = \frac{2\pi n}{L}
+f(x) = \sum_{n=-\infty}^\infty f_{k_n} \exp(ik_n x), \qquad k_n = \frac{2\pi n}{L}
 $$
 In an ordered configuration $x_j = ja$, we would have
 $$
@@ -488,6 +493,16 @@ $$
 >$$
 >
 >[Hint: Consider the differential equation in $x$ obeyed by $e^{xA}B e^{-xA}$]
+>
+>Call $F(x)\equiv e^{xA}B e^{-xA}$ then
+>$$
+>F'(x) = [A,F(x)]
+>$$
+>Then show that 
+>$$
+>B + x\left[A,B\right] + \frac{x^2}{2!}\left[A,\left[A,B\right]\right]+\frac{x^3}{3!}\left[A,\left[A,\left[A,B\right]\right]\right]+\ldots
+>$$
+>also satisfies the same equation. To complete, note that both coincide also for $x=0$.  
 
 
 >Show that the exponent can be written in a form with all occurrences of $\adop$ to the left of all $\aop$ (this operation is called <strong>normal ordering</strong>; we will meet it again).
@@ -495,6 +510,19 @@ $$
 >$$
 >\exp(\lambda \aop + \mu \adop) = \exp(\lambda \mu /2) \exp(\mu\adop)\exp(\lambda\aop).
 >$$
+>Consider $e^{s(A+B)}=G(s)$. This satisfies the equation
+>$$
+>G'(s) = (A+B)G(s)
+>$$
+> Compare with the equation satisfied by $D(s)=e^{sA}e^{sB}$
+>$$
+>D'(s) = A D(s) + D(s)B
+>$$
+>Now we write
+>$$
+>DB = e^{sA}e^{sB}B = e^{sA} B e^{sB} = (B + s[A,B] + \ldots) e^{sA}e^{sB} = (B + s[A,B]) e^{sA}e^{sB} = (B + s[A,B]) D
+>$$
+>Where in the last step we assume $[A,B]=\text{number}$. 
 
 >Use this result to show that
 >
