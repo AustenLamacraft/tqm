@@ -40,8 +40,6 @@ $$
 \newcommand{\brN}{\br_1, \ldots, \br_N}
 \newcommand{\xN}{x_1, \ldots, x_N}
 \newcommand{\zN}{z_1, \ldots, z_N}
-\DeclareMathOperator{\tr}{tr}
-\DeclareMathOperator{\E}{\mathbb{E}}
 $$
 
 
@@ -226,15 +224,15 @@ with the first term accounting for the (free) centre of mass.
 
 ## Quantum Oscillators
 
-In the quantum theory, the variables $\aop$, $\adop$ satisfy $\[\aop,\adop]=1$ and the Hamiltonian $\eqref{coll_SHO}$ takes the form
+In the quantum theory, the variables $\aop$, $\adop$ satisfy $[\aop,\adop]=1$ and the Hamiltonian $\eqref{coll_SHO}$ takes the form
 $$
 H = \frac{\omega}{2}\left(\adop\aop+\aop\adop\right).
 $$
 Let's remind ourselves how this formalism solves the problem of finding the eigenstates. The key observation is that
 $$
 \begin{align}
-[\aop, H] &= \omega\aop,\\
-[\adop, H] &= -\omega \adop.
+\left[\aop, H\right] &= \omega\aop,\\
+\left[\adop, H\right] &= -\omega \adop.
 \end{align}
 $$
 As a result, if $\ket{\psi}$ is an eigenstate of the Hamiltonian
