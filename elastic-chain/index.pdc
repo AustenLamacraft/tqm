@@ -432,7 +432,7 @@ $$
 $$
 Rather than introducing separate notation for the Fourier components of $f(x)$, it's convenient to denote them by $f_q$, so that
 $$
-f(x) = \sum_{n=-\infty}^\infty f_k \exp(ik_n x), \qquad k_n = \frac{2\pi n}{L}
+f(x) = \sum_{n=-\infty}^\infty f_{k_n} \exp(ik_n x), \qquad k_n = \frac{2\pi n}{L}
 $$
 In an ordered configuration $x_j = ja$, we would have
 $$
@@ -449,7 +449,7 @@ $$
 \bra{0} \rho_q \rho_{-q} \ket{0} = \sum_{j,k=1}^N \bra{0} \exp(iq[x_j-x_k])\ket{0}.
 \label{coll_Struct}
 $$
-Upon substituting the mode expansion $\eqref{coll_ModeExp}$© for the displacements, we are left to evaluate expressions of the form
+Upon substituting the mode expansion $\eqref{coll_ModeExp}$ for the displacements, we are left to evaluate expressions of the form
 $$
 \bra{0} \exp(\lambda \aop + \mu \adop)\ket{0}.
 $$
@@ -471,6 +471,7 @@ $$
 >$$
 >\exp(\lambda \aop + \mu \adop) = \exp(\lambda \mu /2) \exp(\mu\adop)\exp(\lambda\aop).
 >$$
+>[Hint: Consider the differential equations obeyed by $F_1(x)=e^{s(A+B)}$ and $F_2(s)=e^{sA}e^{sB}$]
 
 >Use this result to show that
 >
