@@ -48,7 +48,6 @@ In this lecture we introduce a simple quantum mechanical model of magnetism cons
 
 Reading: {% cite Auerbach:2012 %}.
 
-
 ---
 
 ## The Heisenberg Model
@@ -528,7 +527,9 @@ $$
 
 The result of finding the ground state energy in each sector is shown below, relative to the lowest energy, which is at $\eta=\pi$. The agreement with the des Cloiseaux--Pearson dispersion (obtained in the $N\to\infty$ limit) is quite good.
 
-{{< figure src="Heisenberg_model_dispersion.png" title="The ground state energy of the Heisenberg chain for $L=26$ as a function of $\eta$, compared with the des Cloiseaux--Pearson dispersion $\eqref{spin_dCP}$." numbered="true" lightbox="true" >}}
+![](Heisenberg_model_dispersion.png)
+
+_The ground state energy of the Heisenberg chain for $L=26$ as a function of $\eta$, compared with the des Cloiseaux--Pearson dispersion $\eqref{spin_dCP}$._
 
 Appendix
 --------
