@@ -194,7 +194,7 @@ Any system at finite temperature has a finite energy density, or a total energy 
 
 We started our discussion with the ground state of the ferromagnetic $J<0$ Heisenberg model. What about $J>0$? Can we guess the ground state in this case (of course, that's equivalent to finding the _highest_ excited state of the ferromagnet). Bethe's ansatz tells us that it must be some complicated gas of magnons, all scattering off each other. Why are things so complicated?
 
-## Antiferromagnets Are Different!
+### Antiferromagnets Are Different!
 
 Let's try and _guess_ the ground state of the antiferromagnet. Since anti-aligning spins should be favoured, we might try
 
@@ -208,117 +208,6 @@ assuming $N$ is odd. Acting with the $H$ reveals that we are out of luck, howeve
 But antiferromagnets, with the kind of alternating order described by $\eqref{spin_AFM}$ do exist! In fact, their existence was predicted  by [Louis Néel](https://en.wikipedia.org/wiki/Louis_Néel) in 1936 _before_ their experimental discovery. $\eqref{spin_AFM}$ is sometimes called a __Néel state__ for this reason.
 
 The Heisenberg antiferromagnetic spin chain does not have an antiferromagnetic ground state. The reason, as we'll see, is similar to that behind the absence of Bragg peaks in the elastic chain: quantum fluctuations are too strong. On the square and cubic lattices, the Heisenberg model _does_ display antiferromagnetism in the ground state. The above considerations show us, however, that these states are a bit more complicated than $\eqref{spin_AFM}$.
-
-### The Anderson Tower
-
-We consider a simple model due to Philip Anderson. The couplings of the nearest neighbour Heisenberg model on the chain, square and cubic lattices define a [bipartite graph](https://en.wikipedia.org/wiki/Bipartite_graph). This means that the sites (or vertices of the graph) can be grouped into two sets, with couplings only between the two sets (not within). Thus in the chain, the two sets are the even and odd sites. We call these two sets sublattice $A$ and sublattice $B$.
-
-Since it seems to be hard to solve the Heisenberg model, we simplify it in the following way (this discussion follows {% cite Lhuillier:2006aa %}). Introduce the Fourier components of the spin
-
-$$
-\mathbf{s}_\mathbf{j} =  \sum_{\boldsymbol{\eta}} \tilde{\mathbf{s}}_\boldsymbol{\eta} e^{i \boldsymbol{\eta}\cdot \mathbf{j}}.
-$$
-
-Here $\mathbf{j}$ denotes a $d$-dimensional vector of integers $\mathbf{j}=(j_1,\ldots j_d)$, $j=1,\ldots N$ giving the position of the spin in an $\overbrace{N\times N \times \cdots N}^{d\text{ times}}$ cubic lattice, and likewise
-
-$$
-\boldsymbol{\eta} = (\eta_1,\ldots \eta_d) = \frac{2\pi}{N}(n_1,\ldots n_d),\quad n_a = -N/2+1,\ldots N/2
-$$
-
-gives all the wavevectors in the Brillouin zone. It's easier to assume $N$ is even here, to accommodate antiferromagnetic order. In terms of $\tilde{\mathbf{s}}_\boldsymbol{\eta}$, the $d$-dimensional version of the Heisenberg Hamiltonian $\eqref{spin_Hberg}$ on the square / cubic / hypercubic lattice can be written
-
-$$
-H = JN^d\sum_{\boldsymbol{\eta}\in \text{BZ}}\gamma_{\boldsymbol{\eta}}\tilde{\mathbf{s}}_\boldsymbol{\eta}\cdot \tilde{\mathbf{s}}_\boldsymbol{-\eta},
-\label{spin_HbergFT}
-$$
-
-where $\gamma_{\boldsymbol{\eta}}=\frac{1}{2}\sum_{j=1}^d\cos(\eta_j)$. Now we are going to do something drastic and throw away all wavevectors apart from $\boldsymbol{\eta}=\boldsymbol{0}$ and $\boldsymbol{\eta}  = (\pi,\ldots,\pi)$. The motivation is that
-
-$$
-\tilde{\mathbf{s}}_\boldsymbol{0} = \cN^{-1}\left(\mathbf{S}_A + \mathbf{S}_B\right), \qquad\tilde{\mathbf{s}}_{(\pi,\ldots,\pi)} = \cN^{-1}\left(\mathbf{S}_A - \mathbf{S}_B\right),
-$$
-
-where $\mathbf{S}_A$ and $\mathbf{S}_B$ are the total spins of the $A$ and $B$ sublattices, and $\cN = N^d$ is the total number of sites. Since antiferromagnetism involves anti-alignment of spins on the different sublattices, the second component should be particularly important. Our simplified Hamiltonian is then
-
-$$
-\begin{align}
-H_{AB} &= \frac{J}{\cN}\left[\left(\mathbf{S}_A + \mathbf{S}_B\right)^2 - \left(\mathbf{S}_A - \mathbf{S}_B\right)^2\right]\\
-& = \frac{4J}{\cN}\mathbf{S}_A\cdot \mathbf{S}_B.
-\label{spin_HAB}
-\end{align}
-$$
-
-(Note that $\tilde{\mathbf{s}}\_{(\pi,\ldots,\pi)}=\tilde{\mathbf{s}}\_{-(\pi,\ldots,\pi)}$) Relative to the original model, this has the unphysical feature that every sublattice $A$ spin is interacting with every sublattice $B$ spin. The factor of $N^{-d}$ does guarantee that we'll have an extensive energy, however.
-
-What is the ground state of $H_{AB}$, assuming $J>0$? This is easily answered by writing the Hamiltonian as
-
-$$
-H = \frac{2J}{\cN} \left[\left(\mathbf{S}_A + \mathbf{S}_B\right)^2 - \mathbf{S}_A^2 - \mathbf{S}_B^2\right].
-\label{spin_HAB2}
-$$
-
-It's clear that we should form two spins of maximal size $\cN/4$ from each of the two sublattices, and then combine them to make an overall spin singlet. Obviously this singlet is a spherically symmetric state with no preferred direction, and hence no antiferromagnetic order. The ground state energy is
-
-$$
-E_0 = -J\left(\frac{\cN}{4}+1\right),
-$$
-
-which is extensive. What about the excited states? There are two options for the first excited states:
-
-1. Stick with spins of size $\cN/4$ for the sublattices, but combine them to make a total spin $>0$.
-
-2. Make smaller spins on the sublattices, and combine them.
-
-In the first case, the energy of excitation above the ground state is
-
-$$
-E_S - E_0 = \frac{2J}{\cN} S(S+1),
-$$
-
-with degeneracy $2S+1$. In the second case, reducing $S_A\to \cN/4 - 1$ means that $\Delta\mathbf{S}_A^2 = -\frac{\cN}{8}$. From $\eqref{spin_HAB2}$ we see that this is going to cause the energy to increase by an amount of order $J$, while in the first case our excitations were of order $J/\cN$. The two kinds of excitations only have comparable energies when $S$ is $O(\sqrt{N})$.
-
-Let's describe these low energy states in more detail. The two spins of magnitude $S_A = S_B = \frac{\cN}{4}$ can be combined to make a total spin between $\cN/2$ and $0$ (assuming $\cN$ even). We can thus decompose the Hilbert space of the two spins as
-
-$$
-\mathcal{H}_A\otimes \mathcal{H}_B = \mathcal{H}^{(0)}\oplus\mathcal{H}^{(1)}\oplus\cdots \mathcal{H}^{(\cN/2)},
-$$
-
-where $\mathcal{H}^{(S)}$ is the Hilbert space of a spin $S$.
-
-Now we consider a superficially different problem: a particle of mass $M$ moving on a sphere of radius $R$, with Hamiltonian
-
-$$
-H_\text{rotor} = \frac{ \mathbf{L}^2}{2MR^2},
-\label{spin_rotor}
-$$
-
-where $\mathbf{L}=\br\times\bp$ is the orbital angular momentum. The eigenstates of the particle, or rotor, are spherical harmonics $Y_{lm}(\theta,\phi)$, with energy
-
-$$
-E_{lm} = \frac{L(L+1)}{2MR^2},\qquad m=-l,\ldots, l.
-$$
-
-Thus the eigenstates and eigenergies of our model spin Hamiltonian can be identified with those of the rotor up to $l=\cN/2$. What plays the role of the direction of the rotor $\br= R\mathbf{n}$, where $\mathbf{n}$ is a unit vector? Here are some things we know about $\mathbf{n}$.
-
-$$
-\begin{align}
-\mathbf{L}\cdot \mathbf{n} = 0,\quad \mathbf{n}^2 = 1\\
-[L_j,n_k] = i\epsilon_{jkl}n_l,\quad [n_j,n_k]=0.
-\label{spin_nidents}
-\end{align}
-$$
-
-We get the same relations at large $N$ if we make the identifications
-
-$$
-\mathbf{L} = \mathbf{S}_A + \mathbf{S}_B,\quad \mathbf{n} = \frac{2}{\cN}\left(\mathbf{S}_A - \mathbf{S}_B\right),
-$$
-
-as long as we stick to $\mathbf{L}$ of $O(\sqrt{\cN})$.
-
->Evaluate the expressions $\eqref{spin_nidents}$ and see that they are fulfilled in the limit $\cN\to\infty$.
-
-Thus the Néel vector $\mathbf{n}$ acts like the axis of a heavy rotor. Although it is certainly true that the ground state of the rotor is the $l=0$ state, which is delocalized over the sphere, it is possible to form a localized state of the rotor using a superposition of the $l>0$ states -- sometimes called the _Anderson tower_ -- which have energies that vanish as $\cN\to \infty$. The dynamics of such a superposition is therefore very slow. Alternatively, we may imagine that small perturbations from the outside world lift the spherical symmetry of the problem, causing the true ground state to be localized in one direction. The strength of perturbation necessary goes to zero as $\cN\to 0$. In either case, the result is that a thermodynamically large system will at any instant in time be observed to be ordered in a particular direction, and that direction will change infinitesimally slowly. This situation is usually described as __spontaneous symmetry breaking__ -- not a brilliant term given the above discussion.
 
 
 
@@ -626,6 +515,118 @@ $$
 $$
 
 > As a function of momentum, compare the bound state energy with the lowest energy of two free magnons.
+
+### The Anderson Tower
+
+We consider a simple model due to Philip Anderson. The couplings of the nearest neighbour Heisenberg model on the chain, square and cubic lattices define a [bipartite graph](https://en.wikipedia.org/wiki/Bipartite_graph). This means that the sites (or vertices of the graph) can be grouped into two sets, with couplings only between the two sets (not within). Thus in the chain, the two sets are the even and odd sites. We call these two sets sublattice $A$ and sublattice $B$.
+
+Since it seems to be hard to solve the Heisenberg model, we simplify it in the following way (this discussion follows {% cite Lhuillier:2006aa %}). Introduce the Fourier components of the spin
+
+$$
+\mathbf{s}_\mathbf{j} =  \sum_{\boldsymbol{\eta}} \tilde{\mathbf{s}}_\boldsymbol{\eta} e^{i \boldsymbol{\eta}\cdot \mathbf{j}}.
+$$
+
+Here $\mathbf{j}$ denotes a $d$-dimensional vector of integers $\mathbf{j}=(j_1,\ldots j_d)$, $j=1,\ldots N$ giving the position of the spin in an $\overbrace{N\times N \times \cdots N}^{d\text{ times}}$ cubic lattice, and likewise
+
+$$
+\boldsymbol{\eta} = (\eta_1,\ldots \eta_d) = \frac{2\pi}{N}(n_1,\ldots n_d),\quad n_a = -N/2+1,\ldots N/2
+$$
+
+gives all the wavevectors in the Brillouin zone. It's easier to assume $N$ is even here, to accommodate antiferromagnetic order. In terms of $\tilde{\mathbf{s}}_\boldsymbol{\eta}$, the $d$-dimensional version of the Heisenberg Hamiltonian $\eqref{spin_Hberg}$ on the square / cubic / hypercubic lattice can be written
+
+$$
+H = JN^d\sum_{\boldsymbol{\eta}\in \text{BZ}}\gamma_{\boldsymbol{\eta}}\tilde{\mathbf{s}}_\boldsymbol{\eta}\cdot \tilde{\mathbf{s}}_\boldsymbol{-\eta},
+\label{spin_HbergFT}
+$$
+
+where $\gamma_{\boldsymbol{\eta}}=\frac{1}{2}\sum_{j=1}^d\cos(\eta_j)$. Now we are going to do something drastic and throw away all wavevectors apart from $\boldsymbol{\eta}=\boldsymbol{0}$ and $\boldsymbol{\eta}  = (\pi,\ldots,\pi)$. The motivation is that
+
+$$
+\tilde{\mathbf{s}}_\boldsymbol{0} = \cN^{-1}\left(\mathbf{S}_A + \mathbf{S}_B\right), \qquad\tilde{\mathbf{s}}_{(\pi,\ldots,\pi)} = \cN^{-1}\left(\mathbf{S}_A - \mathbf{S}_B\right),
+$$
+
+where $\mathbf{S}_A$ and $\mathbf{S}_B$ are the total spins of the $A$ and $B$ sublattices, and $\cN = N^d$ is the total number of sites. Since antiferromagnetism involves anti-alignment of spins on the different sublattices, the second component should be particularly important. Our simplified Hamiltonian is then
+
+$$
+\begin{align}
+H_{AB} &= \frac{J}{\cN}\left[\left(\mathbf{S}_A + \mathbf{S}_B\right)^2 - \left(\mathbf{S}_A - \mathbf{S}_B\right)^2\right]\\
+& = \frac{4J}{\cN}\mathbf{S}_A\cdot \mathbf{S}_B.
+\label{spin_HAB}
+\end{align}
+$$
+
+(Note that $\tilde{\mathbf{s}}\_{(\pi,\ldots,\pi)}=\tilde{\mathbf{s}}\_{-(\pi,\ldots,\pi)}$) Relative to the original model, this has the unphysical feature that every sublattice $A$ spin is interacting with every sublattice $B$ spin. The factor of $N^{-d}$ does guarantee that we'll have an extensive energy, however.
+
+What is the ground state of $H_{AB}$, assuming $J>0$? This is easily answered by writing the Hamiltonian as
+
+$$
+H = \frac{2J}{\cN} \left[\left(\mathbf{S}_A + \mathbf{S}_B\right)^2 - \mathbf{S}_A^2 - \mathbf{S}_B^2\right].
+\label{spin_HAB2}
+$$
+
+It's clear that we should form two spins of maximal size $\cN/4$ from each of the two sublattices, and then combine them to make an overall spin singlet. Obviously this singlet is a spherically symmetric state with no preferred direction, and hence no antiferromagnetic order. The ground state energy is
+
+$$
+E_0 = -J\left(\frac{\cN}{4}+1\right),
+$$
+
+which is extensive. What about the excited states? There are two options for the first excited states:
+
+1. Stick with spins of size $\cN/4$ for the sublattices, but combine them to make a total spin $>0$.
+
+2. Make smaller spins on the sublattices, and combine them.
+
+In the first case, the energy of excitation above the ground state is
+
+$$
+E_S - E_0 = \frac{2J}{\cN} S(S+1),
+$$
+
+with degeneracy $2S+1$. In the second case, reducing $S_A\to \cN/4 - 1$ means that $\Delta\mathbf{S}_A^2 = -\frac{\cN}{8}$. From $\eqref{spin_HAB2}$ we see that this is going to cause the energy to increase by an amount of order $J$, while in the first case our excitations were of order $J/\cN$. The two kinds of excitations only have comparable energies when $S$ is $O(\sqrt{N})$.
+
+Let's describe these low energy states in more detail. The two spins of magnitude $S_A = S_B = \frac{\cN}{4}$ can be combined to make a total spin between $\cN/2$ and $0$ (assuming $\cN$ even). We can thus decompose the Hilbert space of the two spins as
+
+$$
+\mathcal{H}_A\otimes \mathcal{H}_B = \mathcal{H}^{(0)}\oplus\mathcal{H}^{(1)}\oplus\cdots \mathcal{H}^{(\cN/2)},
+$$
+
+where $\mathcal{H}^{(S)}$ is the Hilbert space of a spin $S$.
+
+Now we consider a superficially different problem: a particle of mass $M$ moving on a sphere of radius $R$, with Hamiltonian
+
+$$
+H_\text{rotor} = \frac{ \mathbf{L}^2}{2MR^2},
+\label{spin_rotor}
+$$
+
+where $\mathbf{L}=\br\times\bp$ is the orbital angular momentum. The eigenstates of the particle, or rotor, are spherical harmonics $Y_{lm}(\theta,\phi)$, with energy
+
+$$
+E_{lm} = \frac{L(L+1)}{2MR^2},\qquad m=-l,\ldots, l.
+$$
+
+Thus the eigenstates and eigenergies of our model spin Hamiltonian can be identified with those of the rotor up to $l=\cN/2$. What plays the role of the direction of the rotor $\br= R\mathbf{n}$, where $\mathbf{n}$ is a unit vector? Here are some things we know about $\mathbf{n}$.
+
+$$
+\begin{align}
+\mathbf{L}\cdot \mathbf{n} = 0,\quad \mathbf{n}^2 = 1\\
+[L_j,n_k] = i\epsilon_{jkl}n_l,\quad [n_j,n_k]=0.
+\label{spin_nidents}
+\end{align}
+$$
+
+We get the same relations at large $N$ if we make the identifications
+
+$$
+\mathbf{L} = \mathbf{S}_A + \mathbf{S}_B,\quad \mathbf{n} = \frac{2}{\cN}\left(\mathbf{S}_A - \mathbf{S}_B\right),
+$$
+
+as long as we stick to $\mathbf{L}$ of $O(\sqrt{\cN})$.
+
+>Evaluate the expressions $\eqref{spin_nidents}$ and see that they are fulfilled in the limit $\cN\to\infty$.
+
+Thus the Néel vector $\mathbf{n}$ acts like the axis of a heavy rotor. Although it is certainly true that the ground state of the rotor is the $l=0$ state, which is delocalized over the sphere, it is possible to form a localized state of the rotor using a superposition of the $l>0$ states -- sometimes called the _Anderson tower_ -- which have energies that vanish as $\cN\to \infty$. The dynamics of such a superposition is therefore very slow. Alternatively, we may imagine that small perturbations from the outside world lift the spherical symmetry of the problem, causing the true ground state to be localized in one direction. The strength of perturbation necessary goes to zero as $\cN\to 0$. In either case, the result is that a thermodynamically large system will at any instant in time be observed to be ordered in a particular direction, and that direction will change infinitesimally slowly. This situation is usually described as __spontaneous symmetry breaking__ -- not a brilliant term given the above discussion.
+
 
 
 References
