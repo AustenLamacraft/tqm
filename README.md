@@ -20,6 +20,8 @@ These are the materials for the Part III course Theories of Quantum Matter at th
 
 ## TODOs
 
-- Switch to `clveref`?
+- [ ] LaTeX in figure captions for Hugo
+
+- [ ] Citations for Hugo
 
 - [ ] Make Typora template in the Academic style, allowing for sidenotes. Look into [Tufte CSS](https://edwardtufte.github.io/tufte-css/)
