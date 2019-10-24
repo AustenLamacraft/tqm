@@ -4,7 +4,11 @@ These are the materials for the Part III course Theories of Quantum Matter at th
 
 - The `master` branch contains the lecture notes that are published on [my site](https://auste.nl).
 
-- The branch `lecture-notes-<year>` contains the files with annotations made during the lectures in `<year>`. View these with the Markdown viewer of your choice, ideally one that is LaTeX-aware: I recommend [Typora](https://typora.io).
+- The branch `lecture-notes-<year>` contains the files with annotations made during the lectures in `<year>`.
+
+- View these with the Markdown viewer of your choice, ideally one that is LaTeX-aware: I recommend [Typora](https://typora.io) (you will need to turn on the options for Inline Math and Equation Numbering in the preferences panel).
+
+- Alternatively you could convert to PDF using [pandoc](https://pandoc.org).
 
 - Feel free to [submit any issues](https://github.com/AustenLamacraft/tqm/issues) with the notes!
 
@@ -17,6 +21,8 @@ These are the materials for the Part III course Theories of Quantum Matter at th
 
 ## TODOs
 
-- [ ] Better quotation styling so that quotes stand out more
+- [ ] LaTeX in figure captions for Hugo
+
+- [ ] Citations for Hugo
 
 - [ ] Make Typora template in the Academic style, allowing for sidenotes. Look into [Tufte CSS](https://edwardtufte.github.io/tufte-css/)

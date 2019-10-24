@@ -40,8 +40,6 @@ $$
 \newcommand{\brN}{\br_1, \ldots, \br_N}
 \newcommand{\xN}{x_1, \ldots, x_N}
 \newcommand{\zN}{z_1, \ldots, z_N}
-\DeclareMathOperator{\tr}{tr}
-\DeclareMathOperator{\E}{\mathbb{E}}
 $$
 
 
@@ -160,7 +158,7 @@ If $u_j$, $p_j$ are canonical variables with Poisson Bracket $\{u_j, p_k\}=\delt
 >$$
 >Just substiute into the Hamiltonian. Take the KE
 >$$
->\sum_j \frac{p_j^2}{2m} = \frac{1}{N}\sum_j\sum_{\eta_1,\eta_2} \pi_{\eta_1} \pi_{\eta_2} e^{-i\eta_1 j}e^{-i\eta_2 j} 
+>\sum_j \frac{p_j^2}{2m} = \frac{1}{N}\sum_j\sum_{\eta_1,\eta_2} \pi_{\eta_1} \pi_{\eta_2} e^{-i\eta_1 j}e^{-i\eta_2 j}
 >$$
 >The sum over $j$ is
 >$$
@@ -254,8 +252,8 @@ $$
 Let's remind ourselves how this formalism solves the problem of finding the eigenstates. The key observation is that
 $$
 \begin{align}
-[\aop, H] &= \omega\aop,\\
-[\adop, H] &= -\omega \adop.
+\left[\aop, H\right] &= \omega\aop,\\
+\left[\adop, H\right] &= -\omega \adop.
 \end{align}
 $$
 As a result, if $\ket{\psi}$ is an eigenstate of the Hamiltonian
@@ -445,7 +443,7 @@ _The integrand in $\eqref{coll_uvar}$ for $j-k=20$. What form does it take for $
 >
 >where we have introduced $\ell_\text{osc}=\left(km\right)^{-1/4}$, the natural length scale of an oscillator.
 >
->When $|j-k|\gg 1$ the numerator in the integrand averages to 1. 
+>When $|j-k|\gg 1$ the numerator in the integrand averages to 1.
 
 The result $\eqref{coll_LogFluct}$ shows that the uncertainty in the separation of two masses in the chain increases with their separation. This implies that the ground state of the chain is _not_ a crystal, but more closely resembles a fluid. It turns out that this conclusion depends strongly on the dimensionality of the system. In higher dimensions, crystalline ground states _do_ exist (thankfully).
 
@@ -478,7 +476,7 @@ $$
 \bra{0} \rho_q \rho_{-q} \ket{0} = \sum_{j,k=1}^N \bra{0} \exp(iq[x_j-x_k])\ket{0}.
 \label{coll_Struct}
 $$
-Upon substituting the mode expansion $\eqref{coll_ModeExp}$© for the displacements, we are left to evaluate expressions of the form
+Upon substituting the mode expansion $\eqref{coll_ModeExp}$ for the displacements, we are left to evaluate expressions of the form
 $$
 \bra{0} \exp(\lambda \aop + \mu \adop)\ket{0}.
 $$
@@ -498,7 +496,7 @@ $$
 >$$
 >F'(x) = [A,F(x)]
 >$$
->Then show that 
+>Then show that
 >$$
 >B + x\left[A,B\right] + \frac{x^2}{2!}\left[A,\left[A,B\right]\right]+\frac{x^3}{3!}\left[A,\left[A,\left[A,B\right]\right]\right]+\ldots
 >$$
@@ -522,7 +520,7 @@ $$
 >$$
 >DB = e^{sA}e^{sB}B = e^{sA} B e^{sB} = (B + s[A,B] + \ldots) e^{sA}e^{sB} = (B + s[A,B]) e^{sA}e^{sB} = (B + s[A,B]) D
 >$$
->Where in the last step we assume $[A,B]=\text{number}$. 
+>Where in the last step we assume $[A,B]=\text{number}$.
 
 >Use this result to show that
 >
