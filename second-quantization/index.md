@@ -177,7 +177,7 @@ $$
 \end{align}
 $$
 
-The same relations describe the ladder operators of a set of independent harmonic oscillators, revealing a deep connection between these two systems. The state $\Psi^{\text{S}}\_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}$ of $\eqref{A_OrthoProd}$ -- a normalized state with $N_\alpha$ particles in state $\alpha$ -- may be written
+The same relations describe the ladder operators of a set of independent harmonic oscillators, revealing a deep connection between these two systems. The state $\Psi^{\text{S}}_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}$ of $\eqref{A_OrthoProd}$ -- a normalized state with $N_\alpha$ particles in state $\alpha$ -- may be written
 
 $$
 \Psi^{\text{S}}_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}(\br_1,\ldots,\br_N) \longleftrightarrow\ket{\mathbf{N}} \equiv \prod_\alpha \frac{\left(\adop_\alpha\right)^{N_\alpha}}{\sqrt{N_\alpha!}}\ket{\text{VAC}}
@@ -226,7 +226,7 @@ $$
 Now we can see why we chose to work with the annihilation operator rather than the creation operator. The conjugate of $\eqref{2nd_quant_PsiDDef}$ is
 
 $$
-	\label{2nd_quant_PsiDef}
+\label{2nd_quant_PsiDef}
 	\pop(\br)\equiv\sum_{\beta}  \varphi_{\beta}(\br)\aop_{\beta},
 $$
 
@@ -244,11 +244,21 @@ These operator-valued functions are called __quantum fields__. By introducing th
 
 > If a state $\ket{\Psi}$ has wavefunction $\Psi(x_1,\ldots, x_N)$, show that the wavefunction of the state $\pop(X)\ket{\Psi}$ is the $N-1$ particle wavefunction
 >
->$$
->\sqrt{N}\Psi(X,x_1,\ldots, x_{N-1})
->$$
+> $$
+> \sqrt{N}\Psi(X,x_1,\ldots, x_{N-1})
+> $$
 >
->Hint: Show that is is true for a product state first.
+> Hint: Show that is is true for a product state first.
+>
+> Product state $\Psi^{S}(x_1,\ldots x_N)=\frac{1}{\sqrt{N}}\sum_P \psi_1(x_{P_1})\cdots \psi_N(x_{P_N})$ has representation
+> $$
+> \adop(\psi_1)\cdots \adop(\psi_N)\ket{\text{VAC}}
+> $$
+> Further, we have the expansion
+> $$
+> \pop(X)\equiv\sum_{\beta}  \psi_{\beta}(X)\aop_{\beta},
+> $$
+> Extend to all many body states by linearity.
 
 
 As an example, let our original basis be the eigenbasis of the free particle Hamiltonian $H=\frac{\bp^{2}}{2m}$ with periodic boundary conditions
@@ -280,6 +290,11 @@ $$
 >$$
 >\sum_\bk c_k \adop_\bk\adop_{-\bk}\ket{\text{VAC}}?
 >$$
+>The two particle state
+>$$
+>\adop_{\bk_1}\adop_{\bk_2}\ket{\text{VAC}} \leftrightarrow \frac{1}{\sqrt{2 L^6}}\left[e^{i(\bk_1\cdot\br_1+\bk_2\cdot\br_2)}+e^{i(\bk_1\cdot\br_2+\bk_2\cdot\br_1)}\right]
+>$$
+>So the above state is a function $\br_1-\br_2$ only. Sum over $\bk$ is taking the Fourier transform of $c_\bk$. $c_\bk$ is the Fourier transform of the _pair wavefunction_. 
 
 
 ### The Case of Fermions
@@ -305,7 +320,7 @@ $$
 \label{A_adanticommute}
 $$
 
-for any states $\psi(\br)$ and $\phi(\br)$, where $\\{A,B\\}\equiv AB+BA$ is called the __anticommutator__. Similarly
+for any states $\psi(\br)$ and $\phi(\br)$, where $\{A,B\}\equiv AB+BA$ is called the __anticommutator__. Similarly
 
 $$
 \left\{\aop(\psi),\aop(\phi)\right\}=0.
@@ -327,6 +342,8 @@ $$
 $$
 
 > Check this.
+>
+> The difference is that now $\aop(\phi)\adop(\psi)=-\adop(\psi)\aop(\phi) + \{a(\phi),\adop(\psi\}$ 
 
 Introducing field operators in the position basis as before leads to a system of operators satisfying the anticommutation relations
 
@@ -342,6 +359,10 @@ $$
 ## Discussion: Explicit Form of Operators
 
 > Think about the form that the operators $\aop_\alpha$, $\adop_\alpha$ take in the basis of product states. Start with one state $\varphi_\alpha$. What's the matrix form of $\adop_\alpha$ in terms of states $\ket{N_\alpha}$? Now consider two states. Can you see how the commutation and anticommutation relations can be satisfied?
+>
+> In the occupation basis, we know that $\adop \ket{N}=\sqrt{N+1}\ket{N+1}$. $\aop\ket{N}=\sqrt{N}\ket{N-1}$. 
+> 
+> <img src="image-20191029113213461.jpg" alt="image-20191029113213461" style="zoom:33%;" />
 
 ## Representation of Operators
 
@@ -546,13 +567,13 @@ $$
 >	&=\frac{k_{F}^{3}}{2\pi^{2}}\left[\frac{\sin\left(k_{F}|\br'-\br|\right)}{(k_{F}|\br'-\br|)^{3}}-\frac{\cos\left(k_{F}|\br'-\br|\right)}{(k_{F}|\br'-\br|)^{2}}\right].
 >\end{aligned}
 >$$
+>
+>Note that $g(\br,\br)=\frac{k_{F}^{3}}{6\pi^{2}}=n$, as it should. Also, $g(\br,\br')\to 0$ as $\abs{\br-\br'}\to\infty$.
 
-Note that $g(\br,\br)=\frac{k_{F}^{3}}{6\pi^{2}}=n$, as it should. Also, $g(\br,\br')\to 0$ as $\abs{\br-\br'}\to\infty$.
-</p>
 
 Contrast this calculation with the wavefunction version.
 
-![]("FermiDensityMatrixCut.png")
+<img src="FermiDensityMatrixCut.png" style="zoom:48%;" />
 _Single particle density matrix for the Fermi gas._
 
 ### Two Particle Operators
