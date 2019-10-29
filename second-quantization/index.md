@@ -40,6 +40,7 @@ $$
 \newcommand{\inner}[2]{\langle{#1}\rvert #2 \rangle}
 \newcommand{\braket}[3]{\langle{#1}\rvert #2 \lvert #3 \rangle}
 \newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\abs}[1]{\lvert{#1}\rvert}
 \newcommand{\brN}{\br_1, \ldots, \br_N}
 \newcommand{\xN}{x_1, \ldots, x_N}
 \newcommand{\zN}{z_1, \ldots, z_N}
@@ -484,7 +485,7 @@ $$
 as it does! Another useful thing to know is the expectation value of the density on a basis state $\ket{N_{0},N_{1}\ldots}$
 
 $$
-	\label{2nd_quant_DensityExp}
+\label{2nd_quant_DensityExp}
 	\braket{N_{0},N_{1}\ldots}{ \hat\rho(\br)}{N_{0},N_{1}\ldots} = \sum_{\alpha} N_{\alpha}\left|\varphi_{\alpha}(\br)\right|^{2}.
 $$
 
@@ -537,7 +538,7 @@ $$
 $$
 
 > Show that
-> 
+>
 >$$
 >\begin{aligned}
 >	\label{2nd_quant_FermiDensityMatrix}
@@ -551,7 +552,8 @@ Note that $g(\br,\br)=\frac{k_{F}^{3}}{6\pi^{2}}=n$, as it should. Also, $g(\br,
 
 Contrast this calculation with the wavefunction version.
 
-{{< figure src="FermiDensityMatrixCut.png" title="Single particle density matrix for the Fermi gas." numbered="true" lightbox="true" >}}
+![]("FermiDensityMatrixCut.png")
+_Single particle density matrix for the Fermi gas._
 
 ### Two Particle Operators
 
