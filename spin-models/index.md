@@ -48,7 +48,6 @@ In this lecture we introduce a simple quantum mechanical model of magnetism cons
 
 Reading: {% cite Auerbach:2012 %}.
 
-
 ---
 
 ## The Heisenberg Model
