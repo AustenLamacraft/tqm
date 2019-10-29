@@ -40,6 +40,7 @@ $$
 \newcommand{\inner}[2]{\langle{#1}\rvert #2 \rangle}
 \newcommand{\braket}[3]{\langle{#1}\rvert #2 \lvert #3 \rangle}
 \newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\abs}[1]{\lvert{#1}\rvert}
 \newcommand{\brN}{\br_1, \ldots, \br_N}
 \newcommand{\xN}{x_1, \ldots, x_N}
 \newcommand{\zN}{z_1, \ldots, z_N}
@@ -537,7 +538,7 @@ $$
 $$
 
 > Show that
-> 
+>
 >$$
 >\begin{aligned}
 >	\label{2nd_quant_FermiDensityMatrix}
