@@ -177,7 +177,7 @@ $$
 \end{align}
 $$
 
-The same relations describe the ladder operators of a set of independent harmonic oscillators, revealing a deep connection between these two systems. The state $\Psi^{\text{S}}\_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}$ of $\eqref{A_OrthoProd}$ -- a normalized state with $N_\alpha$ particles in state $\alpha$ -- may be written
+The same relations describe the ladder operators of a set of independent harmonic oscillators, revealing a deep connection between these two systems. The state $\Psi^{\text{S}}_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}$ of $\eqref{A_OrthoProd}$ -- a normalized state with $N_\alpha$ particles in state $\alpha$ -- may be written
 
 $$
 \Psi^{\text{S}}_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}(\br_1,\ldots,\br_N) \longleftrightarrow\ket{\mathbf{N}} \equiv \prod_\alpha \frac{\left(\adop_\alpha\right)^{N_\alpha}}{\sqrt{N_\alpha!}}\ket{\text{VAC}}
@@ -305,7 +305,7 @@ $$
 \label{A_adanticommute}
 $$
 
-for any states $\psi(\br)$ and $\phi(\br)$, where $\\{A,B\\}\equiv AB+BA$ is called the __anticommutator__. Similarly
+for any states $\psi(\br)$ and $\phi(\br)$, where $\{A,B\}\equiv AB+BA$ is called the __anticommutator__. Similarly
 
 $$
 \left\{\aop(\psi),\aop(\phi)\right\}=0.

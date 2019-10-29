@@ -369,7 +369,7 @@ $$
 satisfy
 
 $$
-\sin^2(\eta/2)q_n q_{-n} + \cos^2(\eta/2)\pi_n\pi_{-n}=\frac{\omega(\eta)}{2}\left[\adop_\eta\aop_\eta+]\aop_\eta\adop_\eta\right].
+\sin^2(\eta/2)q_n q_{-n} + \cos^2(\eta/2)\pi_n\pi_{-n}=\frac{\omega(\eta)}{2}\left[\adop_\eta\aop_\eta+\aop_\eta\adop_\eta\right].
 $$
 
 This puts the Hamiltonian $\eqref{spin_H2AFM}$ in the desired form, so we know that the ground state satisfies $\aop_\eta\ket{\text{GS}}=0$
