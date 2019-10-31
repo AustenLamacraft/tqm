@@ -21,6 +21,8 @@ These are the materials for the Part III course Theories of Quantum Matter at th
 
 ## TODOs
 
+- [ ] Internal references among lectures
+
 - [ ] LaTeX in figure captions for Hugo
 
 - [ ] Citations for Hugo
