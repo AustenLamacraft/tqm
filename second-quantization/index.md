@@ -55,11 +55,11 @@ Reading: {% cite Baym:1969 %}, {% cite Nazarov:2013 %}.
 
 ## Creation and Annihilation Operators
 
-When we discussed the elastic chain in [Lecture 3]({{ site.baseurl }}/lectures/ElasticChain/), we saw that the quanta of the normal modes of the chain could be thought of as bosons. The essence of second quantization is to turn this observation around, and formally introduce __creation and annihilation operators__ that add and remove bosons to a system. Subsequently, we identify these operators as components of a __quantum field__. Whether you think of the field as a physical entity -- with the bosons appearing upon quantization -- or as a mathematical device for representing a system of indistinguishable particles is a question of taste. The former point of view is more common in particle physics, the latter in condensed matter.
+When we discussed the elastic chain in [Lecture 3]({{< ref "elastic-chain" >}}), we saw that the quanta of the normal modes of the chain could be thought of as bosons. The essence of second quantization is to turn this observation around, and formally introduce __creation and annihilation operators__ that add and remove bosons to a system. Subsequently, we identify these operators as components of a __quantum field__. Whether you think of the field as a physical entity -- with the bosons appearing upon quantization -- or as a mathematical device for representing a system of indistinguishable particles is a question of taste. The former point of view is more common in particle physics, the latter in condensed matter.
 
 ### Recap: Product States
 
-Remember that in [Lecture 1]({{ site.baseurl }}/lectures/ManyBodyWavefunctions/) we saw that a normalized product state of $N$ bosons occupying orthonormal states $\varphi_{\alpha_n}(\br)$ $n=1,\ldots, N$ is
+Remember that in [Lecture 1]({{< ref "many-body-wavefunctions" >}}) we saw that a normalized product state of $N$ bosons occupying orthonormal states $\varphi_{\alpha_n}(\br)$ $n=1,\ldots, N$ is
 
 $$
 \Psi^{\text{S}}_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}(\br_1,\ldots,\br_N)=\sqrt{\frac{1}{\prod_{\alpha}N_{\alpha}!}}\frac{1}{\sqrt{N!}}\sum_P\varphi_{\alpha_{1}}(\mathbf{r}_{P_1})\varphi_{\alpha_{2}}(\mathbf{r}_{P_2})\cdots\varphi_{\alpha_{N}}(\mathbf{r}_{P_N}),
@@ -510,7 +510,7 @@ $$
 
 The $\bq=0$ modes are just the total particle number and $\frac{1}{m}$ times the total momentum, respectively.
 
-In [Lecture 1]({{ site.baseurl }}/lectures/ManyBodyWavefunctions/) we introduced the __single particle density matrix__
+In [Lecture 1]({{< ref "many-body-wavefunctions" >}}) we introduced the __single particle density matrix__
 
 $$
 	g(\br,\br') \equiv N \int d\br_{2}\cdots d\br_{N}\,\Psi^{*}(\br,\br_{2},\ldots,\br_{N})\Psi(\br',\br_{2},\ldots,\br_{N}).
@@ -531,7 +531,7 @@ $$
 	g(\br,\br') = \sum_{\alpha} N_{\alpha}\varphi_{\alpha}^{*}(\br)\varphi^{}_{\alpha}(\br').
 $$
 
-In [Lecture 1]({{ site.baseurl }}/lectures/ManyBodyWavefunctions/) we evaluated $g(x,y)$ for the ground state of a 1D Fermi gas using the Slater determinant form of the wavefunction. For variety, let's calculate it using our new method for the 3D Fermi gas. Recall that in this case $N_{\bk}=1$ for $\abs{\bk}<k_{F}$, and $0$ otherwise. Thus the ground state can be written
+In [Lecture 1]({{< ref "many-body-wavefunctions" >}}) we evaluated $g(x,y)$ for the ground state of a 1D Fermi gas using the Slater determinant form of the wavefunction. For variety, let's calculate it using our new method for the 3D Fermi gas. Recall that in this case $N_{\bk}=1$ for $\abs{\bk}<k_{F}$, and $0$ otherwise. Thus the ground state can be written
 
 $$
 \ket{\text{Fermi sea}} = \prod_{|\bk|<k_F} \adop_\bk\ket{\text{VAC}}
@@ -605,7 +605,7 @@ The difference lies in the order of the operators, which prevents a particle fro
 
 > Check that $\eqref{A_VNotNormal}$ has a nonzero expectation value in a 1 particle state.
 
-As an example, let's write the Hamiltonian of interacting bosons that we met in [Lecture 1]({{ site.baseurl }}/lectures/ManyBodyWavefunctions/) in our new formalism.
+As an example, let's write the Hamiltonian of interacting bosons that we met in [Lecture 1]({{< ref "many-body-wavefunctions" >}}) in our new formalism.
 
 $$
 H = \int dx \left[\frac{1}{2}\partial_x\pdop(x)\partial_x\pop(x) + \frac{c}{2}\pdop(x)\pdop(x)\pop(x)\pop(x)\right],
@@ -613,7 +613,7 @@ $$
 
 where $\pop(x)$, $\pdop(x)$ satisfy the canonical bosonic commutation relations $\eqref{2nd_quant_PositionRelations}$.
 
-We've succeeded in translating an interacting many body Hamiltonian into a quantum field theory. But we shouldn't feel too smug. As I said earlier, this is a change of _language_, and its usefulness is not guaranteed. The same warning applies to alternative formulations of the same problem: as a functional integral, for example. In the case of the Lieb--Liniger model, the exact solution was best presented in the first quantized, many body wavefunction framework. Ditto for the Laughlin states of the fractional quantum Hall effect. However, in approximate treatments of many body problems that we _can't_ solve exactly, like the Bose gas in higher dimensions that we'll discuss in [Lecture 8]({{ site.baseurl }}/lectures/BoseGas/), the second quantized framework is often a good starting point.
+We've succeeded in translating an interacting many body Hamiltonian into a quantum field theory. But we shouldn't feel too smug. As I said earlier, this is a change of _language_, and its usefulness is not guaranteed. The same warning applies to alternative formulations of the same problem: as a functional integral, for example. In the case of the Lieb--Liniger model, the exact solution was best presented in the first quantized, many body wavefunction framework. Ditto for the Laughlin states of the fractional quantum Hall effect. However, in approximate treatments of many body problems that we _can't_ solve exactly, like the Bose gas in higher dimensions that we'll discuss in [Lecture 8]({{< ref "bose-gas" >}}), the second quantized framework is often a good starting point.
 
 References
 ----------

@@ -5,6 +5,7 @@ author: Austen Lamacraft
 draft: false  # Is this a draft? true/false
 toc: true  # Show table of contents? true/false
 type: docs  # Do not modify.
+markup: pandoc
 menu:
   tqm:
     parent: Lectures
@@ -390,7 +391,7 @@ _Almost_. Looking back at $\eqref{many_densityop}$, we see that the product of t
 
 ### Impenetrable Bose Gas
 
-There's a bit more mileage in the 1D Fermi gas yet. Consider the following Hamiltonian, which we'll study in more detail in [Lecture 15]({{ site.baseurl }}/lectures/LiebLinigerModel/)
+There's a bit more mileage in the 1D Fermi gas yet. Consider the following Hamiltonian, which we'll study in more detail in [Lecture 15]({{< ref "lieb-liniger-model" >}})
 $$
 H = -\frac{1}{2m}\sum_j \frac{\partial^2}{\partial x_j^2} + \overbrace{c\sum_{j<k}\delta(x_j-x_k)}^{\equiv H_\text{int}}.
 \label{many_LL}
