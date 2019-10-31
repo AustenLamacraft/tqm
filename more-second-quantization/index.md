@@ -159,7 +159,7 @@ $$
 
 which, in the case of the ground state of the Fermi gas, reproduces $\eqref{more_rho2evalFermi}$. We see that the correlation function vanishes as the separation $x-y\to 0$, because $g(x,x)=\langle\mathop{\rho(y)}\rangle$. This is, of course, another manifestation of the exclusion principle: it is not possible for two fermions to sit on top of each other. The scale of the 'hole' in the correlation function is of course set by the mean interparticle separation, or Fermi wavelength. Note also the decaying oscillations, indicating liquid-like correlations in the positions of the particles. These are sometimes known as __Friedel oscillations__.
 
-{{< figure src="1DFermiCorrelation.png" title="Correlation function $\rho_2(x,0)$ for the Fermi gas." numbered="true" lightbox="true" >}}
+{{< figure src="1DFermiGasCorrelation.png" title="Correlation function $\rho_2(x,0)$ for the Fermi gas." numbered="true" lightbox="true" >}}
 
 For bosons the situation is very different. If $g(x,y)\to 0$ as $\abs{x-y}\to\infty$, the value of the correlation function as $\abs{x-y}\to 0$ is _twice_ the value at $\abs{x-y}\to\infty$. This characteristic behavior is often termed __bunching__: a pair of bosons is more likely to be found at two nearby points than at two distant points.
 
