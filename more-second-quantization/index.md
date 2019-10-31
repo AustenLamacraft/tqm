@@ -95,6 +95,8 @@ $$
 \label{more_rho22ndquant}
 $$
 
+> Notice that (for bosons) which order $\psi(x)$ and $\psi(y)$ come in (they commute). For fermions, you could switch both $\psi(x)$, $\psi(y)$ and $\pdop(x)$, $\pdop(y)$.
+
 This differs from $\bra{\Psi}\rho(x)\rho(y)\ket{\Psi}$ by the ordering of operators. Using the canonical commutation relations for the fields gives the relation $\eqref{more_rhorhonorm}$ for both bosons and fermions.
 
 Operators in which all annihilation operators stand to the right of all creation operators are said to be __normal ordered__. Here, the normal ordering serves to ensure that a term with $j=k$ does not appear in $\eqref{more_rho21stquant}$. Two particle terms in the Hamiltonian are normal ordered for the same reason.
@@ -202,7 +204,7 @@ $$
 We write the field operator as
 
 $$
-\pop(\br)=\varphi_L(\br,t)\aop_L+\varphi_R(\br,t)\aop_R+\cdots,
+\pop(\br,t)=\varphi_L(\br,t)\aop_L+\varphi_R(\br,t)\aop_R+\cdots,
 $$
 
 where the wavefunctions $\varphi_{L/R}(\br,t)$ are evolving freely, and the dots denote the other states in some complete orthogonal set that includes $\varphi_L(\br)$ and $\varphi_R(\br)$: we can ignore them because they are empty. A calculation of the expectation value of $\rho(\br)=\pdop(\br)\pop(\br)$ gives
@@ -259,6 +261,8 @@ $$
 $$
 
 The interference term therefore consists of regularly spaced fringes, with a separation at long times of $2\pi t/md$.
+
+<img src="image-20191031113226799.jpg" alt="image-20191031113226799" style="zoom:33%;" />
 
 Now we imagine doing the same thing with two condensates of fixed particle number, which bear no phase relation to one another. The system is described by the product state (often called a __Fock state__ in this context)
 

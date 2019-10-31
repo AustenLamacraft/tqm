@@ -387,7 +387,7 @@ $$
 A\ket{\varphi_\alpha} = \sum_{\beta} \ket{\varphi_\beta}\braket{\varphi_\beta}{A}{\varphi_\alpha} = \sum_\beta A_{\beta\alpha}\ket{\varphi_\beta}
 $$
 
-Therefore, the action of $\hat A$ on the product state $\ket{\Psi^{\text{S}}\_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}}$ is
+Therefore, the action of $\hat A$ on the product state $\ket{\Psi^{\text{S}}_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}}$ is
 
 $$
 \hat A \ket{\Psi^{\text{S}}_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}} = \sum_\beta \left[A_{\beta\alpha_1}\ket{\Psi^{\text{S}}_{\beta\alpha_{2}\cdots\alpha_{N}}} +A_{\beta\alpha_2}\ket{\Psi^{\text{S}}_{\alpha_1\beta\cdots\alpha_{N}}}+\cdots A_{\beta\alpha_N}\ket{\Psi^{\text{S}}_{\alpha_1\alpha_{2}\cdots\beta}}\right]
@@ -423,7 +423,7 @@ $$
 \end{align}
 $$
 
-The second quantized form of $\hat A$ allows us to find the matrix element $\braket{\mathbf{N}}{\hat A}{\mathbf{N'}}$ between product states made of orthonormal single particle states. This vanishes unless $\mathbf{N}$ and $\mathbf{N'}$ differ by the movement of of one particle. If $N\_\beta = N'\_\beta-1$ and $N\_\alpha = N'\_\alpha+1$ we have
+The second quantized form of $\hat A$ allows us to find the matrix element $\braket{\mathbf{N}}{\hat A}{\mathbf{N'}}$ between product states made of orthonormal single particle states. This vanishes unless $\mathbf{N}$ and $\mathbf{N'}$ differ by the movement of of one particle. If $N_\beta = N'_\beta-1$ and $N_\alpha = N'_\alpha+1$ we have
 
 $$
 \braket{\mathbf{N}}{\hat A}{\mathbf{N'}} = A_{\alpha\beta} \sqrt{N_\alpha N'_\beta}.
@@ -468,6 +468,8 @@ $$
 
 where in the second line we have integrated by parts, assuming that boundary terms at infinity vanish. The equality of $\eqref{2nd_quant_HPos}$ and $\eqref{2nd_quant_Nrep}$ may be seen by using $\eqref{2nd_quant_PsiDef}$.
 
+> Reminder: In the Heisenberg picture operators evolve according to $A(t)=e^{iHt}A(0)e^{-iHt}$, so $\dot A(t)=i[H,A]$.  
+
 The Heisenberg equation of motion corresponding to $\eqref{2nd_quant_HPos}$ is
 
 $$
@@ -482,8 +484,11 @@ $$
 
 which is just the time dependent Schrödinger equation!
 
-As a second example, consider the particle density. This is not something that one encounters very often in few particle quantum mechanics, but is obviously an observable of interest in a extended system of many particles. The single particle operator for the density at $\mathbf{x}$ is
+As a second example, consider the particle density. 
 
+> In the many body wavefunction language, this is $\rho(x)=\sum_i \delta(x-x_i)$. 
+
+This is not something that one encounters very often in few particle quantum mechanics, but is obviously an observable of interest in a extended system of many particles. The single particle operator for the density at $\mathbf{x}$ is
 $$
 	\label{2nd_quant_spDens}
 	\rho(\mathbf{x})\equiv\delta(\mathbf{x}-\br).
@@ -503,8 +508,11 @@ $$
 	\hat N=\int d\mathbf{x}\, \pdop(\mathbf{x})\pop(\mathbf{x})=\sum_{\alpha} \adop_{\alpha}\aop_{a}=\sum_{\alpha}\Nop_{\alpha},
 $$
 
-as it does! Another useful thing to know is the expectation value of the density on a basis state $\ket{N_{0},N_{1}\ldots}$
+as it does! 
 
+> Using the expansion of $\psi(x)$ in terms of $a_\alpha$ and using orthonormality of the $\varphi_a(\br)$. 
+
+Another useful thing to know is the expectation value of the density on a basis state $\ket{N_{0},N_{1}\ldots}$
 $$
 \label{2nd_quant_DensityExp}
 	\braket{N_{0},N_{1}\ldots}{ \hat\rho(\br)}{N_{0},N_{1}\ldots} = \sum_{\alpha} N_{\alpha}\left|\varphi_{\alpha}(\br)\right|^{2}.
@@ -529,6 +537,10 @@ $$
 \end{align}
 $$
 
+> Recall $\rho_\bq$ from the the elastic chain where we calculated $\braket{0}{\rho_{-\bq}\rho_\bq}{0}$.
+>
+> Sanity check: $\hat{\mathbf{j}}_0=\sum_{\bk} \frac{\bk}{m}\adop_{\bk}\aop_{\bk}=\sum_\bk \bv_\bk N_\bk$.
+
 The $\bq=0$ modes are just the total particle number and $\frac{1}{m}$ times the total momentum, respectively.
 
 In [Lecture 1]({{< ref "many-body-wavefunctions" >}}) we introduced the __single particle density matrix__
@@ -540,10 +552,11 @@ $$
 
 > Show that this can be written in terms of our field operators as
 >
->$$
->	\label{2nd_quant_SPDensity}
->	g(\br,\br')= \braket{\Psi}{\pdop(\br)\pop(\br')}{\Psi}
->$$
+> $$
+> \label{2nd_quant_SPDensity}
+> 	g(\br,\br')= \braket{\Psi}{\pdop(\br)\pop(\br')}{\Psi}
+> $$
+> As usual, try for product states first!
 
 Notice that $g(\br,\br)=\braket{\Psi}{\hat\rho(\br)}{\Psi}$. A slight generalization of the above calculation for the density gives for the state $\ket{\mathbf{N}}$
 
@@ -560,15 +573,21 @@ $$
 
 > Show that
 >
->$$
->\begin{aligned}
->	\label{2nd_quant_FermiDensityMatrix}
->	g(\br,\br')=\frac{1}{V}\sum_{|\bk|<k_{F}} e^{i\bk\cdot(\br'-\br)}&=\int_{|\bk|<k_{F}} \frac{d\bk}{(2\pi)^{3}}\,e^{i\bk\cdot(\br'-\br)}\nonumber\\
->	&=\frac{k_{F}^{3}}{2\pi^{2}}\left[\frac{\sin\left(k_{F}|\br'-\br|\right)}{(k_{F}|\br'-\br|)^{3}}-\frac{\cos\left(k_{F}|\br'-\br|\right)}{(k_{F}|\br'-\br|)^{2}}\right].
->\end{aligned}
->$$
+> $$
+> \begin{aligned}
+> 	\label{2nd_quant_FermiDensityMatrix}
+> 	g(\br,\br')=\frac{1}{V}\sum_{|\bk|<k_{F}} e^{i\bk\cdot(\br'-\br)}&=\int_{|\bk|<k_{F}} \frac{d\bk}{(2\pi)^{3}}\,e^{i\bk\cdot(\br'-\br)}\nonumber\\
+> 	&=\frac{k_{F}^{3}}{2\pi^{2}}\left[\frac{\sin\left(k_{F}|\br'-\br|\right)}{(k_{F}|\br'-\br|)^{3}}-\frac{\cos\left(k_{F}|\br'-\br|\right)}{(k_{F}|\br'-\br|)^{2}}\right].
+> \end{aligned}
+> $$
 >
->Note that $g(\br,\br)=\frac{k_{F}^{3}}{6\pi^{2}}=n$, as it should. Also, $g(\br,\br')\to 0$ as $\abs{\br-\br'}\to\infty$.
+> Note that $g(\br,\br)=\frac{k_{F}^{3}}{6\pi^{2}}=n$, as it should. Also, $g(\br,\br')\to 0$ as $\abs{\br-\br'}\to\infty$.
+>
+> Solution: substitute the expansion $\psi(\br)=\sum_\bk a_\bk \frac{e^{i\bk\cdot\br}}{\sqrt{V}}$.
+> $$
+> 	g(\br,\br')= \braket{\Psi}{\pdop(\br)\pop(\br')}{\Psi}
+> $$
+> 
 
 
 Contrast this calculation with the wavefunction version.
@@ -584,7 +603,7 @@ $$
 \hat B = \sum_{j<k} B_{jk}.
 $$
 
-(Note that $B_{jk}=B_{kj}$ for indistinguishable particles.) Similar to the single particle case, the action of $\hat B$ on a two particle product state $\ket{\varphi\_{\alpha}}\_1\ket{\varphi\_{\beta}}\_2$ can be expressed in terms of the matrix elements
+(Note that $B_{jk}=B_{kj}$ for indistinguishable particles.) Similar to the single particle case, the action of $\hat B$ on a two particle product state $\ket{\varphi_{\alpha}}_1\ket{\varphi_{\beta}}_2$ can be expressed in terms of the matrix elements
 
 $$
 B_{\alpha\beta,\gamma\delta} = \bra{\varphi_\alpha}_1\bra{\varphi_\beta}_2 B_{12} \ket{\varphi_\gamma}_1\ket{\varphi_\delta}_2.
