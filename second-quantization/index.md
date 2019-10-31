@@ -366,7 +366,7 @@ $$
 A\ket{\varphi_\alpha} = \sum_{\beta} \ket{\varphi_\beta}\braket{\varphi_\beta}{A}{\varphi_\alpha} = \sum_\beta A_{\beta\alpha}\ket{\varphi_\beta}
 $$
 
-Therefore, the action of $\hat A$ on the product state $\ket{\Psi^{\text{S}}\_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}}$ is
+Therefore, the action of $\hat A$ on the product state $\ket{\Psi^{\text{S}}_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}}$ is
 
 $$
 \hat A \ket{\Psi^{\text{S}}_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}} = \sum_\beta \left[A_{\beta\alpha_1}\ket{\Psi^{\text{S}}_{\beta\alpha_{2}\cdots\alpha_{N}}} +A_{\beta\alpha_2}\ket{\Psi^{\text{S}}_{\alpha_1\beta\cdots\alpha_{N}}}+\cdots A_{\beta\alpha_N}\ket{\Psi^{\text{S}}_{\alpha_1\alpha_{2}\cdots\beta}}\right]
@@ -402,7 +402,7 @@ $$
 \end{align}
 $$
 
-The second quantized form of $\hat A$ allows us to find the matrix element $\braket{\mathbf{N}}{\hat A}{\mathbf{N'}}$ between product states made of orthonormal single particle states. This vanishes unless $\mathbf{N}$ and $\mathbf{N'}$ differ by the movement of of one particle. If $N\_\beta = N'\_\beta-1$ and $N\_\alpha = N'\_\alpha+1$ we have
+The second quantized form of $\hat A$ allows us to find the matrix element $\braket{\mathbf{N}}{\hat A}{\mathbf{N'}}$ between product states made of orthonormal single particle states. This vanishes unless $\mathbf{N}$ and $\mathbf{N'}$ differ by the movement of of one particle. If $N_\beta = N'_\beta-1$ and $N_\alpha = N'_\alpha+1$ we have
 
 $$
 \braket{\mathbf{N}}{\hat A}{\mathbf{N'}} = A_{\alpha\beta} \sqrt{N_\alpha N'_\beta}.
@@ -433,7 +433,7 @@ $$
 \end{align}
 $$
 
-Evidently this is correct: the eigenstates of this operator are just the $N$ particle basis states $\ket{\Psi^{S/A}\_{\alpha_{1}\alpha_{2}\cdots \alpha_{N}}}$, with eigenvalues $\sum_\alpha N_\alpha E_\alpha$.
+Evidently this is correct: the eigenstates of this operator are just the $N$ particle basis states $\ket{\Psi^{S/A}_{\alpha_{1}\alpha_{2}\cdots \alpha_{N}}}$, with eigenvalues $\sum_\alpha N_\alpha E_\alpha$.
 
 Alternatively, we can look at things in the position basis. By recalling how the expectation value of the Hamiltonian looks in this basis, we come up with
 
@@ -546,9 +546,8 @@ $$
 >	&=\frac{k_{F}^{3}}{2\pi^{2}}\left[\frac{\sin\left(k_{F}|\br'-\br|\right)}{(k_{F}|\br'-\br|)^{3}}-\frac{\cos\left(k_{F}|\br'-\br|\right)}{(k_{F}|\br'-\br|)^{2}}\right].
 >\end{aligned}
 >$$
-
-Note that $g(\br,\br)=\frac{k_{F}^{3}}{6\pi^{2}}=n$, as it should. Also, $g(\br,\br')\to 0$ as $\abs{\br-\br'}\to\infty$.
-</p>
+>
+>Note that $g(\br,\br)=\frac{k_{F}^{3}}{6\pi^{2}}=n$, as it should. Also, $g(\br,\br')\to 0$ as $\abs{\br-\br'}\to\infty$.
 
 Contrast this calculation with the wavefunction version.
 
@@ -562,28 +561,32 @@ $$
 \hat B = \sum_{j<k} B_{jk}.
 $$
 
-(Note that $B_{jk}=B_{kj}$ for indistinguishable particles.) Similar to the single particle case, the action of $\hat B$ on a two particle product state $\ket{\varphi\_{\alpha}}\_1\ket{\varphi\_{\beta}}\_2$ can be expressed in terms of the matrix elements
+(Note that $B_{jk}=B_{kj}$ for indistinguishable particles.) Similar to the single particle case, the action of $\hat B$ on a two particle product state $\ket{\varphi_{\alpha}}_1\ket{\varphi_{\beta}}_2$ can be expressed in terms of the matrix elements
 
 $$
 B_{\alpha\beta,\gamma\delta} = \bra{\varphi_\alpha}_1\bra{\varphi_\beta}_2 B_{12} \ket{\varphi_\gamma}_1\ket{\varphi_\delta}_2.
 $$
 
-By a similar argument to that used in the case of one particle operators, we arrive at the second quantized representation
+The second quantized representation of $\hat B$ is
 
 $$
 \hat B = \frac{1}{2}\sum_{\alpha\beta\gamma\delta} B_{\alpha\beta,\gamma\delta}\adop_\alpha\adop_\beta\aop_\delta\aop_\gamma.
+\label{2part}
 $$
 
-(Note the order, which is important for fermions!) The analog of the formula $\eqref{A_Aab}$ for the matrix elements of a two particle operator between two product states is
+(Note the order, which is important for fermions!). 
 
+> Check that $\eqref{2part}$ has the correct action on product states, starting with two particles.
+
+The analog of the formula $\eqref{A_Aab}$ for the matrix elements of a two particle operator between two product states is
 $$
 \braket{\mathbf{N}}{\hat B}{\mathbf{N'}} = \sum_{\alpha\beta\gamma\delta} B_{\alpha\beta,\gamma\delta} \sqrt{N_\alpha N_\beta N'_\gamma N'_\delta}.
 \label{A_Babcd}
 $$
 
+> Strictly this formula is not correct when $\gamma=\delta$ or $\alpha=\beta$. In the former case $N'_\gamma N'_\delta \to N'_\gamma (N'_\gamma-1)$ and in the latter $N_\alpha N_\beta \to N_\alpha (N_\alpha-1)$.  In the thermodynamic limit these terms usually make a vanishing contribution when sums are replaced with integrals. There are exceptions: when a finite fraction of the particles are in one state (which occurs for Bose—Einstein condensates, for example). In those cases we end up neglecting $N_\alpha-1$ relative to $N_\alpha$, however!
 
 The most important two particle operator that we encounter is that describing interactions between pairs of particles, usually of the the form
-
 $$
 \hat H_\text{int.} = \sum_{j<k} U(\br_j-\br_k).
 $$
