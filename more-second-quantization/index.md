@@ -131,7 +131,7 @@ $$
 \braket{\mathbf{N}}{\adop_{\alpha}\adop_{\gamma}\aop_{\gamma}\aop_{\alpha}}{\mathbf{N}}&=N_{\alpha}N_{\gamma}\nonumber\\
 	\braket{\mathbf{N}}{\adop_{\alpha}\adop_{\gamma}\aop_{\alpha}\aop_{\gamma}}{\mathbf{N}}&=\pm N_{\alpha}N_{\gamma}\qquad\text{if }\alpha\neq\gamma,
 \end{align}
-$$  
+$$
 
 the $\pm$ corresponding to bosons and fermions respectively. Thus we have
 
@@ -159,7 +159,8 @@ $$
 
 which, in the case of the ground state of the Fermi gas, reproduces $\eqref{more_rho2evalFermi}$. We see that the correlation function vanishes as the separation $x-y\to 0$, because $g(x,x)=\langle\mathop{\rho(y)}\rangle$. This is, of course, another manifestation of the exclusion principle: it is not possible for two fermions to sit on top of each other. The scale of the 'hole' in the correlation function is of course set by the mean interparticle separation, or Fermi wavelength. Note also the decaying oscillations, indicating liquid-like correlations in the positions of the particles. These are sometimes known as __Friedel oscillations__.
 
-{{< figure src="1DFermiCorrelation.png" title="Correlation function $\rho_2(x,0)$ for the Fermi gas." numbered="true" lightbox="true" >}}
+<img src="1DFermiGasCorrelation.png" style="zoom:75%;" />
+_Correlation function $\rho_2(x,0)$ for the Fermi gas._
 
 For bosons the situation is very different. If $g(x,y)\to 0$ as $\abs{x-y}\to\infty$, the value of the correlation function as $\abs{x-y}\to 0$ is _twice_ the value at $\abs{x-y}\to\infty$. This characteristic behavior is often termed __bunching__: a pair of bosons is more likely to be found at two nearby points than at two distant points.
 
@@ -497,11 +498,13 @@ $$
 
 When written in this way, interaction Hamiltonians are sometimes associated with the graphical representation below, one of the ingredients of the __Feynman diagram__ technique for performing perturbation theory calculations in field theories. The incoming lines (arrows in) represent particles being removed (in momentum states $\bk_3$ and $\bk_4$) and the outgoing lines represent particles added (momenta $\bk_1$ and $\bk_2$). The wiggly line represents $\tilde V(\bq)$. The conservation of momentum at the vertices is a consequence of the translational invariance of the problem: the two integrations over $\br$ and $\br'$ give rise to two $\delta$-functions that perform this function.  
 
-{{< figure src="Vertex.png" title="Graphical representation of the interaction $\eqref{more_vertex}$." numbered="true" lightbox="true" >}}
+<img src="Vertex.png" style="zoom:33%;" />5
+_Graphical representation of the interaction $\eqref{more_vertex}$._
 
 As we've already discussed, the expectation value of $\eqref{more_vertex}$ in a product state of momentum eigenstates gives two terms, with different 'pairings' of creation operators with annihilation operators. We can represent these two terms graphically as shown below.
 
-{{< figure src="HFDiag.png" title="Graphical representation of the Hartree and Fock terms." numbered="true" lightbox="true" >}}
+<img src="HFDiag.png" style="zoom:25%;" />
+_Graphical representation of the Hartree and Fock terms._
 
 Evaluating the two contributions in terms of the occupation numbers gives
 
