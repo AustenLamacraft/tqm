@@ -14,6 +14,8 @@ menu:
 
 $$
 \nonumber
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cH}{\mathcal{H}}
 \newcommand{\cN}{\mathcal{N}}
 \newcommand{\br}{\mathbf{r}}
 \newcommand{\bp}{\mathbf{p}}
@@ -283,7 +285,7 @@ This analysis applies only at small $t/U$. What happens in the regions where the
 
 Note the diminishing size of the Mott lobes, a consequence of the enhanced hopping in the effective tight binding models $\eqref{latt_tbp}$ and $\eqref{latt_tbh}$ as we go to higher filling.
 
-{{< figure src="mott_cake.png" title="With a trap potential as well as a lattice, moving radially outwards corresponds to moving down a vertical slice through the phase diagram, producing this distinctive 'wedding cake' structure. Successive Mott states are separated by superfluid regions. Source: Cheng Chin, University of Chicago." numbered="true" lightbox="true" >}}
+{{< figure src="mott_state_cake.png" title="With a trap potential as well as a lattice, moving radially outwards corresponds to moving down a vertical slice through the phase diagram, producing this distinctive 'wedding cake' structure. Successive Mott states are separated by superfluid regions. Source: Cheng Chin, University of Chicago." numbered="true" lightbox="true" >}}
 
 ## Fermi Hubbard Model
 
