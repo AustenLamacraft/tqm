@@ -294,7 +294,7 @@ $$
 >$$
 >\adop_{\bk_1}\adop_{\bk_2}\ket{\text{VAC}} \leftrightarrow \frac{1}{\sqrt{2 L^6}}\left[e^{i(\bk_1\cdot\br_1+\bk_2\cdot\br_2)}+e^{i(\bk_1\cdot\br_2+\bk_2\cdot\br_1)}\right]
 >$$
->So the above state is a function $\br_1-\br_2$ only. Sum over $\bk$ is taking the Fourier transform of $c_\bk$. $c_\bk$ is the Fourier transform of the _pair wavefunction_. 
+>So the above state is a function $\br_1-\br_2$ only. Sum over $\bk$ is taking the Fourier transform of $c_\bk$. $c_\bk$ is the Fourier transform of the _pair wavefunction_.
 
 
 ### The Case of Fermions
@@ -343,7 +343,7 @@ $$
 
 > Check this.
 >
-> The difference is that now $\aop(\phi)\adop(\psi)=-\adop(\psi)\aop(\phi) + \{a(\phi),\adop(\psi\}$ 
+> The difference is that now $\aop(\phi)\adop(\psi)=-\adop(\psi)\aop(\phi) + \{a(\phi),\adop(\psi\}$
 
 Introducing field operators in the position basis as before leads to a system of operators satisfying the anticommutation relations
 
@@ -360,8 +360,8 @@ $$
 
 > Think about the form that the operators $\aop_\alpha$, $\adop_\alpha$ take in the basis of product states. Start with one state $\varphi_\alpha$. What's the matrix form of $\adop_\alpha$ in terms of states $\ket{N_\alpha}$? Now consider two states. Can you see how the commutation and anticommutation relations can be satisfied?
 >
-> In the occupation basis, we know that $\adop \ket{N}=\sqrt{N+1}\ket{N+1}$. $\aop\ket{N}=\sqrt{N}\ket{N-1}$. 
-> 
+> In the occupation basis, we know that $\adop \ket{N}=\sqrt{N+1}\ket{N+1}$. $\aop\ket{N}=\sqrt{N}\ket{N-1}$.
+>
 > <img src="image-20191029113213461.jpg" alt="image-20191029113213461" style="zoom:33%;" />
 
 ## Representation of Operators
@@ -454,7 +454,7 @@ $$
 \end{align}
 $$
 
-Evidently this is correct: the eigenstates of this operator are just the $N$ particle basis states $\ket{\Psi^{S/A}\_{\alpha_{1}\alpha_{2}\cdots \alpha_{N}}}$, with eigenvalues $\sum_\alpha N_\alpha E_\alpha$.
+Evidently this is correct: the eigenstates of this operator are just the $N$ particle basis states $\ket{\Psi^{S/A}_{\alpha_{1}\alpha_{2}\cdots \alpha_{N}}}$, with eigenvalues $\sum_\alpha N_\alpha E_\alpha$.
 
 Alternatively, we can look at things in the position basis. By recalling how the expectation value of the Hamiltonian looks in this basis, we come up with
 
@@ -484,9 +484,9 @@ $$
 
 which is just the time dependent Schrödinger equation!
 
-As a second example, consider the particle density. 
+As a second example, consider the particle density.
 
-> In the many body wavefunction language, this is $\rho(x)=\sum_i \delta(x-x_i)$. 
+> In the many body wavefunction language, this is $\rho(x)=\sum_i \delta(x-x_i)$.
 
 This is not something that one encounters very often in few particle quantum mechanics, but is obviously an observable of interest in a extended system of many particles. The single particle operator for the density at $\mathbf{x}$ is
 $$
@@ -508,9 +508,9 @@ $$
 	\hat N=\int d\mathbf{x}\, \pdop(\mathbf{x})\pop(\mathbf{x})=\sum_{\alpha} \adop_{\alpha}\aop_{a}=\sum_{\alpha}\Nop_{\alpha},
 $$
 
-as it does! 
+as it does!
 
-> Using the expansion of $\psi(x)$ in terms of $a_\alpha$ and using orthonormality of the $\varphi_a(\br)$. 
+> Using the expansion of $\psi(x)$ in terms of $a_\alpha$ and using orthonormality of the $\varphi_a(\br)$.
 
 Another useful thing to know is the expectation value of the density on a basis state $\ket{N_{0},N_{1}\ldots}$
 $$
@@ -587,7 +587,7 @@ $$
 > $$
 > 	g(\br,\br')= \braket{\Psi}{\pdop(\br)\pop(\br')}{\Psi}
 > $$
-> 
+>
 
 
 Contrast this calculation with the wavefunction version.
@@ -609,22 +609,26 @@ $$
 B_{\alpha\beta,\gamma\delta} = \bra{\varphi_\alpha}_1\bra{\varphi_\beta}_2 B_{12} \ket{\varphi_\gamma}_1\ket{\varphi_\delta}_2.
 $$
 
-By a similar argument to that used in the case of one particle operators, we arrive at the second quantized representation
+The second quantized representation of $\hat B$ is
 
 $$
 \hat B = \frac{1}{2}\sum_{\alpha\beta\gamma\delta} B_{\alpha\beta,\gamma\delta}\adop_\alpha\adop_\beta\aop_\delta\aop_\gamma.
+\label{2part}
 $$
 
-(Note the order, which is important for fermions!) The analog of the formula $\eqref{A_Aab}$ for the matrix elements of a two particle operator between two product states is
+(Note the order, which is important for fermions!).
 
+> Check that $\eqref{2part}$ has the correct action on product states, starting with two particles.
+
+The analog of the formula $\eqref{A_Aab}$ for the matrix elements of a two particle operator between two product states is
 $$
 \braket{\mathbf{N}}{\hat B}{\mathbf{N'}} = \sum_{\alpha\beta\gamma\delta} B_{\alpha\beta,\gamma\delta} \sqrt{N_\alpha N_\beta N'_\gamma N'_\delta}.
 \label{A_Babcd}
 $$
 
+> Strictly this formula is not correct when $\gamma=\delta$ or $\alpha=\beta$. In the former case $N'_\gamma N'_\delta \to N'_\gamma (N'_\gamma-1)$ and in the latter $N_\alpha N_\beta \to N_\alpha (N_\alpha-1)$.  In the thermodynamic limit these terms usually make a vanishing contribution when sums are replaced with integrals. There are exceptions: when a finite fraction of the particles are in one state (which occurs for Bose—Einstein condensates, for example). In those cases we end up neglecting $N_\alpha-1$ relative to $N_\alpha$, however!
 
 The most important two particle operator that we encounter is that describing interactions between pairs of particles, usually of the the form
-
 $$
 \hat H_\text{int.} = \sum_{j<k} U(\br_j-\br_k).
 $$
