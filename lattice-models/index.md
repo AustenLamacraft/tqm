@@ -77,9 +77,13 @@ H_t = -t \sum_{j} \left[\adop_j\aop_{j+1}+\adop_{j+1}\aop_j\right],
 \label{latt_tb}
 $$
 
+> In first quantized notation $H_t=-t\sum_j \ket{j}\bra{j+1}+\ket{j+1}\bra{j}$. 
+
 which will play the role of kinetic energy in our models. In fact, we've already met such a description, when we described a magnon propagating in a spin chain in [Lecture 4]({{< ref "spin-models" >}}).
 
 ### Physical Motivation
+
+> For information only!
 
 This subsection is to shed some light on the origin of $\eqref{latt_tb}$. Feel free to jump to the conclusion.
 
@@ -177,7 +181,7 @@ $$
 E(\mathbf{N}) = \frac{U}{2} \sum_j N_j(N_j-1).
 $$
 
-To find the ground state at fixed particle number, we should try filling the $N_\text{sites}$ sites as uniformly as possible. This is easy if the filling $\nu \equiv N_{\text{particles}}/N_\text{sites}$ is integer. Otherwise, denote by $\lfloor \nu\rfloor$ the largest integer less than $\nu$, and $\lceil \nu\rceil$ the smallest integer larger than $\nu$. Then the number of sites with occupancy $\lceil \nu\rceil$ is $N\_\text{sites}\left(\nu - \lfloor \nu\rfloor\right)$. The ground state energy has a piecewise linear dependence on $\nu$
+To find the ground state at fixed particle number, we should try filling the $N_\text{sites}$ sites as uniformly as possible. This is easy if the filling $\nu \equiv N_{\text{particles}}/N_\text{sites}$ is integer. Otherwise, denote by $\lfloor \nu\rfloor$ the largest integer less than $\nu$, and $\lceil \nu\rceil$ the smallest integer larger than $\nu$. Then the number of sites with occupancy $\lceil \nu\rceil$ is $N_\text{sites}\left(\nu - \lfloor \nu\rfloor\right)$. The ground state energy has a piecewise linear dependence on $\nu$
 
 $$
 \frac{E_0}{N_\text{sites}} = \left(\nu - \lfloor \nu\rfloor\right)e(\lceil \nu\rceil) + \left(\lceil \nu\rceil - \nu\right)e(\lfloor \nu\rfloor),
@@ -222,8 +226,9 @@ $$
 \braket{j}{H_t}{k} = -t(N+1).
 $$
 
-Thus within the ground state multiplet $H_t$ corresponds to a tight binding model
+> The factor $N+1$ originates in the property $\adop_j\ket{N_j}=\sqrt{N_j+1}\ket{N_j+1}$. 
 
+Thus within the ground state multiplet $H_t$ corresponds to a tight binding model
 $$
 H_t\rvert_{+} = -t(N+1) \sum_{\langle j\,k\rangle} \left[\ket{j,+}\bra{k,+}+\text{h.c.}\right].
 \label{latt_tbp}

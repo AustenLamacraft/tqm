@@ -295,7 +295,12 @@ $$
 \end{align}
 $$
 
+> Note that the fluctuations are of the same order as the total number of particles, because the few states we have are __macroscopically occupied__.
+
 We see that the second line contains interference fringes, with the same spacing as before. The correlation function gives the relative probability of finding an atom at $\br'$ if there is one at $\br$. We conclude that in each measurement of the density, fringes are present but with a phase that varies between measurements, even if the samples are identically prepared.
+
+<img src="AndrewsFringes.png" style="zoom:100%;" />
+_Fringes observed by interfering two Bose condensates (Source: [Andrews _et al._](https://science.sciencemag.org/content/275/5300/637))_
 
 The rather surprising implication is that predictions for measured quantities for a system in a Fock state are the same as in a relative phase state, but with a subsequent averaging over the phase.
 
@@ -364,8 +369,9 @@ $$
 \mathbf{\rho}(\br) = \tr\left[g(\br,\br)\right],\quad \mathbf{s}(\br) = \frac{1}{2}\tr\left[\boldsymbol{\sigma}g(\br,\br)\right].
 $$
 
-(I've dropped the subscript from $\rho_1(\br)$ here.) An spin-independent interaction potential is described by a Hamiltonian of the form
+> $\boldsymbol{\sigma}=(\sigma_x,\sigma_y,\sigma_z)$.
 
+(I've dropped the subscript from $\rho_1(\br)$ here.) An spin-independent interaction potential is described by a Hamiltonian of the form
 $$
 \hat H_\text{int.} = \frac{1}{2}\sum_{\sigma_1,\sigma_2}\int d\br_1 d\br_2\, U(\br_1-\br_2)\pdop_{\sigma_1}(\br_1)\pdop_{\sigma_2}(\br_2)\pop_{\sigma_2}(\br_2)\pop_{\sigma_1}(\br_1).
 $$
@@ -398,7 +404,7 @@ Suppose we had a $\delta$-function interaction $U(\br)=U_0 \delta(\br)$. Then th
 
 $$
 \begin{align}
-E_{\text{Fock}} =-\frac{V_0}{4} \int d\br\, \rho(\br)^2-V_0\int d\br\, \mathbf{s}(\br)\cdot\mathbf{s}(\br)
+E_{\text{Fock}} =-\frac{U_0}{4} \int d\br\, \rho(\br)^2-U_0\int d\br\, \mathbf{s}(\br)\cdot\mathbf{s}(\br)
 \end{align}
 $$
 
@@ -428,9 +434,9 @@ Polarizing the spins in a Fermi gas is not without cost (otherwise everything wo
 
 $$
 \begin{align}
-N = \sum_{|\bk|<k_\text{F}}&\longrightarrow L^3 \int_{|\bk|<k_\text{F}} \frac{d\bk}{(2\pi)^3} = \frac{k_\text{F}^3}{6\pi^2} \\
+N = \sum_{|\bk|<k_\text{F}}&\longrightarrow L^3 \int_{|\bk|<k_\text{F}} \frac{d\bk}{(2\pi)^3} = \frac{k_\text{F}^3}{6\pi^2}L^3 \\
 E_\text{kin} = \sum_{|\bk|<k_\text{F}} \frac{\bk^2}{2m} &\longrightarrow L^3 \int_{|\bk|<k_\text{F}} \frac{d\bk}{(2\pi)^3} \frac{\bk^2}{2m}\\
- &= \frac{k_\text{F}^5}{20\pi^2 m} = L^3 \frac{3}{10m}(6\pi^2)^{2/3} n^{5/3},
+ &= L^3\frac{k_\text{F}^5}{20\pi^2 m} = L^3 \frac{3}{10m}(6\pi^2)^{2/3} n^{5/3},
 \end{align}
 $$
 
