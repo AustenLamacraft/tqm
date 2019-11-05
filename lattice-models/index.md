@@ -175,7 +175,7 @@ $$
 E(\mathbf{N}) = \frac{U}{2} \sum_j N_j(N_j-1).
 $$
 
-To find the ground state at fixed particle number, we should try filling the $N_\text{sites}$ sites as uniformly as possible. This is easy if the filling $\nu \equiv N_{\text{particles}}/N_\text{sites}$ is integer. Otherwise, denote by $\lfloor \nu\rfloor$ the largest integer less than $\nu$, and $\lceil \nu\rceil$ the smallest integer larger than $\nu$. Then the number of sites with occupancy $\lceil \nu\rceil$ is $N\_\text{sites}\left(\nu - \lfloor \nu\rfloor\right)$. The ground state energy has a piecewise linear dependence on $\nu$
+To find the ground state at fixed particle number, we should try filling the $N_\text{sites}$ sites as uniformly as possible. This is easy if the filling $\nu \equiv N_{\text{particles}}/N_\text{sites}$ is integer. Otherwise, denote by $\lfloor \nu\rfloor$ the largest integer less than $\nu$, and $\lceil \nu\rceil$ the smallest integer larger than $\nu$. Then the number of sites with occupancy $\lceil \nu\rceil$ is $N_\text{sites}\left(\nu - \lfloor \nu\rfloor\right)$. The ground state energy has a piecewise linear dependence on $\nu$
 
 $$
 \frac{E_0}{N_\text{sites}} = \left(\nu - \lfloor \nu\rfloor\right)e(\lceil \nu\rceil) + \left(\lceil \nu\rceil - \nu\right)e(\lfloor \nu\rfloor),
@@ -263,7 +263,7 @@ $$
 \frac{\cE^{(N)}_\mu}{N_\text{sites}} = \frac{U}{2}N(N-1)-\mu N.
 $$
 
-$\cE^{(N)}\_\mu$ and $\cE^{(N+1)}\_\mu$ become degenerate when $\mu=UN$ for $t=0$. Let's compare this with the ground state with one extra particle on top of the $N$ Mott state. This state corresponds to a particle at the bottom of the tight binding band. From $\eqref{latt_pband}$, we see that the ground state energy of the tight binding model is $-2td(N+1)$. Together with extra energy of interaction we have overall
+$\cE^{(N)}_\mu$ and $\cE^{(N+1)}_\mu$ become degenerate when $\mu=UN$ for $t=0$. Let's compare this with the ground state with one extra particle on top of the $N$ Mott state. This state corresponds to a particle at the bottom of the tight binding band. From $\eqref{latt_pband}$, we see that the ground state energy of the tight binding model is $-2td(N+1)$. Together with extra energy of interaction we have overall
 
 $$
 \cE^{(N)}_\mu + UN - \mu -2dt(N+1).

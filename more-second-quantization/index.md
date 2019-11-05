@@ -292,6 +292,8 @@ $$
 
 We see that the second line contains interference fringes, with the same spacing as before. The correlation function gives the relative probability of finding an atom at $\br'$ if there is one at $\br$. We conclude that in each measurement of the density, fringes are present but with a phase that varies between measurements, even if the samples are identically prepared.
 
+{{< figure src="AndrewsFringes.png" title="Fringes observed by interfering two Bose condensates (Source: [Andrews _et al._](https://science.sciencemag.org/content/275/5300/637))." numbered="true" lightbox="true" >}}
+
 The rather surprising implication is that predictions for measured quantities for a system in a Fock state are the same as in a relative phase state, but with a subsequent averaging over the phase.
 
 
