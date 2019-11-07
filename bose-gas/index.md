@@ -256,7 +256,9 @@ Kinetic Energy | Magnetostatic Energy
 
 Vortices with $\abs{\ell}>1$ are generally unstable, and will break into multiple vortices of winding $\ell=\pm 1$. Like vortices repel each other, and can form spectacular __vortex lattices__, akin to crystals.
 
-{{< figure src="3dLattices.jpg" title="Vortex lattice in a Bose--Einstein condensate of Sodium atoms. Source: [Ketterle group, MIT](http://cua.mit.edu/ketterle_group/)." numbered="true" lightbox="true" >}}
+<img src="3dLattices.jpg" style="zoom:45%;" />
+
+_Vortex lattice in a Bose--Einstein condensate of Sodium atoms. Source: [Ketterle group, MIT](http://cua.mit.edu/ketterle_group/)._
 
 Vortices are one manifestation of the phenomenon of __superfluidity__: persistent flow without resistance. The true ground state of the system does not have such flows, of course, so these flows are only _metastable_ (as long as rotational symmetry is broken, so that angular momentum is not conserved). In the case of the vortex, it can only decay by its core leaving the system. An even simpler example is provided by currents flowing in a ring, a situation studied in [Problem Set 2]({{ site.baseurl }}/problems/Problems2/), which illustrates the important role played by repulsive interactions.
 
@@ -488,4 +490,4 @@ In the previous lecture we met another situation where the depletion can be incr
 References
 ----------
 
-{% bibliography --cited %}
+{% bibliography --cited %}f
