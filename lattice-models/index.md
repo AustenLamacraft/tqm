@@ -1,4 +1,6 @@
 ---
+
+
 title: Lattice Models and Strong Correlations
 summary: Tight binding models. Hubbard models and the Mott transition. Superexchange.
 author: Austen Lamacraft
@@ -299,8 +301,9 @@ _With a trap potential as well as a lattice, moving radially outwards correspond
 
 ## Fermi Hubbard Model
 
-Now we turn to the case of fermions, the context in which the Hubbard model was originally introduced. Allowing for spin, the model is usually written.
+> Hubbard model for fermions _without spin_ would be noninteracting! 
 
+Now we turn to the case of fermions, the context in which the Hubbard model was originally introduced. Allowing for spin, the model is usually written.
 $$
 H=-t \sum_{\substack{\langle j\,k\rangle\\ s=\uparrow,\downarrow}}  \left[\adop_{j,s}\aop_{k,s}+\adop_{k,s}\aop_{j,s}\right] + U\sum_j N_\uparrow N_\downarrow,
 $$
@@ -311,7 +314,13 @@ Relatively little is known _for sure_ about the Hubbard model, except in 1D, whe
 
 ### Discussion: Two Sites, Large $U/t$
 
-As in the Bose case, we start by thinking about $U/t\to\infty$. In the limit we get Mott states: only three this time, corresponding to 0, 1, or 2 particles per site. When we have two particles on a site, they must be in a spin singlet. But when we have only 1 per site (We call this __half filling__), we can have either spin. Thus the $\nu=1$ Mott state is _massively_ degenerate, with a ground state multiplet consisting of $2^{N_\text{sites}}$ possible spin configurations. $U/t\to\infty$ is therefore a rather singular limit, and to understand the true ground state at large $U$ we'll need to work bit harder.
+As in the Bose case, we start by thinking about $U/t\to\infty$. In the limit we get Mott states: only three this time, corresponding to 0, 1, or 2 particles per site. When we have two particles on a site, they must be in a spin singlet. 
+
+> By construction: $\adop_{j,\uparrow}\adop_{j,\downarrow}\ket{\text{VAC}}$ is a spin singlet (by antisymmetry).
+>
+> Also, with filling 2 no hopping is possible.
+
+But when we have only 1 per site (We call this __half filling__), we can have either spin. Thus the $\nu=1$ Mott state is _massively_ degenerate, with a ground state multiplet consisting of $2^{N_\text{sites}}$ possible spin configurations. $U/t\to\infty$ is therefore a rather singular limit, and to understand the true ground state at large $U$ we'll need to work bit harder.
 
 Start by thinking about two sites and two particles. There are 6 states altogether in the Hilbert space.
 
@@ -325,6 +334,59 @@ $$
 The top two states have energy $U$ when $t=0$; the bottom 4 have energy 0.
 
 >[Try this before continuing!] How does the degeneracy of these states get lifted at finite $t$? Try writing down the Hamiltonian restricted to these states.
+>
+>Need to find the matrix elements between the 6 states. Which matrix elements are nonzero?
+>$$
+>\begin{aligned}
+>\ket{1}=\adop_{1,\uparrow}\adop_{1,\downarrow} =\ket{\text{VAC}},\quad \ket{2}=\adop_{2,\uparrow}\adop_{2,\downarrow} \ket{\text{VAC}}\\
+>\ket{3}= \adop_{1,\uparrow}\adop_{2,\downarrow} \ket{\text{VAC}}\\
+>\ket{4}= \adop_{1,\downarrow}\adop_{2,\uparrow} \ket{\text{VAC}}\\
+>\ket{5}= \adop_{1,\uparrow}\adop_{2,\uparrow} \ket{\text{VAC}}\\
+>\ket{6}= \adop_{1,\downarrow}\adop_{2,\downarrow} \ket{\text{VAC}}\\
+>\end{aligned}
+>$$
+>Want matrix element of $H_t = -t\sum_s\left[\adop_{1,s}\aop_{2,s}+\adop_{2,s}\aop_{1,s}\right]$. Because of the on-site spin singlet, $\braket{j}{H_t}{5\text{ or } 6}=0$. 
+>
+><img src="image-20191107113135686.jpg" alt="image-20191107113135686" style="zoom:25%;" />
+>$$
+>\braket{j}{H_t}{k}=-t\begin{pmatrix}
+>0 & 0 & 1 & -1\\
+>0 & 0 & 1 & -1\\
+>1 & 1 & 0 & 0\\
+>-1 & -1 & 0 & 0\\
+>\end{pmatrix}
+>$$
+>
+>For the overall Hamiltonian
+>$$
+>\braket{j}{H}{k}=\begin{pmatrix}U & 0 & -t & t\\0 & U & -t & t\\-t & -t & 0 & 0\\t & t & 0 & 0\\\end{pmatrix}
+>$$
+>The minus sign means that only the singlet combination $\ket{S}=(\ket{3}-\ket{4})/\sqrt{2}$ couples: the triplet state $\ket{T}=(\ket{3}+\ket{4})/\sqrt{2}$ decouples from $\ket{1}$ and $\ket{2}$. Moving to the basis $\ket{1}, \ket{2}, \ket{S},\ket{T}$ gives.
+>$$
+>\braket{j}{H}{k}=\begin{pmatrix}
+>U & 0 & t & 0\\
+>0 & U & t & 0\\
+>t & t & 0 & 0\\
+>0 & 0 & 0 & 0\\ 
+>\end{pmatrix}
+>$$
+>
+>Next, we see that only the combination $\ket{E}=(\ket{1}+\ket{2})/\sqrt{2}$ couples to the triplet. The odd combination $\ket{O}=(\ket{1}-\ket{2})/\sqrt{2}$ decouples. In this way we end up with a $2\times 2$ problem in the $\ket{E},\ket{S}$ subspace
+>$$
+>\begin{pmatrix}
+>\braket{E}{H_t}{E} & \braket{E}{H_t}{S}\\
+>\braket{S}{H_t}{E} & \braket{S}{H_t}{S}\\
+>\end{pmatrix}=
+>\begin{pmatrix}
+>U & t\\
+>t & 0
+>\end{pmatrix}
+>$$
+>The eigenvalues are $U/2\pm\sqrt{U^2/4+t^2}$.
+>
+><img src="image-20191107115036646.jpg" alt="image-20191107115036646" style="zoom:25%;" />
+>
+>
 
 ### Effective Hamiltonian
 
@@ -392,8 +454,9 @@ $$
 H_\text{eff} = -\frac{V^{}V^\dagger}{U} = -\frac{t^2}{U} \sum_{\substack{\langle j\,k\rangle\\s,s'}} \adop_{j,s}\aop_{k,s} \adop_{k,s'}\aop_{j,s'}.
 $$
 
-We can write this in a more familiar way by first reordering the operators (not forgetting the anticommutation relations!)
+> By inspection this Hamiltonian preserves $H_\text{eff}\ket{\Psi}$ in the Mott subspace. 
 
+We can write this in a more familiar way by first reordering the operators (not forgetting the anticommutation relations!)
 $$
  \adop_{j,s}\aop_{k,s} \adop_{k,s'}\aop_{j,s'} = -\adop_{j,s}\aop_{j,s'}\adop_{k,s'}\aop_{k,s} + \delta_{s^{}s'}\adop_{j,s}\aop_{j,s'},
 $$
@@ -415,6 +478,8 @@ with $J=\frac{2t^2}{U}$ and
 $$
 \mathbf{s}_j=\frac{1}{2}\sum_{s,s'}\adop_{j,s}\boldsymbol{\sigma}_{s^{}s'}\aop_{j,s'}.
 $$
+
+> Recall in our discussion of HF theory we had the spin density $\tr[\boldsymbol{\sigma}\psi^\dagger(\br)\psi(\br)]/2$.  
 
 The effective Hamiltonian is nothing but the spin-1/2 antiferromagnetic Heisenberg model!
 
