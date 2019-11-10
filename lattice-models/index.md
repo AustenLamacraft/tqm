@@ -1,6 +1,4 @@
 ---
-
-
 title: Lattice Models and Strong Correlations
 summary: Tight binding models. Hubbard models and the Mott transition. Superexchange.
 author: Austen Lamacraft
@@ -301,7 +299,7 @@ _With a trap potential as well as a lattice, moving radially outwards correspond
 
 ## Fermi Hubbard Model
 
-> Hubbard model for fermions _without spin_ would be noninteracting! 
+> Hubbard model for fermions _without spin_ would be noninteracting!
 
 Now we turn to the case of fermions, the context in which the Hubbard model was originally introduced. Allowing for spin, the model is usually written.
 $$
@@ -314,7 +312,7 @@ Relatively little is known _for sure_ about the Hubbard model, except in 1D, whe
 
 ### Discussion: Two Sites, Large $U/t$
 
-As in the Bose case, we start by thinking about $U/t\to\infty$. In the limit we get Mott states: only three this time, corresponding to 0, 1, or 2 particles per site. When we have two particles on a site, they must be in a spin singlet. 
+As in the Bose case, we start by thinking about $U/t\to\infty$. In the limit we get Mott states: only three this time, corresponding to 0, 1, or 2 particles per site. When we have two particles on a site, they must be in a spin singlet.
 
 > By construction: $\adop_{j,\uparrow}\adop_{j,\downarrow}\ket{\text{VAC}}$ is a spin singlet (by antisymmetry).
 >
@@ -345,7 +343,7 @@ The top two states have energy $U$ when $t=0$; the bottom 4 have energy 0.
 >\ket{6}= \adop_{1,\downarrow}\adop_{2,\downarrow} \ket{\text{VAC}}\\
 >\end{aligned}
 >$$
->Want matrix element of $H_t = -t\sum_s\left[\adop_{1,s}\aop_{2,s}+\adop_{2,s}\aop_{1,s}\right]$. Because of the on-site spin singlet, $\braket{j}{H_t}{5\text{ or } 6}=0$. 
+>Want matrix element of $H_t = -t\sum_s\left[\adop_{1,s}\aop_{2,s}+\adop_{2,s}\aop_{1,s}\right]$. Because of the on-site spin singlet, $\braket{j}{H_t}{5\text{ or } 6}=0$.
 >
 ><img src="image-20191107113135686.jpg" alt="image-20191107113135686" style="zoom:25%;" />
 >$$
@@ -367,7 +365,7 @@ The top two states have energy $U$ when $t=0$; the bottom 4 have energy 0.
 >U & 0 & t & 0\\
 >0 & U & t & 0\\
 >t & t & 0 & 0\\
->0 & 0 & 0 & 0\\ 
+>0 & 0 & 0 & 0\\
 >\end{pmatrix}
 >$$
 >
@@ -454,7 +452,7 @@ $$
 H_\text{eff} = -\frac{V^{}V^\dagger}{U} = -\frac{t^2}{U} \sum_{\substack{\langle j\,k\rangle\\s,s'}} \adop_{j,s}\aop_{k,s} \adop_{k,s'}\aop_{j,s'}.
 $$
 
-> By inspection this Hamiltonian preserves $H_\text{eff}\ket{\Psi}$ in the Mott subspace. 
+> By inspection this Hamiltonian preserves $H_\text{eff}\ket{\Psi}$ in the Mott subspace.
 
 We can write this in a more familiar way by first reordering the operators (not forgetting the anticommutation relations!)
 $$
