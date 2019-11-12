@@ -104,8 +104,15 @@ $$
 \end{align}
 $$
 
-For large $N$, we can neglect the difference between $N$ and $N+1$. Now we want to extremize this functional with respect to $\varphi_0(\br)$, keeping $\varphi_{0}(\br)$ normalized. To do this we introduce a Lagrange multiplier $\mu N$ (the factor of $N$ will become clear shortly) and extremize the functional
+> Can obtain this by (for example) use the formula
+> $$
+> \psi(X)\ket{\Psi} \text{ corresponds to } \Psi(X,x_1,\ldots x_N)
+> $$
+> Alternatively, use the basic commutation relation $\left[\psi(x),\adop(\varphi_0)\right]=\varphi_0(x)$
+>
+> Note that the fact that we end up with $|\varphi|^{2p}$ is a consequence of particle conservation (same number of $\adop$ and $\aop$ operators)
 
+For large $N$, we can neglect the difference between $N$ and $N+1$. Now we want to extremize this functional with respect to $\varphi_0(\br)$, keeping $\varphi_{0}(\br)$ normalized. To do this we introduce a Lagrange multiplier $\mu N$ (the factor of $N$ will become clear shortly) and extremize the functional
 $$
 \braket{\Psi}{H}{\Psi} - \mu N \int d\br |\varphi_{0}(\br)|^{2}.
 $$
@@ -132,8 +139,7 @@ $$
 
 so that $\mu$ is identified with the chemical potential.
 
-A fundamental effect of the nonlinearity of the GP equation is that there exists a length scale set by the
-typical value of $|\varphi(\br)|^2\sim n$ and the interaction strength
+A fundamental effect of the nonlinearity of the GP equation is that there exists a length scale set by the typical value of $|\varphi(\br)|^2\sim n$ and the interaction strength
 
 $$
 \xi\equiv \frac{1}{\sqrt{2m n U_0}}
@@ -145,15 +151,19 @@ of a localized potential of scale $\ll \xi$. It is a fundamental length scale in
 > Show that near a hard wall, where the condensate wavefunction goes to zero, $\varphi(\br)$ is given by
 >
 > $$
->  \varphi(x)=\varphi_{\infty}\tanh \frac{x}{\sqrt{2}\xi}
+> \varphi(x)=\varphi_{\infty}\tanh \frac{x}{\sqrt{2}\xi}
 > $$
 >
 > where $x$ is the distance from the wall, and $\varphi_{\infty}=\sqrt{n_{\infty}}$ is fixed by the density of the condensate far from the wall.
+>
+> <img src="image-20191112113437158.jpg" alt="image-20191112113437158" style="zoom:33%;" />
 
 ### Some Observables
 
 With the ansatz $\eqref{bose_GPW}$ for the wavefunction, we can obtain various observables without
 difficulty. The density and current density are
+
+> Recall that $\rho(\br)=\pdop(\br)\pop(\br)$. 
 
 $$
 \begin{align}
@@ -207,6 +217,8 @@ $$
 
 shows that this is a truly _quantum_ phenomenon.
 
+<img src="image-20191112113537002.jpg" alt="image-20191112113537002" style="zoom:33%;" />
+
 A non-zero winding of the phase requires that $\rho(\br)$ vanishes at a point (in two dimensions) or on a line (in three). Let's see how such configurations are described by the Gross--Pitaevskii theory.
 
 We are going to look for 2D solutions where the phase winds $\ell$ times as we encircle the origin
@@ -225,6 +237,8 @@ $$
 We take $\mu = U_0 n$ to get the behaviour $\eqref{bose_vortex}$ at infinity.
 
 > Without finding the solution explicitly, show that $f(s)\sim s^\ell$ for small $s$, and $f(s\to\infty) \to 1$.
+>
+> <img src="image-20191112113626002.jpg" alt="image-20191112113626002" style="zoom:33%;" />
 
 The region of suppressed density, of characteristic size $\xi$, is called the __vortex core__. In three dimensions, the vortex core is a line.
 
@@ -234,8 +248,9 @@ $$
 \Delta E = \int d\br \left[\frac{n^2}{2m\xi^2}(f')^2+\frac{U}{2}n^2 \left(f^2-1\right)^2\right] + \frac{n}{2m}\int d\br\, f^2(\nabla\theta)^2.
 $$
 
-The first integral is finite, and arises purely from the departure of the density away from its bulk value. The second represents the contribution to the kinetic energy arising from the winding of the vortex's phase. Since we have
+>  The second term has the interpretation as the kinetic of a fluid, which is $\int d\br \frac{1}{2}\rho\bv^2$. Using $\bv =\frac{\nabla \theta}{m}$. 
 
+The first integral is finite, and arises purely from the departure of the density away from its bulk value. The second represents the contribution to the kinetic energy arising from the winding of the vortex's phase. Since we have
 $$
 \nabla \theta = \frac{\ell}{r}\hat{\mathbf{e}}_\theta,
 $$
@@ -255,6 +270,8 @@ Superfluid velocity $\mathbf{v}_s$ | Magnetic field, $\mathbf{B}$
 Kinetic Energy | Magnetostatic Energy
 
 Vortices with $\abs{\ell}>1$ are generally unstable, and will break into multiple vortices of winding $\ell=\pm 1$. Like vortices repel each other, and can form spectacular __vortex lattices__, akin to crystals.
+
+> Uniform rotation $\bv=\boldsymbol{\omega}\times\br$ has a constant vorticity. 
 
 <img src="3dLattices.jpg" style="zoom:45%;" />
 
@@ -302,8 +319,11 @@ H_\text{int} = \frac{U_0}{2V}\adop_0\adop_0\aop_0\aop_0 + \frac{U_0}{2V}\sum_{\b
 \end{align}
 $$
 
-The Gross--Pitaevskii approximation corresponds to the first term. We are now going to keep the second term, and neglect the third and fourth. Thus we study the Hamiltonian
+The Gross--Pitaevskii approximation corresponds to the first term. 
 
+> i.e. taking the expectation value in the GP state has a contribution only from the first term.
+
+We are now going to keep the second term, and neglect the third and fourth. Thus we study the Hamiltonian
 $$
 \begin{align}
 H_\text{pair} &= \sum_\bk \epsilon(\bk)\adop_\bk\aop_\bk  +\frac{U_0}{2V}\adop_0\adop_0\aop_0\aop_0 \nonumber\\ &\quad+\frac{U_0}{2V}\sum_{\bk\neq0}\left[\adop_{\bk}\adop_{-\bk}\aop_{0}\aop_{0} + \adop_{0}\adop_{0}\aop_{\bk}\aop_{-\bk}+4\adop_\bk\adop_0\aop_0\aop_\bk\right].
@@ -362,8 +382,11 @@ $$
 \tanh2\kappa_\bp=\frac{n_0 U_0}{\epsilon(\bp)+n_0 U_0}.
 $$
 
-The parameter $\kappa_\bp$ of the transformation is chosen in order that there are no 'anomalous' $\bdop_\bp\bdop_{-\bp}$ or $\bop_\bp\bop_{-\bp}$ terms left in the Hamiltonian, which then takes the form of a sum of oscillators
+> The hyperbolic transformation preserves the bosonic commutation relations, so $[\bop_\bp,\bdop_\bp]=1$ on account of $\cosh^2\kappa-\sinh^2\kappa=1$. 
+>
+> Express $\adop_\bp$ in terms of $\bdop_\bp$ and $\bop_\bp$ and subsitute in. 
 
+The parameter $\kappa_\bp$ of the transformation is chosen in order that there are no 'anomalous' $\bdop_\bp\bdop_{-\bp}$ or $\bop_\bp\bop_{-\bp}$ terms left in the Hamiltonian, which then takes the form of a sum of oscillators
 $$
 H=E_0+\sum_{\bp\neq 0}\omega(\bp)\bdop_\bp
 \bop_\bp.
@@ -375,17 +398,21 @@ $$
 \omega(\bp) = \sqrt{\epsilon(\bp)\left(\epsilon(\bp)+2U_0n_0\right)},
 $$
 
+<img src="image-20191112113708149.jpg" alt="image-20191112113708149" style="zoom:33%;" />
+
 and the ground state energy is
 
+> c.f $\sum_\bp \omega(\bp)/2$. 
+
 $$
-E_0=\frac{1}{2}nU_0  N+\sum_{\bp\neq 0}\frac{1}{2}\left[\omega(\bp)-\epsilon(\bq)-n_0U_0\right].
+E_0=\frac{1}{2}nU_0  N+\sum_{\bp\neq 0}\frac{1}{2}\left[\omega(\bp)-\epsilon(\bp)-n_0U_0\right].
 $$
 
 Somewhat annoyingly, this integral is divergent in the ultraviolet. However, this is actually nothing to do with the many body physics of the problem, but is rather related to the need to regularize a $\delta$-function potential in three dimensions. We can cure the problem by writing
 
 $$
 E_0=\frac{1}{2}nU_0  N\left[1-\frac{1}{V}\sum_\bp \frac{U_0}{2\epsilon(\bp)}\right]+\sum_{\bp\neq 0}\frac{1}
-{2}\left[\omega(\bp)-\epsilon(\bq)-n_0U_0+ \frac{(n_0U_0)^2}{2\epsilon(\bp)}\right].
+{2}\left[\omega(\bp)-\epsilon(\bp)-n_0U_0+ \frac{(n_0U_0)^2}{2\epsilon(\bp)}\right].
 $$
 
 In this form, the term we have added and subtracted is recognized as the next order in the Born
