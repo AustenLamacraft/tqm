@@ -376,14 +376,14 @@ $$
 and the ground state energy is
 
 $$
-E_0=\frac{1}{2}nU_0  N+\sum_{\bp\neq 0}\frac{1}{2}\left[\omega(\bp)-\epsilon(\bq)-n_0U_0\right].
+E_0=\frac{1}{2}nU_0  N+\sum_{\bp\neq 0}\frac{1}{2}\left[\omega(\bp)-\epsilon(\bp)-n_0U_0\right].
 $$
 
 Somewhat annoyingly, this integral is divergent in the ultraviolet. However, this is actually nothing to do with the many body physics of the problem, but is rather related to the need to regularize a $\delta$-function potential in three dimensions. We can cure the problem by writing
 
 $$
 E_0=\frac{1}{2}nU_0  N\left[1-\frac{1}{V}\sum_\bp \frac{U_0}{2\epsilon(\bp)}\right]+\sum_{\bp\neq 0}\frac{1}
-{2}\left[\omega(\bp)-\epsilon(\bq)-n_0U_0+ \frac{(n_0U_0)^2}{2\epsilon(\bp)}\right].
+{2}\left[\omega(\bp)-\epsilon(\bp)-n_0U_0+ \frac{(n_0U_0)^2}{2\epsilon(\bp)}\right].
 $$
 
 In this form, the term we have added and subtracted is recognized as the next order in the Born
