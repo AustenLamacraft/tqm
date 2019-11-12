@@ -9,7 +9,7 @@ markup: pandoc
 menu:
   tqm:
     parent: Lectures
-    weight: 7
+    weight: 8
 ---
 
 $$
