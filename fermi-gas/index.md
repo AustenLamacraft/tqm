@@ -213,7 +213,7 @@ $$
 \mathbf{K} = \frac{1}{2}\left(\bk_2+\bk_3\right),\quad \bq = \frac{1}{2}\left(\bk_2-\bk_3\right),
 $$
 
-{{< figure src="FermiGeometry" title="Geometry of the integral for $f_{\uparrow\uparrow}(\bk,\bk')$." numbered="true" lightbox="true" >}}
+{{< figure src="FermiGeometry.png" title="Geometry of the integral for $f_{\uparrow\uparrow}(\bk,\bk')$." numbered="true" lightbox="true" >}}
 
 the denominator becomes
 
@@ -311,7 +311,7 @@ $$
 
 Fortunately, we can get at this quantity using the results we already have, thanks to the following sneaky trick (due to Landau). If we increment the momentum of each quasiparticle by a small amount $\delta\bk$, we can compute the new energy using our energy functional $\eqref{fermi_fdef}$, along with a new distribution function
 
-{{< figure src="FermiShift" title="Shifting the Fermi sea to increase the momentum." numbered="true" lightbox="true" >}}
+{{< figure src="FermiShift.png" title="Shifting the Fermi sea to increase the momentum." numbered="true" lightbox="true" >}}
 
 $$
 \begin{align}
