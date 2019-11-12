@@ -131,7 +131,8 @@ $$
 This might seem a bit odd given that $N_{s}(\bk)=\pm 1$. You should think of this expansion in terms of the continuum limit, where the $
 \bk$ values become finely spaced. In this limit $n_\bk$ represents the _mean_ deviation from the Fermi sphere in that region of $\bk$-space.
 
-{{< figure src="FermiN.png" title="$n_\bk$ as a smoothed deviation from the Fermi step." numbered="true" lightbox="true" >}}
+<img src="FermiN.png" style="zoom:50%;" />
+_Quasiparticle occupation $n_{\bk}$ as a smoothed deviation from the Fermi step._
 
 The excitation energy above the ground state of an eigenstate labelled by occupancies $N_\bk$ can then be expanded in $n_\bk$
 
@@ -213,7 +214,9 @@ $$
 \mathbf{K} = \frac{1}{2}\left(\bk_2+\bk_3\right),\quad \bq = \frac{1}{2}\left(\bk_2-\bk_3\right),
 $$
 
-{{< figure src="FermiGeometry" title="Geometry of the integral for $f_{\uparrow\uparrow}(\bk,\bk')$." numbered="true" lightbox="true" >}}
+<img src="FermiGeometry.png" style="zoom:50%;" />
+
+_Geometry of the integral for $f_{\uparrow\uparrow}(\bk,\bk')$._
 
 the denominator becomes
 
@@ -311,7 +314,9 @@ $$
 
 Fortunately, we can get at this quantity using the results we already have, thanks to the following sneaky trick (due to Landau). If we increment the momentum of each quasiparticle by a small amount $\delta\bk$, we can compute the new energy using our energy functional $\eqref{fermi_fdef}$, along with a new distribution function
 
-{{< figure src="FermiShift" title="Shifting the Fermi sea to increase the momentum." numbered="true" lightbox="true" >}}
+<img src="FermiShift.png" style="zoom:50%;" />
+
+_Shifting the Fermi sea to increase the momentum._
 
 $$
 \begin{align}
@@ -378,7 +383,9 @@ $$
 
 Let's consider the Fermi sea ground state \ket{\text{FS}}$. What states can appear in the above sum in this case? The only possibility is that the interaction creates two particle-hole pairs out of the Fermi sea, with total momentum zero.
 
-{{< figure src="2ph.png" title="Two particle-hole pairs created out of the Fermi sea." numbered="true" lightbox="true" >}}
+<img src="2ph.png" style="zoom:50%;" />
+
+_Two particle-hole pairs created out of the Fermi sea._
 
 What about an excited state? If we consider the state
 
@@ -388,7 +395,9 @@ $$
 
 two kinds of states can contribute. Either we create a pair of particle-hole pairs, as before, or we create a single particle-hole pair and scatter the particle at $\bk$ somewhere else
 
-{{< figure src="phscatter.png" title="Particle scatters, creating a particle-hole pair." numbered="true" lightbox="true" >}}
+<img src="phscatter.png" style="zoom:50%;" />
+
+_Particle scatters, creating a particle-hole pair._
 
 Consider the state $\adop_{\bk,s}\ket{0}$, creating a particle in the _exact_ ground state of the problem. Since $\ket{0}$ includes the first kind of state (2 particle-hole pair states), $\adop_{\bk,s}\ket{0}$ is only missing the second kind. Therefore to first order, the single quasiparticle state is
 
@@ -422,7 +431,11 @@ $$
 
 > This is also the occupation number of the original fermions $\braket{0}{\adop_{\bk,s}\aop_{\bk,s}}{0}$ (not the quasiparticles!) just below the Fermi surface in the ground state. There is a corresponding result just above. Even with interactions, there is a finite step in the distribution function at the Fermi surface.
 
-{{< figure src="FermiJump.png" title="Discontinutity in the ground state occupation number." numbered="true" lightbox="true" >}}
+
+
+<img src="FermiJump.png" style="zoom:50%;" />
+
+_Discontinutity in the ground state occupation number._
 
 ### Collisions
 
@@ -434,7 +447,9 @@ $$
 
 By considering the volume of phase space available for the scattering of a quasiparticle of energy $\Delta$ above the Fermi surface, you should be able to argue that the _total_ rate, obtained by integrating over all possible final states, varies like $\Delta^2$. This means that at low energy (or temperature) such scattering is ineffective and the Landau picture holds.
 
-{{< figure src="Collision.png" title="Vanishing phase space volume at low energies." numbered="true" lightbox="true" >}}
+<img src="Collision.png" style="zoom:50%;" />
+
+_Vanishing phase space volume at low energies._
 
 References
 ----------
