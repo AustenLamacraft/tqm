@@ -315,7 +315,6 @@ $$
 Fortunately, we can get at this quantity using the results we already have, thanks to the following sneaky trick (due to Landau). If we increment the momentum of each quasiparticle by a small amount $\delta\bk$, we can compute the new energy using our energy functional $\eqref{fermi_fdef}$, along with a new distribution function
 
 <img src="FermiShift.png" style="zoom:50%;" />
-
 _Shifting the Fermi sea to increase the momentum._
 
 $$
