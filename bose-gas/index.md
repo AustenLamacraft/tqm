@@ -402,7 +402,6 @@ a_0=(m/4\pi)U_0,\qquad a_1=-(m/4\pi)\frac{U_0^2}{V}\sum_\bp \frac{1}{2\epsilon
 (\bp)}.
 $$
 
-
 ### The Ground State
 
 So far, our ground state is just defined by the condition that it is a vacuum of Bogoliubov excitations
@@ -431,7 +430,7 @@ $$
 On the basis of the logic that we've been following so far, the most important terms will be those where one of $\adop_{\bk-\bq}$ or $\aop_\bk$ acts on the condensate. Thus
 
 $$
-\rho_\bq \sim \sqrt{N}\left(\adop_{-\bq} + \aop_{\bq}\right) = e^{-\kappa_\bq} \left(\bdop_{-\bq} + \bop_{\bq}\right),
+\rho_\bq \sim \sqrt{N}\left(\adop_{-\bq} + \aop_{\bq}\right) = \sqrt{N}e^{-\kappa_\bq} \left(\bdop_{-\bq} + \bop_{\bq}\right),
 $$
 
 where
