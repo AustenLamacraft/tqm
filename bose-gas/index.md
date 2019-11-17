@@ -163,7 +163,7 @@ of a localized potential of scale $\ll \xi$. It is a fundamental length scale in
 With the ansatz $\eqref{bose_GPW}$ for the wavefunction, we can obtain various observables without
 difficulty. The density and current density are
 
-> Recall that $\rho(\br)=\pdop(\br)\pop(\br)$. 
+> Recall that $\rho(\br)=\pdop(\br)\pop(\br)$.
 
 $$
 \begin{align}
@@ -248,7 +248,7 @@ $$
 \Delta E = \int d\br \left[\frac{n^2}{2m\xi^2}(f')^2+\frac{U}{2}n^2 \left(f^2-1\right)^2\right] + \frac{n}{2m}\int d\br\, f^2(\nabla\theta)^2.
 $$
 
->  The second term has the interpretation as the kinetic of a fluid, which is $\int d\br \frac{1}{2}\rho\bv^2$. Using $\bv =\frac{\nabla \theta}{m}$. 
+>  The second term has the interpretation as the kinetic of a fluid, which is $\int d\br \frac{1}{2}\rho\bv^2$. Using $\bv =\frac{\nabla \theta}{m}$.
 
 The first integral is finite, and arises purely from the departure of the density away from its bulk value. The second represents the contribution to the kinetic energy arising from the winding of the vortex's phase. Since we have
 $$
@@ -271,7 +271,7 @@ Kinetic Energy | Magnetostatic Energy
 
 Vortices with $\abs{\ell}>1$ are generally unstable, and will break into multiple vortices of winding $\ell=\pm 1$. Like vortices repel each other, and can form spectacular __vortex lattices__, akin to crystals.
 
-> Uniform rotation $\bv=\boldsymbol{\omega}\times\br$ has a constant vorticity. 
+> Uniform rotation $\bv=\boldsymbol{\omega}\times\br$ has a constant vorticity.
 
 <img src="3dLattices.jpg" style="zoom:45%;" />
 
@@ -319,7 +319,7 @@ H_\text{int} = \frac{U_0}{2V}\adop_0\adop_0\aop_0\aop_0 + \frac{U_0}{2V}\sum_{\b
 \end{align}
 $$
 
-The Gross--Pitaevskii approximation corresponds to the first term. 
+The Gross--Pitaevskii approximation corresponds to the first term.
 
 > i.e. taking the expectation value in the GP state has a contribution only from the first term.
 
@@ -382,9 +382,9 @@ $$
 \tanh2\kappa_\bp=\frac{n_0 U_0}{\epsilon(\bp)+n_0 U_0}.
 $$
 
-> The hyperbolic transformation preserves the bosonic commutation relations, so $[\bop_\bp,\bdop_\bp]=1$ on account of $\cosh^2\kappa-\sinh^2\kappa=1$. 
+> The hyperbolic transformation preserves the bosonic commutation relations, so $[\bop_\bp,\bdop_\bp]=1$ on account of $\cosh^2\kappa-\sinh^2\kappa=1$.
 >
-> Express $\adop_\bp$ in terms of $\bdop_\bp$ and $\bop_\bp$ and subsitute in. 
+> Express $\adop_\bp$ in terms of $\bdop_\bp$ and $\bop_\bp$ and subsitute in.
 
 The parameter $\kappa_\bp$ of the transformation is chosen in order that there are no 'anomalous' $\bdop_\bp\bdop_{-\bp}$ or $\bop_\bp\bop_{-\bp}$ terms left in the Hamiltonian, which then takes the form of a sum of oscillators
 $$
@@ -402,7 +402,7 @@ $$
 
 and the ground state energy is
 
-> c.f $\sum_\bp \omega(\bp)/2$. 
+> c.f $\sum_\bp \omega(\bp)/2$.
 
 $$
 E_0=\frac{1}{2}nU_0  N+\sum_{\bp\neq 0}\frac{1}{2}\left[\omega(\bp)-\epsilon(\bp)-n_0U_0\right].
@@ -430,6 +430,13 @@ $$
 a_0=(m/4\pi)U_0,\qquad a_1=-(m/4\pi)\frac{U_0^2}{V}\sum_\bp \frac{1}{2\epsilon
 (\bp)}.
 $$
+
+> 1. Wrote $H_\text{int}$ in plane wave basis $\adop_\bp$ $\aop_\bp$.
+> 2. Separated terms according to the number of occurrence of $\adop_0$ and $\aop_0$ describing the condensate
+> 3. Including only terms with four or two $\adop_0$, $\aop_0$. Includes pair creation $\adop_\bp\adop_{-\bp}$ and pair destruction.
+> 4. Argued that the matrix elements of this Hamiltonian could be reproduced by replacing $\adop_0$ and $\aop_0$ with $\sqrt{N}$, where $N\gg 1$. This gives a quadratic Hamiltonian
+> 5. Solve this Hamiltonian in terms of new boson $\bdop_\bp$, $\bop_\bp$ such that there are no pair creation / destruction terms for these operators.
+> 6. Find ground state energy.
 
 
 ### The Ground State
@@ -460,7 +467,7 @@ $$
 On the basis of the logic that we've been following so far, the most important terms will be those where one of $\adop_{\bk-\bq}$ or $\aop_\bk$ acts on the condensate. Thus
 
 $$
-\rho_\bq \sim \sqrt{N}\left(\adop_{-\bq} + \aop_{\bq}\right) = e^{-\kappa_\bq} \left(\bdop_{-\bq} + \bop_{\bq}\right),
+\rho_\bq \sim \sqrt{N}\left(\adop_{-\bq} + \aop_{\bq}\right) =\sqrt{N} e^{-\kappa_\bq} \left(\bdop_{-\bq} + \bop_{\bq}\right),
 $$
 
 where
@@ -508,6 +515,8 @@ $$
 $$
 
 where we used the Born approximation for the scattering length $a=\frac{mU_0}{4\pi}$. Excluding the value $\bp=0$ has no effect, because of the vanishing phase space at small momentum in three dimensions.
+
+<img src="image-20191114104125478.jpg" alt="image-20191114104125478" style="zoom:33%;" />
 
 Under typical experimental conditions in experiments on ultracold atoms the depletion does not much exceed $0.01$, which justifies the use of the GP approximation. Liquid He$^{4}$, the first superfluid to be discovered, can be described as an interacting Bose condensate, but the depletion is much larger. The Bogoliubov approximation does not provide a quantiatively accurate description in this case.
 

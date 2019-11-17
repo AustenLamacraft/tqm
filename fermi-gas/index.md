@@ -214,7 +214,7 @@ $$
 \mathbf{K} = \frac{1}{2}\left(\bk_2+\bk_3\right),\quad \bq = \frac{1}{2}\left(\bk_2-\bk_3\right),
 $$
 
-<img src="FermiGeometry.png" style="zoom:50%;" />
+<img src="FermiGeometry.png" style="zoom:33%;" />
 
 _Geometry of the integral for $f_{\uparrow\uparrow}(\bk,\bk')$._
 
