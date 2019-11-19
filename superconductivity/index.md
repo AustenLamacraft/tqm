@@ -162,10 +162,11 @@ $$
 \label{bcs_cons}
 $$
 
+> c.f. BEC wave function of $N/2$ pairs.
+
 corresponding to $\eqref{pair_fermi}$ but with a set of coefficients $c_{\{n^P_\bp\}}$ that factorizes.
 Finding the variational energy of Equation (\ref{bcs_cons}) is still a tricky problem. For instance, what is the
 expectation value of the kinetic energy?
-
 $$
 \mathrm{K.E}=2\sum_\bp\epsilon_{\bp}\langle\bdop_\bp\bop_\bp\rangle\equiv 2\sum_\bp\epsilon_{\bp} \langle n^P_
 \bp\rangle,
@@ -173,9 +174,12 @@ $$
 $$
 
 Finding the average number of pairs $\langle n^P_\bp\rangle$ in $\eqref{bcs_cons}$ is however not
-obvious. Instead, we follow the route taken by BCS, and consider instead the
-normalized wavefunction
+obvious.
 
+> We have a superposition over different pair numbers, with correlations in the number at different $\bp$ arising because we have a fixed number of pairs. 
+
+ Instead, we follow the route taken by BCS, and consider instead the
+normalized wavefunction
 $$
 \ket{\text{BCS}} =\prod_\bp \left[v_\bp\bdop_\bp+u_\bp\right]\ket{\text{VAC}}\qquad |u_\bp|^2+|v_\bp|
 ^2=1.
@@ -193,9 +197,12 @@ $$
 \label{bcs_en}
 $$
 
+> KE is just counting the expected number of pairs. For the interaction energy, we have that the Hamiltonian can move pairs from $\bp'$ to $\bp$. Simplest to start with a BCS state consisting of just two $\bp$ and act with the interaction Hamiltonian. 
+>
+> 
+
 What about our use of a non-conserving wavefunction? The expectation value of any operator that itself
 conserves the number of particles can evidently be written
-
 $$
 \braket{\text{BCS}}{\cO}{\text{BCS}}=\sum_N P_N \braket{N \text{ pair}}{\cO}{N\text{ pair}},
 $$
@@ -236,9 +243,9 @@ $$
 H_{\text{pair}}-\mu N=2\sum_\bp \xi({\bp})S_\bp^z+\frac{U_0}{V}\sum_{\bp,\bp'}S^+_\bp S^-_{\bp'},
 $$
 
-where we have included the chemical potential by defining $\xi_\bp\equiv\epsilon(\bp)-\mu$. If we parameterize $\left(u_\bp,v_\bp\right)$ as $(\cos(\theta/2)e^{-i\varphi/2},\sin(\theta/2)e^{i\varphi/2})$
-then the variational energy Equation (\ref{bcs_en}) has the form (except for a constant)
+> This type of interaction is often called an XY or transverse spin interaction.
 
+where we have included the chemical potential by defining $\xi_\bp\equiv\epsilon(\bp)-\mu$. If we parameterize $\left(u_\bp,v_\bp\right)$ as $(\cos(\theta/2)e^{-i\varphi/2},\sin(\theta/2)e^{i\varphi/2})$ then the variational energy Equation (\ref{bcs_en}) has the form (except for a constant)
 $$
 \braket{\text{BCS}}{H}{\text{BCS}}=-\sum_\bp \xi_\bp\cos\theta_\bp+\frac{U_0}{4V}\sum_{\bp,\bp'}\sin
 \theta_\bp\sin\theta_{\bp'}\cos\left(\varphi_\bp-\varphi_{\bp'}\right).
@@ -277,8 +284,9 @@ $$
 \Delta=-\frac{U_0}{2V}\sum_\bp e^{i\varphi}\sin\theta_\bp=-\frac{U_0}{V}\sum_\bp u_\bp v^*_\bp.
 $$
 
-Thus we have
+> $\Delta$ is the total transverse field due to all the other spins. It's complex because it's $h_x+ih_y$. 
 
+Thus we have
 $$
 \cos\theta_\bp=\frac{\xi_{\bp}}{E_\bp},\qquad \sin\theta_\bp=\frac{|\Delta|}{E_\bp}, \qquad E_\bp=\sqrt{\xi
 (\bp)^2+|\Delta|^2}.
@@ -307,10 +315,17 @@ $$
 \label{cont_sc}
 $$
 
-This integral is divergent in the ultraviolet. We turn to the question of how to regularize it in the next
-section. More significant, however, is the dependence of the right hand side on $\Delta$ for small $
-\Delta$. This is
+This integral is divergent in the ultraviolet. 
 
+> This is because at large $\bp$ $E_\bp\sim \epsilon_\bp\propto \bp^2$. But this is the same kind of issue we encountered in the discussion of the Bose gas. It's a consequence of dealing with a $\delta$-function interaction. 
+
+We turn to the question of how to regularize it in the next
+section. More significant, however, is the dependence of the right hand side on $\Delta$ for small $
+\Delta$. 
+
+> As $\bp$ approaches the FS, the denominator vanishes as $E_\bp\sim |\xi_\bp|$ for small $\Delta$. $\Delta$ cuts off the log divergence of the integral. 
+
+This is
 $$
 \sim-\frac{U_0}{2}\nu(\mu)\Delta\log \Lambda/\Delta,
 $$
@@ -331,7 +346,7 @@ Surprisingly, the wavefunctions in the two limits are the same! This can be seen
 from the first quantized form of the number conserving wavefunction  $\eqref{bcs_cons}$
 
 $$
-\ket{N \text{ pair}}=\sum_P (-1)^P \prod_{j=1}^{N/2} \varphi(\br^\uparrow_{i}-\br^\downarrow_{P(j)}),
+\ket{N \text{ pair}}=\sum_P (-1)^P \prod_{i,j=1}^{N/2} \varphi(\br^\uparrow_{i}-\br^\downarrow_{P(j)}),
 \label{bcs_first}
 $$
 
@@ -341,14 +356,15 @@ where $\varphi_\bp=v_\bp/u_\bp$, and $\br^{\uparrow,\downarrow}_j$ are the posit
 Do you understand where this comes from?
 </p>
 
+> Recall the wavefunction $\sum_\bp \varphi_\bp\adop_{\bp}\adop_{-\bp}\ket{\text{VAC}}$ from the lecture on second quantization. Since $\varphi_\bp$ represents the relative weight of having a pair vs. no pair. 
+
 At weak coupling the extent of the `pair wavefunction' $\varphi(\br)$ is
 large compared to the separation between pairs. In this limit the antisymmetrization operation, required
 by the exclusion principle, plays a dominant role, as we have seen. When the pair wavefunction $\varphi
 (\br)$ has a much smaller extent than the typical separation between pairs, we can expect that the
 anitsymmetrization operation in $\eqref{bcs_first}$ is not too important, as two fermions of the same
 type rarely overlap. In this limit, any given momentum state has a low average occupancy, and the
-hardcore constraint $\eqref{hardcore}$ does not play a significant role. Then $\eqref{pair_h}$ can
-really be thought of as a Hamiltonian for isolated pairs, with the corresponding binding energy. The resulting wavefunction is then essentially a Gross-Pitaevskii state of molecules. This all suggests that the BCS state is smoothly connected to the Bose--Einstein condensate (BEC), though the __BCS-BEC crossover__.
+hardcore constraint $\eqref{hardcore}$ does not play a significant role. Then $\eqref{pair_h}$ can really be thought of as a Hamiltonian for isolated pairs, with the corresponding binding energy. The resulting wavefunction is then essentially a Gross-Pitaevskii state of molecules. This all suggests that the BCS state is smoothly connected to the Bose--Einstein condensate (BEC), though the __BCS-BEC crossover__.
 
 To see how this works in detail we need to address the issue of regularizing $\eqref{gap_eq}$. The details are given in the Appendix, but the conclusion is very simple. The gap equation can be written in terms of the _scattering length_ $a$ (if you haven't met scattering theory before, the meaning of this quantity is explained in the Appendix too) of the two-particle potential instead of interaction strength $U_0$
 
@@ -360,10 +376,8 @@ $$
 
 The nice thing about this new equation is that, on account of the second term in the square brackets, the ultraviolet divergence has been eliminated.
 
-In the weak-coupling limit, the gap $\Delta$ is expected to be much smaller than
-the Fermi energy, and the chemical potential is just equal to the Fermi energy $E_F=k_\text{F}^2/2m$. The
+In the weak-coupling limit, the gap $\Delta$ is expected to be much smaller than the Fermi energy, and the chemical potential is just equal to the Fermi energy $E_F=k_\text{F}^2/2m$. The
 integral in $\eqref{sc_reg}$ can then be done explicitly to give the gap
-
 $$
 \Delta_{\mathrm{BCS}}=\frac{8}{e^2}E_F\exp\left[-\frac{\pi}{2|k_\text{F} a|}\right]
 \label{bcs_gap}
@@ -393,19 +407,14 @@ where $\mu$ and $\Delta_0$ are measured in units of $E_F=p_F^2/2m$, and the unit
 <img src="BCS-BEC.png" style="zoom:75%;" />
 _Variation of gap and chemical potential accross the BCS (left, weak attraction) to BEC (right, strong attraction)._
 
-The point $1/k_\text{F}a=0$, where the scattering length diverges, corresponds to the formation of a bound state. This is
-an interesting part of the phase diagram, because here (if
-the temperature is zero) there is only one energy scale (the Fermi energy) and only one length scale (the
-fermi wavelength). All quantities such as $\Delta$ and $\mu$ are simply some universal fraction of the
-Fermi energy. In particular the equation of state of the system is
-
+The point $1/k_\text{F}a=0$, where the scattering length diverges, corresponds to the formation of a bound state. This is an interesting part of the phase diagram, because here (if
+the temperature is zero) there is only one energy scale (the Fermi energy) and only one length scale (the fermi wavelength). All quantities such as $\Delta$ and $\mu$ are simply some universal fraction of the Fermi energy. In particular the equation of state of the system is
 $$
 E/V=\alpha\frac{3}{5}E_Fn\propto n^{5/3}.
 $$
 
 The numerical factors are to emphasize the resemblance of the unitary gas to the free fermi gas, where $
-\alpha=1$. The mean field theory above gives $\alpha=0.59$, while a Quantum Monte Carlo calculation
-found $\alpha=0.44\pm0.01$. There is of course no reason to believe the quantitative
+\alpha=1$. The mean field theory above gives $\alpha=0.59$, while a Quantum Monte Carlo calculation found $\alpha=0.44\pm0.01$. There is of course no reason to believe the quantitative
 predictions of the mean-field theory in the region where interactions are so strong.
 
 ### Quasiparticle Excitations
@@ -551,22 +560,16 @@ Which coincides with $\eqref{sc_reg}$ (we drop the subscript $0$ from now on, as
 
 ### The Effect of Temperature
 
-When we discussed the quasiparticle excitations, we didn't account for the effect that they have on the
-self-consistent equation. This is fine when there are few excitations in the system, but when many levels
-are blocked, we have to take this effect into account, leading to a reduction in the gap parameter. The
-obvious example of this effect is a system at finite temperature, where the quasiparticles, being
-fermionic, have the fermi-dirac distribution function
+When we discussed the quasiparticle excitations, we didn't account for the effect that they have on the self-consistent equation. This is fine when there are few excitations in the system, but when many levels are blocked, we have to take this effect into account, leading to a reduction in the gap parameter. The obvious example of this effect is a system at finite temperature, where the quasiparticles, being fermionic, have the fermi-dirac distribution function
 
 $$
 n_s(\bp)=\frac{1}{e^{\beta E_s(\bp)}+1},
 $$
 
-where we allow the quasiparticle energies, and hence distributions, to differ for the two species. Since
-the occupancy of a given state can be zero or one only $n_s(\bp)$ is also the _probability_ for that
+where we allow the quasiparticle energies, and hence distributions, to differ for the two species. Since the occupancy of a given state can be zero or one only $n_s(\bp)$ is also the _probability_ for that
 state to be occupied. Thus the probability of a  $(\bp,s;-\bp,-s)$ state being blocked is $n_s(\bp)\left[1-n_
 {-s}(-\bp)\right]+n_{-s}(-\bp)\left[1-n_{s}(\bp)\right]$. What if we have _both_ a $(\bp,s)$ and a $(-
 \bp,-s)$ quasiparticle present?
-
 
 $$
 \aldop_{\bp\uparrow}\aldop_{-\bp\downarrow}\ket{\text{BCS}}=\left[u^*_\bp\adop_{\bp\uparrow}
@@ -585,8 +588,7 @@ $$
 
 with $\theta' = \pi/2 - \theta$ and $\varphi' = \varphi + \pi$.
 
-The excitation energy of this state is twice the 'magnetic field' each pair experiences $2E(\bp)$, see $\eqref{heff}$. The spin interpretation allows us to see easily that this state contributes $-u_\bp v_\bp$ to the self consistent
-equation, and occurs with probability $n_{\uparrow}(\bp)n_{\downarrow}(-\bp)$. The overall result is thus
+The excitation energy of this state is twice the 'magnetic field' each pair experiences $2E(\bp)$, see $\eqref{heff}$. The spin interpretation allows us to see easily that this state contributes $-u_\bp v_\bp$ to the self consistent equation, and occurs with probability $n_{\uparrow}(\bp)n_{\downarrow}(-\bp)$. The overall result is thus
 
 $$
 \begin{eqnarray}
@@ -604,10 +606,8 @@ $$
 \frac{1}{U_0\nu(E_F)}=-\int_\Delta dE \tanh\left(\frac{E}{2T}\right)\frac{\Delta}{\sqrt{E^2-\Delta^2}},
 $$
 
-where $\nu(E_F)$ is the fermi surface density of states per spin, and we have left out the upper cut-off. This
-expression needs to be regularized as in the zero temperature case considered before. The resulting $
+where $\nu(E_F)$ is the fermi surface density of states per spin, and we have left out the upper cut-off. This expression needs to be regularized as in the zero temperature case considered before. The resulting $
 \Delta(T)$ varies from $\Delta(0)=\Delta_{\text{BCS}}$ given by $\eqref{bcs_gap}$, to zero at
-
 $$
 \begin{equation}\label{Tc}
 k_\text{B}T_\text{c}=\frac{\gamma}{\pi}\Delta_{\text{BCS}},
@@ -623,10 +623,8 @@ k_\text{B}T_\text{c} \sim E_b/2\left[\log E_b/E_F\right]^{3/2}, 1/k_\text{F} a\g
 $$
 
 where $E_b=1/ma^2$ is the binding energy of a pair. This temperature should be thought of as a
-dissociation temperature below which pairs can form (the logarithmic factor is entropic in origin). The
-temperature at which these pairs condense will however be lower, tending to the ideal bose $T_
-{\mathrm{BEC}}$ in the $1/k_\text{F}a\to \infty$ limit. A more sophisticated treatment is required to find a
-smooth interpolating $T_\text{c}(1/k_\text{F}a)$.
+dissociation temperature below which pairs can form (the logarithmic factor is entropic in origin). The temperature at which these pairs condense will however be lower, tending to the ideal bose $T_
+{\mathrm{BEC}}$ in the $1/k_\text{F}a\to \infty$ limit. A more sophisticated treatment is required to find a smooth interpolating $T_\text{c}(1/k_\text{F}a)$.
 
 <img src="EngelbrechtTc.png" style="zoom:50%;" />
 _$T_c$ in the mean-field theory (solid line), compared with the result of a treatment that smoothly
