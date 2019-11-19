@@ -226,7 +226,7 @@ $$
 \begin{align}
 S^+ &=\sqrt{2s}\sqrt{1-\frac{\adop\aop}{2s}}\aop \\
 S^- &= \sqrt{2s}\adop\sqrt{1-\frac{\adop\aop}{2s}} \\
-S_z &= \left(s - \adop \aop\right).
+S^z &= \left(s - \adop \aop\right).
 \end{align}
 $$
 
