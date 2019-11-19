@@ -35,7 +35,7 @@ $$
 \newcommand{\bdop}{b^\dagger}
 \newcommand{\cop}{c^{\vphantom{\dagger}}}
 \newcommand{\cdop}{c^\dagger}
-\newcommand{\alop}{\alphs^{\vphantom{\dagger}}}
+\newcommand{\alop}{\alpha^{\vphantom{\dagger}}}
 \newcommand{\aldop}{\alpha^\dagger}
 \newcommand{\bra}[1]{\langle{#1}\rvert}
 \newcommand{\ket}[1]{\lvert{#1}\rangle}
@@ -264,7 +264,8 @@ the increase in kinetic energy that comes from smearing the step, see Equation (
 angles $\varphi_\bp$, describing the angle in the x-y plane, should be equal. Taking  the extremum of
 $\eqref{spin_en}$ with respect to the angles $\theta_{\bp}$ gives the condition
 
-{{< figure src="wall.png" title="Anderson spin configurations and the associated distribution functions for the free fermi gas (top) and the BCS state (bottom)." numbered="true" lightbox="true" >}}
+![](wall.png)
+_Anderson spin configurations and the associated distribution functions for the free fermi gas (top) and the BCS state (bottom)._
 
 $$
 \xi_{\bp}\sin\theta_\bp-|\Delta|\cos\theta_\bp=0,
@@ -389,7 +390,8 @@ $$
 where $\mu$ and $\Delta_0$ are measured in units of $E_F=p_F^2/2m$, and the unit of length is $k_\text{F}^
 {-1}$. In these units the total density of particles of both types is $1/3\pi^2$.
 
-{{< figure src="BCS-BEC.png" title="Variation of gap and chemical potential accross the BCS (left, weak attraction) to BEC (right, strong attraction)." numbered="true" lightbox="true" >}}
+<img src="BCS-BEC.png" style="zoom:75%;" />
+_Variation of gap and chemical potential accross the BCS (left, weak attraction) to BEC (right, strong attraction)._
 
 The point $1/k_\text{F}a=0$, where the scattering length diverges, corresponds to the formation of a bound state. This is
 an interesting part of the phase diagram, because here (if
@@ -626,11 +628,9 @@ temperature at which these pairs condense will however be lower, tending to the 
 {\mathrm{BEC}}$ in the $1/k_\text{F}a\to \infty$ limit. A more sophisticated treatment is required to find a
 smooth interpolating $T_\text{c}(1/k_\text{F}a)$.
 
-{{< figure src="EngelbrechtTc.png" title="$T_c$ in the mean-field theory (solid line), compared with the result of a treatment that smoothly
-  interpolates to $T_{\text{BEC}}$ (dashed). Reproduced from [C. A. R. Sá de Melo, Mohit Randeria, and Jan R. Engelbrecht](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.71.3202)." numbered="true" lightbox="true" >}}
-
-
-
+<img src="EngelbrechtTc.png" style="zoom:50%;" />
+_$T_c$ in the mean-field theory (solid line), compared with the result of a treatment that smoothly
+  interpolates to $T_{\text{BEC}}$ (dashed). Reproduced from [C. A. R. Sá de Melo, Mohit Randeria, and Jan R. Engelbrecht](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.71.3202)._
 
 References
 ----------
