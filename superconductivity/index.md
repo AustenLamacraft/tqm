@@ -337,6 +337,16 @@ low energies because the density of states $\nu(E)$ vanishes. The finite value o
 
 We have shown that the BCS state, consisting of a superposition of zero momentum pairs, is a better variational state than the Fermi sea for arbitrarily weak attractive interactions. Further, it coincides with the Fermi sea at zero interaction, suggesting a smooth evolution of the ground state as interactions are switched on. What, if anything, does this have to do with the strong coupling picture of tightly bound bosonic pairs in a dilute gas that we gave in the introduction?
 
+> Last time
+>
+> 1. Simple model of attractive fermions: $\delta$-function interaction.
+> 2. Focus on pair wave functions. 
+> 3. Focus on zero momentum pairs $\pm \bp$. 
+> 4. Amplitudes  factorizes into separate pair amplitudes. 
+> 5. Eventually arrive at __BCS wavefunction__. No particle conservation. 
+> 6. Use this minimize variational energy.
+> 7. Find _pairing_ for _any_ attractive interaction $U_0<0$. 
+
 ### Discussion: Heisenberg's Problem
 
 
@@ -349,6 +359,8 @@ $$
 \ket{N \text{ pair}}=\sum_P (-1)^P \prod_{i,j=1}^{N/2} \varphi(\br^\uparrow_{i}-\br^\downarrow_{P(j)}),
 \label{bcs_first}
 $$
+
+> These kind of wavefunctions are called _Geminal_ 
 
 where $\varphi_\bp=v_\bp/u_\bp$, and $\br^{\uparrow,\downarrow}_j$ are the positions of the spin up and spin down fermions, and we sum over all permutations of $N/2$ objects (assuming $N$ is even).
 
@@ -424,8 +436,11 @@ $$
 \end{eqnarray}
 $$
 
-satisfy the canonical fermion anticommutation relations and annihilate the BCS state
+satisfy the canonical fermion anticommutation relations 
 
+> This is a consequence of the normalization condition $|u|^2+|v|^2$.
+
+and annihilate the BCS state
 $$
 \alop_{\bp,s}\ket{\text{BCS}}\rangle=0.
 $$
