@@ -419,9 +419,7 @@ predictions of the mean-field theory in the region where interactions are so str
 
 ### Quasiparticle Excitations
 
-Like the Bogoliubov theory, this BCS theory also lets us discuss excitations out of the ground state. We
-didn't solve the BCS hamiltonian by a Bogoliubov transformation, as is often done, but we can introduce
-the Bogoliubov-type excitations after the fact. Recalling the BCS state
+Like the Bogoliubov theory, this BCS theory also lets us discuss excitations out of the ground state. We didn't solve the BCS hamiltonian by a Bogoliubov transformation, as is often done, but we can introduce the Bogoliubov-type excitations after the fact. Recalling the BCS state
 $$
 \ket{\text{BCS}} =\prod_\bp \left[v_\bp\adop_{\bp\uparrow}\adop_{-\bp\downarrow}+u_\bp\right]\ket{\text{VAC}},
 $$
@@ -452,10 +450,7 @@ corresponding to the momentum state $\bp$ certainly containing one particle with
 and the $\left(-\bp,-s\right)$ state certainly being empty. The result is an eigenstate of momentum and
 spin, but is it an energy eigenstate, and thus a sharply defined excitation? Note that if we chose $s=
 \uparrow$ so that the $\left(\bp,\uparrow\right)$ state is certainly occupied it means that $\adop_{\bp
-\uparrow}\adop_{-\bp\downarrow}\ket{\bp,\uparrow}=0$, so that the corresponding term no longer
-appears in the interaction term when it is applied to this state. The level is said to be `blocked'. Thus it
-certainly is an eigenstate of the pair problem, if $\ket{\text{BCS}}$ is. What is its energy? We have
-to take into account the kinetic energy as well as the loss of attractive interaction energy, see $\eqref{spin_en}$
+\uparrow}\adop_{-\bp\downarrow}\ket{\bp,\uparrow}=0$, so that the corresponding term no longer appears in the interaction term when it is applied to this state. The level is said to be `blocked'. Thus it certainly is an eigenstate of the pair problem, if $\ket{\text{BCS}}$ is. What is its energy? We have to take into account the kinetic energy as well as the loss of attractive interaction energy, see $\eqref{spin_en}$
 
 $$
 E_{s}(\bp)=\xi_{\bp}[\overbrace{\left(1-\langle n^P_\bp\rangle\right)}^{\left(\bp,s\right)\,\mathrm{occupied}}
