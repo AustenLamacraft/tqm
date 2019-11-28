@@ -410,7 +410,7 @@ where $\sqrt{z_k}$ is a normalization factor. As we go to successively higher or
 Normalizing $\eqref{fermi_phpeturb}$ gives
 
 $$
-z_\bk = 1 - \left(\frac{U_0}{V}\right)^2\sum_{\substack{\bk_1+\bk_2=\bk_3+\bk\\ s,s'}}\frac{1}{\left[\epsilon(\bk_1)+\epsilon(\bk_2)-\epsilon(\bk_3)-\epsilon(\bk)\right]^2}+\cdots.
+z_\bk = 1 - \left(\frac{U_0}{V}\right)^2\sum_{\substack{\bk_1+\bk_2=\bk_3+\bk\\\abs{\bk_3}<k_\text{F},\abs{\bk_2}>k_\text{F}, \abs{\bk_1}>k_\text{F}\\ s,s'}}\frac{1}{\left[\epsilon(\bk_1)+\epsilon(\bk_2)-\epsilon(\bk_3)-\epsilon(\bk)\right]^2}+\cdots.
 \label{fermi_z}
 $$
 
