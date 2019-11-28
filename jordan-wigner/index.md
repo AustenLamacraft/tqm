@@ -304,145 +304,80 @@ We see that the computation of the transverse correlations in terms of fermions 
 
 It is possible to use Wick's theorem at this point to evaluate $\eqref{Transverse}$ in terms of the (equal time) Green's function of the fermions. However, we'll pursue a different approach, based upon yet another way of representing the degrees of freedom.
 
-## Bosonization
+## The Quantum Ising Model and Kitaev's Chain
 
-Unlike the Jordan--Wigner mapping, the representation that we turn to now is only _approximate_, and applies to the long wavelength contribution to correlation functions. Its value as a unifying framework for 1D quantum fluids more than makes up for this shortcoming, however.
-
-The idea is very natural: instead of dealing with the particle operators $\adop_j$, $\aop_j$ we are going to deal with their _density_. Although this is a bilinear $n_j=\adop_j\aop_j$ in terms of particles, we will see that in one dimension the long wavelength components can be represented _linearly_ in terms of bosonic modes. This makes computation of the exponent in $\eqref{Transverse}$ much more straightforward.
-
-A key role is played by the __density-phase representation__
+Another model that can be solved using the Jordan--Wigner transformation is the __quantum Ising chain__, with Hamiltonian
 
 $$
-\pop(x)=e^{i\theta(x)}\sqrt{n(x)}.
-\label{DensityPhase}
+H=\sum_j\left[g\sigma_j^z - J\sigma_{j}^x\sigma_{j+1}^x\right].
 $$
 
->Show that we can reproduce the fundamental commutator of a boson field
->
->$$
->[\pop(x),\pdop(y)]=\delta(x-y)
->$$
->
->if we demand that
->
->$$
->\left[n(x),\theta(y)\right]=i\delta(x-y).
->$$
->
-> _Hint: It's easier if you discretize space!_
+The second term looks like the familiar Ising model energy, with the spin variable identified with the $x$-component of spin (for a change). Applying the Jordan—Wigner transformation we end up with the equivalent fermion Hamiltonian
+$$
+\begin{align}\label{eq:fermi-ising}
+H &= \sum_j\left[g\left(2\adop_j\aop_j-1\right) -J\left(\adop_j-\aop_{j}\right)\left(\adop_{j+1}+\aop_{j+1}\right)\right]\\
+&= \sum_j\left[-t\left(\adop_j\aop_{j+1}+\adop_{j+1}\aop_{j}\right)-\mu\left(\adop_j\aop_j-\frac{1}{2}\right)+\Delta\aop_j\aop_{j+1}+\Delta^*\adop_j\adop_{j+1}\right].
+\end{align}
+$$
+In the second line we have written the Hamiltonian more suggestively by introducing
+$$
+\begin{align}\label{eq:ising-vals}
+t = J\qquad \mu=-2g\qquad \Delta=-J.
+\end{align}
+$$
+In this way the Hamiltonian resembles a BCS mean-field Hamiltonian with an unusual order parameter $\Delta$ that sits between two sites. 
 
-The density $n(x)$ and phase $\theta(x)$ are then seen to be continuum conjugate variables, like the displacement and momentum density in the elastic chain.
-
-### Bosonizing Lieb--Liniger
-
-Let's return to the 1D gas of bosons in the continuum, described by the Lieb--Liniger model.
+With periodic boundary conditions $\aop_1=\aop_{N+1}$ the Hamiltonian $\eqref{eq:fermi-ising}$ can be solved by the Bogoliubov transformation by first introducing the mode expansion
+$$
+\aop_j = \frac{1}{\sqrt{N}}\sum_\eta e^{i\eta j}\aop_\eta\qquad \eta=2\pi n/N
+$$
+In terms of the plane wave operators, the Hamiltonian has the form
 
 $$
-H_\text{LL} = \int dx\,\left[\frac{\partial_{x}\pdop \partial_{x}\pop}{2m}+\frac{g}{2}\pdop\pdop\pop\pop\right]
+H = \sum_\eta\left[-2t\cos(\eta)\adop_\eta\aop_{\eta}-\mu\left(\adop_\eta\aop_\eta-\frac{1}{2}\right)+\Delta e^{i\eta}\aop_\eta\aop_{-\eta}+\Delta^*e^{-i\eta}\adop_\eta\adop_{-\eta}\right].
 $$
 
-We can express $H_\text{LL}$ in terms of the representation $\eqref{DensityPhase}$ of the field operator
-
+We can write this in matrix form, paying attention to the _anti-_commutation relations of the fermions, as
 $$
-	H_\text{LL} = \int dx \left[\frac{(\partial_{x} \theta) n(\partial_x\theta)}{2m}+\frac{(\partial_{x} \sqrt{n})^{2}}{2m}+\frac{g}{2}n^{2}\right].
-$$
-
-As in the elastic chain, small deviations from a state of uniform density can be described by a quadratic approximation. Writing $n=\rho_{0}+\rho$, the quadratic Hamiltonian is then
-
-$$
-	H_2 = \int dx \left[\frac{\rho_{0}\left(\partial_{x} \theta\right)^{2}}{2m}+\frac{(\partial_{x} \rho)^{2}}{8m\rho_{0}}+\frac{g}{2}\rho^{2}\right].
-$$
-
-As usual, we can solve this by passing to Fourier modes
-
-$$
-\begin{split}
-	\rho(x) = \frac{1}{\sqrt{L}}\sum_p \rho_p e^{ipx}\\
-	\theta(x) = \frac{1}{\sqrt{L}}\sum_p \theta_p e^{ipx}	 
-\end{split}
-$$
-
-with $p = 2\pi n/L$, $\rho_p^\dagger=\rho_{-p}$, and $\theta_p^\dagger=\theta_{-p}$. In terms of these modes, $H_2$ takes form
-
-$$
-\begin{split}
-	H_2 &= \int dx \left[\frac{\rho_{0}\left(\partial_{x} \theta\right)^{2}}{2m}+\frac{(\partial_{x} \rho)^{2}}{8m\rho_{0}}+\frac{g}{2}\rho^{2}\right]\\
-	&=	\sum_{p\geq 0} \left[\frac{\rho_0 p^2}{m}|\theta_p|^2 + \left(g + \frac{p^2}{4m\rho_0}\right)|\rho_p|^2 \right]
-\end{split}
-$$
-
-By comparision with the usual oscillator Hamiltonian, we can read off the __Bogoliubov__ spectrum of excitations
-
-$$
-\Omega_p^2 = \frac{p^2}{2m}\left(\frac{p^2}{2m} + 2g\rho_0 \right)\sim c^2 p^2,
-$$
-
-where $c^2 = \frac{g\rho_0}{m}$ is the speed of sound.
-
-We are interested in the _long wavelength limit_, where $\Omega_p \sim c \abs{p}$. The amounts to ignoring the _quantum pressure_ term
-
-$$
-	\begin{split}
-	H_2 &= \int dx \left[\frac{\rho_{0}\left(\partial_{x} \theta\right)^{2}}{2m}+\overbrace{\frac{(\partial_{x} \rho)^{2}}{8m\rho_{0}}}^{\text{Quantum pressure}}+\frac{g}{2}\rho^{2}\right]\\
-	&\to H_\text{TL}= \frac{c}{2\pi}\int dx\left[K \left(\partial_x\theta\right)^2+\frac{1}{K}\left(\partial_x\phi\right)^2 \right] 		
-	\end{split}
-$$
-
-where $\rho = \partial_x \phi/\pi$. This quadratic Hamiltonian is known as the __Tomonaga--Luttinger__ model, and
-
-$$
-K = \frac{\pi \rho_0}{mc}
-$$
-
-is the __Luttinger parameter__.
-
-As usual we can introduce the oscillator variables
-
-$$
-		\begin{split}
-	\rho(x)&=\sqrt{\frac{\rho_{0}}{2L}}\sum_{k\neq 0}e^{-\kappa_{k}}\left(\aop_{k}e^{ikx}+\text{h.c}\right)	\\
-		\theta(x)&= \frac{i}{\sqrt{2\rho_{0}L}} \sum_{k\neq 0}e^{\kappa_{k}}\left(\aop_{k}e^{ikx}-\text{h.c}\right).
-		\end{split}
-$$
-
-With the choice
-
-$$
-e^{-4\kappa_{k}}=\frac{k^{2}}{k^{2}/4+mg\rho_{0}},
-$$
-
-the quadratic Hamiltonian becomes
-
-$$
-H_{2}=\sum_{p} \Omega_{p}\bdop_{p}\bop_{p}
+\begin{equation}\label{eq:bdg}
+H = \sum_\eta \begin{pmatrix}
+\adop_\eta &
+\aop_{-\eta}
+\end{pmatrix} 
+\begin{pmatrix}
+-t\cos(\eta) -\mu/2 & -i\Delta\sin(\eta)\\
+i\Delta^*\sin(\eta) & t\cos(\eta) +\mu/2
+\end{pmatrix}
+\begin{pmatrix}
+\aop_\eta \\
+\adop_{-\eta}
+\end{pmatrix}.
+\end{equation}
 $$
 
 
-### Boson density matrix
-
-Now let's turn back to our original problem: the computation of the transverse spin correlation function $\eqref{Transverse}$, or equivalently, the boson density matrix for hardcore bosons. The simplest approximation is to take
-
+In this format it's easy to see that a $2\times 2$ unitary transformation of the fermion operators
 $$
-\pop(x)=e^{i\theta(x)}\sqrt{n(x)}\sim\sqrt{\rho_0}e^{i\theta(x)}.
+\begin{align}
+\bop_\eta &= u_\eta\aop_\eta + v_\eta \adop_{-\eta}\\
+\bdop_\eta &= u_\eta^*\adop_\eta + v_\eta^* \aop_{-\eta}\nonumber\\
+&|u_\eta|^2+|v_\eta|^2=1\nonumber
+\end{align}
 $$
-
-The justification for this is that inside a correlation function, the corrections will decay more quickly than the contribution from this part.
-
-Evaluating the density matrix is now a straightforward calculation
+Can be used to eliminate "anomalous" $\bop_\eta\bop_{-\eta}$ and $\bdop_{\eta}\bdop_{-\eta}$ terms from the Hamiltonian, diagonalizing the Hermitian matrix that appears in $\eqref{eq:bdg}$. This is the fermionic version of the Bogoliubov Hamiltonian we used for the Bose gas. Without working out the explicit form of the coefficients we can deduce the final form of the $\bdop_\eta$, $\bop_\eta$ Hamiltonian from the eigenvalues of the matrix
 
 $$
 \begin{align}
-\braket{0}{\pdop(x)\pop(x')}{0} &\sim \rho_0\braket{0}{e^{-i\theta(x)}e^{i\theta(x')}}{0}\\
-&\sim \rho_0 \exp\left(-\frac{1}{2}\braket{0}{\left[\theta(x)-\theta(x')\right]^2}{0}\right)\\
-&\sim \rho_0 \exp\left(-\frac{1}{4K}\int dk\frac{1-\cos(k[x-x'])}{\abs{k}}\right)\\
-&\sim \rho_0 \exp\left(-\frac{1}{2K}\log\abs{x-x'}\right)
+H= \sum_\eta E_\eta\left[\bdop_\eta\bop_\eta-\bop_\eta\bdop_\eta\right]\\
+E_\eta =\sqrt{(t\cos(\eta)+\mu/2)^2+|\Delta|^2\sin^2(\eta)}
 \end{align}
 $$
 
-How do we know the value of the Luttinger parameter $K$? In general, we don't! However, thanks to Jordan--Wigner, we know that there is a really a free fermion system underneath all this, which allows us to deduce, since $\rho_0=k_\text{F}/\pi$, that $K=1$. This gives us finally
-
+With the values $\eqref{eq:ising-vals}$ for the Ising chain, the dispersion relation is
 $$
-\braket{0}{\pdop(x)\pop(x')}{0}\sim \frac{\rho_0}{\abs{x-x'}^{1/2}}.
+E(\eta)=\pm\sqrt{J^2+g^2-2gJ\cos(\eta)}
 $$
+For $J\neq g$, there is a gap in the dispersion relation. For $J=g$ the gap closes. This is associated with a __quantum phase transition__ between the paramagnetic ground state at large $g$ and a ferromagnetic ground state at small $g$.
 
-Although the bosonization method is only able to obtain results about the _asymptotic_ behaviour of correlation functions, it has a generality far beyond the Jordan-Wigner approach. For example, when $J_z\neq 0$ in the Heisenberg model, the Jordan--Wigner transformation maps the spin chain to a system of _interacting_ fermions. Nevertheless, the Tomonaga--Luttinger Hamiltonian is still the correct long distance description, with the asymptotic behaviour of all correlation functions depending only on $K$.
+
+
