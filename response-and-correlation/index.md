@@ -311,6 +311,15 @@ $$
 
 Note that $S(\omega)=S(-\omega)$ on account of $\chi''(\omega)$ being odd. This result tells us that the fluctuations and response of our oscillator are related to each other. This is actually rather natural -- the fluctuations are a response to the thermal noise felt by the system. Since it is $\chi''(\omega)$ -- the dissipative part of the response -- that appears in $\eqref{res_ClassicalFDT}$, relations of this sort are called __fluctuation--dissipation relations__. We'll meet the quantum version next.
 
+> ### Last time
+>
+> - Response $\chi(\omega)$ of the driven harmonic oscillator, $x(\omega)=\chi(\omega)F(\omega)$. 
+> -  _Causality_ ($\chi(t)=0$ for $t<0$) in the time domain corresponds to analyticity in the UHP of $\omega$. 
+> - Introduced mechanical model ("Lamb model") for dissipation by a string that is stationary at $x\to\infty$. 
+> - Next, introduce thermal fluctuations described by classical equipartition theorem ($kT$ per normal mode). Corresponds to white noise fluctuations of the force on the oscillator.
+> - Power spectrum of oscillator fluctuations $\propto |\chi(\omega)|^2$.
+> - Finally, express this in terms of $\text{Im}\chi(\omega)$, gives relation between __fluctuations__ and __dissipation__.
+
 ### Quantum Fluctuations
 
 Quantum mechanics provides another source of fluctuations. For a single (undamped) oscillator
@@ -325,13 +334,22 @@ $$
 \bra{0} y^2 \ket{0} = \frac{1}{2m \omega_0},
 $$
 
-while at finite temperature
+> By using equipartition in the ground state, or expressing $y$ in terms of $\adop$, $\aop$. Or (last resort) could evaluate the width of the Gaussian wave function. 
 
+while at finite temperature
 $$
 \langle\langle y^2\rangle\rangle=\tr\left[\rho\, y^2\right] = \frac{\coth(\beta\omega_0/2)}{2m\omega_0}.
 $$
 
 where $\rho = e^{-\beta H}/Z$ is the equilibrium density matrix, and $Z=\tr[e^{-\beta H}]$ is the partition function. The double angular brackets $\langle\langle (\cdots)\rangle\rangle$ denote that we are taking quantum _and thermal_ expectations.
+
+> Again, evaluate using $\adop$, $\aop$ and use the property $\adop\aop\ket{n}=n\ket{n}$ with density matrix eigenvalues $e^{-\beta \omega(n+1/2)}$. 
+>
+> Checks: (1) $\beta\to\infty$ gives g.s. result (2) $\beta\to 0$ then
+> $$
+> <<y^2>> = \frac{kT}{m\omega_0^2}
+> $$
+> which is consistent with equipartition $kT/2$ for each quadratic degree of freedom.
 
 Now what about _time dependent fluctuations_? This is what was calculated in $\eqref{res_power_final}$ for the classical damped oscillator. A natural candidate is
 
@@ -352,8 +370,21 @@ $$
 S(\omega)\neq S(-\omega).
 $$
 
-Many of the properties of this function are most easily understood from a __spectral representation__, which is obtained by inserting a complete set of energy eigenstates between $y(0)$ and $y(t)$ in $\eqref{res_QNoise}$. This gives
+> In the classical case, $y(\omega)=y(-\omega)^*$, so the power spectrum is necessarily symmetric.
 
+Many of the properties of this function are most easily understood from a __spectral representation__, which is obtained by inserting a complete set of energy eigenstates between $y(0)$ and $y(t)$ in $\eqref{res_QNoise}$. 
+
+> $$
+> \begin{align}
+> S(\omega) &= \int e^{i\omega t}\sum_m\tr\left[\frac{e^{-\beta H}}{Z}y(t)\ket{m}\bra{m}y(0)\right]\\
+> &=\int e^{i\omega t}\sum_{m,n}\bra{n}\frac{e^{-\beta H}}{Z}y(t)\ket{m}\bra{m}y(0)\ket{n}\\
+> &=\int e^{i\omega t}\sum_{m,n}\bra{n}\frac{e^{-\beta E_n}}{Z}e^{i(E_n-E_m)t}y(0)\ket{m}\bra{m}y(0)\ket{n}\\
+> \end{align}
+> $$
+>
+> 
+
+This gives
 $$
 S(\omega) = 2\pi\sum_{m,n} \frac{e^{-\beta E_n}}{Z} |\bra{n}y\ket{m}|^2 \delta(\omega-E_m+E_n).
 \label{res_SSpectral}
@@ -405,8 +436,9 @@ $$
 
 as we found before.
 
-Our discussion of the single oscillator can be generalized to a system of coupled oscillators, of which our damped spring is an example. Although we won't carry out the transformation explicitly, we could express the  $y(t)$ in terms of a system of normal modes as
+<img src="image-20191126105053554.jpg" alt="image-20191126105053554" style="zoom:33%;" />
 
+Our discussion of the single oscillator can be generalized to a system of coupled oscillators, of which our damped spring is an example. Although we won't carry out the transformation explicitly, we could express the  $y(t)$ in terms of a system of normal modes as
 $$
 y(t) = \sum_k \left[c^{}_k \adop_k(t) + c_k^* \aop_k(t)\right],
 \label{res_ymode}
@@ -418,8 +450,9 @@ $$
 \adop_k(t) = e^{i\omega_k t}\adop_k,\quad \aop_k(t) = e^{-i\omega_k t}\aop_k.
 $$
 
-Repeating the calculation of $S(\omega)$ gives
+> Here we are talking about the normal modes of the string + oscillator system, which could be quite complicated. In particular, waves "scatter" at the oscillator. 
 
+Repeating the calculation of $S(\omega)$ gives
 $$
 \begin{align}
 S(\omega)= 2\pi\sum_k |c_k|^2\left[n_\text{B}(\omega_k)\delta(\omega+\omega_k)+(n_\text{B}(\omega_k)+1)\delta(\omega-\omega_k)\right].
@@ -468,8 +501,11 @@ $$
 \Im \frac{1}{x\mp i0} = \pm\pi\delta(x),
 $$
 
-which you can prove by allowing the infinitesimal to be finite, and then letting it go to zero. We can then show
+which you can prove by allowing the infinitesimal to be finite, and then letting it go to zero. 
 
+<img src="image-20191126105231091.jpg" alt="image-20191126105231091" style="zoom:33%;" />
+
+We can then show
 $$
 \chi''(\omega) = \pi\sum_k |c_k|^2\delta(\omega_k-\omega),\quad \omega>0,
 \label{res_Imchi_modes}
@@ -582,7 +618,9 @@ S_{AB}(t) = S_{BA}(-t-i\beta).
 $$
 
 
-> Hint: use the cyclic property of the trace.
+> Hint: use the cyclic property of the trace. 
+>
+> Origin of imaginary time is $e^{-\beta H}$ in density matrix _vs._ $e^{iHt}$ that appears in the Heisenberg picture operators. 
 
 Fourier transforming, we arrive at
 
@@ -681,7 +719,7 @@ $$
 This perturbation couples to the density, and we ask how the density is affected by it. In a translationally invariant system
 
 $$
-\langle\langle \rho_\bq(t)\rangle\rangle = -\frac{1}{L^3} \int_{-\infty}^t  \chi^{\rho}_\bq(t-t') V_\bq(t)\,dt',
+\langle\langle \rho_\bq(t)\rangle\rangle = -\frac{1}{L^3} \int_{-\infty}^t  \chi^{\rho}_\bq(t-t') V_\bq(t')\,dt',
 $$
 
 where the density response function $\chi^\rho_\bq(t)$ is
