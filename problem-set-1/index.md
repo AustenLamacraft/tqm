@@ -53,7 +53,7 @@ $$
 At finite temperature $T$ and chemical potential $\mu$ we can describe a system of free particles in terms of the _$N$-particle density matrix_.
 
 $$
-\rho = \frac{N}{\mathcal{Z}}\sum_{\{N_\alpha\}} \exp\left(-\frac{1}{k_\text{B}T}\sum_\alpha N_\alpha [E_\alpha -\mu]\right)\ket{\Psi^{S/A}_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}}\bra{\Psi^{S/A}_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}}
+\rho = \frac{1}{\mathcal{Z}}\sum_{\{N_\alpha\}} \exp\left(-\frac{1}{k_\text{B}T}\sum_\alpha N_\alpha [E_\alpha -\mu]\right)\ket{\Psi^{S/A}_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}}\bra{\Psi^{S/A}_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}}
 $$
 
 where the sum is over the occupation number of each state, and $\mathcal{Z}$ is a normalization factor (the grand canonical partition function). Find the single particle density matrix $g(x,y)$ for bosons and fermions.
@@ -138,13 +138,11 @@ Investigate the behaviour of $\bra{0} u_j^2\ket{0}$ in a chain of length $N$. Wh
 
 Solve the 2D harmonic solid, defined by
 
-<a name="2dSolid"></a>
-![]({{ site.baseurl }}/assets/2dSolid.png)
+{{< figure src="2dSolid.png" title="2D harmonic solid." numbered="true" lightbox="true" >}}
 
 __NOTE__: You will need to assume that the equilibrium length of the springs is zero. If not, your solid will not be 'solid', in that even infinitely stiff bars connecting the atoms will not give a rigid structure because they are free to shear layer by layer:
 
-<a name="isostatic"></a>
-![]({{ site.baseurl }}/assets/isostatic.png)
+{{< figure src="isostatic.png" title="Isostatic solid." numbered="true" lightbox="true" >}}
 
 ## Thermal Displacement in 2D
 

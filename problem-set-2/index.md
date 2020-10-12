@@ -14,6 +14,7 @@ menu:
 
 $$
 \nonumber
+\newcommand{\cH}{\mathcal{H}}
 \newcommand{\cN}{\mathcal{N}}
 \newcommand{\br}{\mathbf{r}}
 \newcommand{\bp}{\mathbf{p}}
@@ -104,9 +105,8 @@ $$
 \varphi_{i}(\br)=\frac{1}{\left(\pi R^{2}\right)^{3/4}}\exp\left[-\frac{\left(\br-\br_{i}\right)^2}{2R^2}\right]
 $$
 
-<a name="folling"></a>
-![]({{ site.baseurl }}/assets/FollingNoise.png)
-_(a) raw image (b) density of an atomic cloud following expansion from a Mott state. (c) and (d) noise correlation signal extracted from the same image. From {% cite Folling:2005aa %}._
+{{< figure src="FollingNoise.png" title="(a) raw image (b) density of an atomic cloud following expansion from a Mott state. (c) and (d) noise correlation signal extracted from the same image." numbered="true" lightbox="true" >}}
+
 
 Show that the correlation function of momentum state occupancies is
 
