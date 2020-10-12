@@ -12,13 +12,40 @@ menu:
     weight: 2
 ---
 
-## Contents
-{:.no_toc}
-
-2. Toc
-{:toc}
-
----
+$$
+\nonumber
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bp}{\mathbf{p}}
+\newcommand{\bk}{\mathbf{k}}
+\newcommand{\bq}{\mathbf{q}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\pop}{\psi^{\vphantom{\dagger}}}
+\newcommand{\pdop}{\psi^\dagger}
+\newcommand{\Pop}{\Psi^{\vphantom{\dagger}}}
+\newcommand{\Pdop}{\Psi^\dagger}
+\newcommand{\Phop}{\Phi^{\vphantom{\dagger}}}
+\newcommand{\Phdop}{\Phi^\dagger}
+\newcommand{\phop}{\phi^{\vphantom{\dagger}}}
+\newcommand{\phdop}{\phi^\dagger}
+\newcommand{\aop}{a^{\vphantom{\dagger}}}
+\newcommand{\adop}{a^\dagger}
+\newcommand{\bop}{b^{\vphantom{\dagger}}}
+\newcommand{\bdop}{b^\dagger}
+\newcommand{\cop}{c^{\vphantom{\dagger}}}
+\newcommand{\cdop}{c^\dagger}
+\newcommand{\Nop}{\mathsf{N}^{\vphantom{\dagger}}}
+\newcommand{\bra}[1]{\langle{#1}\rvert}
+\newcommand{\ket}[1]{\lvert{#1}\rangle}
+\newcommand{\inner}[2]{\langle{#1}\rvert #2 \rangle}
+\newcommand{\braket}[3]{\langle{#1}\rvert #2 \lvert #3 \rangle}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\tr}{tr}
+\newcommand{\abs}[1]{\lvert{#1}\rvert}
+\newcommand{\brN}{\br_1, \ldots, \br_N}
+\newcommand{\xN}{x_1, \ldots, x_N}
+\newcommand{\zN}{z_1, \ldots, z_N}
+$$
 
 ## $N$ Particle Hong--Ou--Mandel
 
@@ -86,7 +113,7 @@ Show that the correlation function of momentum state occupancies is
 $$
 			\braket{\Psi}{:N(\bp)N(\bp'):}{\Psi}=\sum_{i,j}\tilde\varphi^{*}_{i}(\bp)\tilde\varphi^{}_{i}(\bp)\tilde\varphi^{*}_{j}(\bp')\tilde\varphi^{}_{j}(\bp')
 +\tilde\varphi^{*}_{i}(\bp)\tilde\varphi^{}_{j}(\bp)\tilde\varphi^{*}_{j}(\bp')\tilde\varphi^{}_{i}(\bp').			
-	$$
+$$
 
 where $\tilde\varphi_{i}(\bp)$ is the Fourier transform of the spatial wavefunction, and $:(\cdots):$ denotes _normal ordering_ of the operators between the colons. Evaluate the Fourier transform and explain the structure of the noise correlations in the above data.
 
@@ -229,7 +256,7 @@ and show that:
 
 	$$
 		E^{(3)}_{0} = \sum_{m,n\neq 0} \frac{\braket{0}{H_{\text{int}}}{m}\braket{m}{H_{\text{int}}}{n}\braket{n}{H_{\text{int}}}{0}}{\left(E^{(0)}_{m}-E^{(0)}_{0}\right)\left(E^{(0)}_{n}-E^{(0)}_{0}\right)}-\braket{0}{H_{\text{int}}}{0}\sum_{n\neq 0}\frac{|\braket{n}{H_{\text{int}}}{0}|^{2}}{\left(E^{(0)}_{0}-E^{(0)}_{n}\right)^{2}}.
-		$$
+	$$
 
 	Show that this expression contains an _infrared_ divergence (i.e. at low momenta). This can't be fixed by appealing to the interaction potential, and is the reason we need Bogoliubov theory! See {% cite Brueckner:1957aa  %}.
 
