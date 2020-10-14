@@ -108,7 +108,7 @@ therefore have energy $\omega_c/2$ and belong to the __lowest Landau level__ (LL
 > Show that these states have the form
 >
 >$$
->\psi(z,\bar z) = f(z) \exp\left(-\frac{eB}{4}\left|z\right|^2\right),
+>\psi(z,\bar z) = f(z) \exp\left(-\frac{qB}{4}\left|z\right|^2\right),
 >$$
 >
 >where $f(z)$ is an arbitrary analytic function.
@@ -125,6 +125,7 @@ A possible orthonormal basis is
 $$
 f_n(z) = \frac{z^n}{\sqrt{2^n n!}}.
 $$
+
 ### Filled LLL of Fermions
 
 Let's imagine filling the LLL with fermions. As it stands, there's no principle to suggest how we do this, as all the states are degenerate. We can lift that degeneracy by adding a rotationally symmetric harmonic potential
