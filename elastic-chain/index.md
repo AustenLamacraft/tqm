@@ -206,7 +206,7 @@ a^*_n &= \sqrt{\frac{m\omega(\eta_n)}{2}}\left(q_{-n} - \frac{i}{m\omega(\eta_n)
 \label{coll_adef}
 \end{align}
 $$
-Remember that $q_n = q_{-n}^\*$ and $\pi_n = \pi_{-n}^\*$ in order that $u_j$ and $p_j$ are real. Note that $n=0$ is excluded because $\omega(0)=0$. These coordinates satisfy
+Remember that $q_n = q_{-n}^*$ and $\pi_n = \pi_{-n}^*$ in order that $u_j$ and $p_j$ are real. Note that $n=0$ is excluded because $\omega(0)=0$. These coordinates satisfy
 $$
 \{a_m,a^{*}_n\}=-i\delta_{mn}.
 $$
@@ -332,7 +332,7 @@ $$
 
 Our continuum Hamiltonian $H= T+V$ is then written in Fourier components as
 $$
-\frac{H}{L} = \sum_{n=-\infty}^\infty \left[\frac{1}{2\rho} \pi_n\pi_{-n} + \frac{\kappa k_n^2}{2}  u_nu_{-n} \right].
+H = \sum_{n=-\infty}^\infty \left[\frac{1}{2\rho L} \pi_n\pi_{-n} + \frac{\kappa L k_n^2}{2}  u_nu_{-n} \right].
 $$
 We can now read off the dispersion relation
 $$
