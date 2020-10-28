@@ -98,7 +98,7 @@ where we have chosen the labels so that the hermiticity condition $\left(\rho^R_
 
 	where $\left[r_q,r_{q'}^\dagger\right]=\delta_{q,q'}$. From the definition \eqref{rhodef} we see that $\rho_q^R$ annihilates the ground state, while $\rho^R_{-q}$ creates an excitation with momentum $q$.
 
-4. Show that the structure factor of the density $\rho_q = \rho^R_q+\rho^L_q$ saturates the Onsager bound discussed in [Problem Set 3]({{ site.baseurl }}/problems/Problems3/).
+4. Show that the structure factor of the density $\rho_q = \rho^R_q+\rho^L_q$ saturates the Onsager bound discussed in [Problem Set 3]({{< relref "../problem-set-3/index.md" >}}).
 
 ## Bosonized Form of the Fermion Operator
 
@@ -130,7 +130,7 @@ $$
 
 here the $\bop$ fermion describes the impurity site: $N_{b,s}=\bdop_{s}\bop_s$.
 
-For $t=0$ and $\epsilon_b=-U/2$ the singly occupied, doubly degenerate impurity state has energy $-U/2$, with the empty and double occupied states having larger energy $0$ (this choice is made for simplicity). We can then ask for the effective Hamiltonian describing the singly occupied site. We've seen one way to do this in [Lecture 7]({{ site.baseurl }}/lectures/Lattice/)). A second way is to use the __Schrieffer–Wolff transformation__ {%cite Schrieffer:1966aa %}. The idea is to perform a unitary transformation on the Hamiltonian that removes the coupling in the last term to lowest order.
+For $t=0$ and $\epsilon_b=-U/2$ the singly occupied, doubly degenerate impurity state has energy $-U/2$, with the empty and double occupied states having larger energy $0$ (this choice is made for simplicity). We can then ask for the effective Hamiltonian describing the singly occupied site. We've seen one way to do this in [Lecture 7]({{< relref "../lattice-models/index.md" >}}). A second way is to use the __Schrieffer–Wolff transformation__ {%cite Schrieffer:1966aa %}. The idea is to perform a unitary transformation on the Hamiltonian that removes the coupling in the last term to lowest order.
 
 We write
 
@@ -245,7 +245,7 @@ $$
 \Psi(x_1,\ldots,x_N) = \prod_{j<k}\exp\left(-\frac{\abs{c}}{2}\abs{x_j-x_k}\right),\quad x_1<x_2<\cdots <x_N
 $$
 
-Show that this is a Bethe state, find the Bethe roots, and calculate the energy. Compare with the prediction of the Gross--Pitaevskii equation found in [Problem Set 2]({{ site.baseurl }}/problems/Problems2/).
+Show that this is a Bethe state, find the Bethe roots, and calculate the energy. Compare with the prediction of the Gross--Pitaevskii equation found in [Problem Set 2]({{< relref "../problem-set-2/index.md" >}}).
 
 
 ## Density Correlations in Lieb--Liniger

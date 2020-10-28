@@ -258,7 +258,7 @@ Vortices with $\abs{\ell}>1$ are generally unstable, and will break into multipl
 
 {{< figure src="3dLattices.jpg" title="Vortex lattice in a Bose--Einstein condensate of Sodium atoms. Source: [Ketterle group, MIT](http://cua.mit.edu/ketterle_group/)." numbered="true" lightbox="true" >}}
 
-Vortices are one manifestation of the phenomenon of __superfluidity__: persistent flow without resistance. The true ground state of the system does not have such flows, of course, so these flows are only _metastable_ (as long as rotational symmetry is broken, so that angular momentum is not conserved). In the case of the vortex, it can only decay by its core leaving the system. An even simpler example is provided by currents flowing in a ring, a situation studied in [Problem Set 2]({{ site.baseurl }}/problems/Problems2/), which illustrates the important role played by repulsive interactions.
+Vortices are one manifestation of the phenomenon of __superfluidity__: persistent flow without resistance. The true ground state of the system does not have such flows, of course, so these flows are only _metastable_ (as long as rotational symmetry is broken, so that angular momentum is not conserved). In the case of the vortex, it can only decay by its core leaving the system. An even simpler example is provided by currents flowing in a ring, a situation studied in [Problem Set 2]({{< relref "../problem-set-2/index.md" >}}), which illustrates the important role played by repulsive interactions.
 
 ## Bogoliubov Theory
 
@@ -457,7 +457,7 @@ $$
 \braket{0}{\rho_{-\bq}\rho_{\bq}}{0} = N.
 $$
 
-corresponding to uncorrelated, Poissonian fluctuations of number inside any volume of the gas. If we were to take a snapshot of the particles at any instant in the interacting gas, we would see a picture similar to the image of the Laughlin state in [Lecture 1]({{ site.baseurl }}/lectures/ManyBodyWavefunctions/).
+corresponding to uncorrelated, Poissonian fluctuations of number inside any volume of the gas. If we were to take a snapshot of the particles at any instant in the interacting gas, we would see a picture similar to the image of the Laughlin state in [Lecture 1]({{< relref "../many-body-wavefunctions/index.md" >}}).
 
 The other qualitatively new feature of the Bogoliubov ground state is that the zero momentum state is _depleted_. We find the momentum distribution by first writing the number operator $N_\bp=\adop_{\bp}\aop_{\bp}$ in terms of the Bogoliubov quasiparticles
 

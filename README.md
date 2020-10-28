@@ -16,6 +16,8 @@ These are the materials for the Part III course Theories of Quantum Matter at th
 
 - Figures for Hugo follow the format: `{{< figure src="HOM.png" title="Four possible outcomes after the passage of two bosons through a beam splitter." numbered="true" lightbox="true" >}}`
 
+- Links for Hugo follow format `[Lecture 3]({{< relref "../elastic-chain/index.md" >}})`
+
 - Figures for Typora use standard markdown
 
 ## TODOs

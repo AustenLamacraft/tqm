@@ -167,7 +167,7 @@ $$
 
 (I've set $J=-1$ as it's the only scale in the problem, so no harm done.) Acting with $H$ therefore leaves us within the subspace spanned by the states $\ket{j}$. It had to, of course: this is the subspace with $S_z=N/2-1$. We can think of down spins as being like particles, with the Hamiltonian conserving their number.
 
-We can easily diagonalize $H$ in this space by noting that it corresponds to a circulant matrix. As we saw in [Lecture 3]({{ site.baseurl }}/lectures/ElasticChain/), the eigenstates are plane waves
+We can easily diagonalize $H$ in this space by noting that it corresponds to a circulant matrix. As we saw in [Lecture 3]({{< relref "../elastic-chain/index.md" >}}), the eigenstates are plane waves
 
 $$
 \ket{\eta} = \frac{1}{\sqrt{N}}\sum_{j=1}^N e^{i\eta j}\ket{j},
@@ -190,7 +190,7 @@ If we are thinking of the down spin as a particle, then the eigenstates $\eqref{
 
 ### $N$-Magnon States
 
-Any system at finite temperature has a finite energy density, or a total energy proportional to the system size. Since a magnon has a microscopic energy set by $J$, such a system will presumably have _many_ magnons (many flipped spins). As we increase the number of flipped spins, we increase the size of the subspace in which $H$ acts -- it has dimension $\binom{N}{n}$ for $n$ flipped spins i.e. $S^z = N/2-n$. Things are obviously going to get difficult quickly! It turns out that for the Heisenberg model we are lucky, and we know the form of a general energy eigenstate. It's called __Bethe's ansatz__ and we'll meet it in [Lecture 15]({{ site.baseurl }}/lectures/LiebLinigerModel/).
+Any system at finite temperature has a finite energy density, or a total energy proportional to the system size. Since a magnon has a microscopic energy set by $J$, such a system will presumably have _many_ magnons (many flipped spins). As we increase the number of flipped spins, we increase the size of the subspace in which $H$ acts -- it has dimension $\binom{N}{n}$ for $n$ flipped spins i.e. $S^z = N/2-n$. Things are obviously going to get difficult quickly! It turns out that for the Heisenberg model we are lucky, and we know the form of a general energy eigenstate. It's called __Bethe's ansatz__ and we'll meet it in [Lecture 15]({{< relref "../lieb-liniger/index.md" >}}).
 
 We started our discussion with the ground state of the ferromagnetic $J<0$ Heisenberg model. What about $J>0$? Can we guess the ground state in this case (of course, that's equivalent to finding the _highest_ excited state of the ferromagnet). Bethe's ansatz tells us that it must be some complicated gas of magnons, all scattering off each other. Why are things so complicated?
 
@@ -218,7 +218,7 @@ A common strategy when faced with an intractable model is to generalize it to a 
 
 ### Holstein--Primakoff Representation of Spin
 
-This is a way of representing spins in terms of oscillator variables so that a problem of coupled spins becomes a problem of coupled oscillators, of the kind we studied in [Lecture 3]({{ site.baseurl }}/lectures/ElasticChain/). Since the map is nonlinear, the problem is not harmonic, although a harmonic approximation is a useful first step that turns out to be justified when the spins are large.
+This is a way of representing spins in terms of oscillator variables so that a problem of coupled spins becomes a problem of coupled oscillators, of the kind we studied in [Lecture 3]({{< relref "../elastic-chain/index.md" >}}). Since the map is nonlinear, the problem is not harmonic, although a harmonic approximation is a useful first step that turns out to be justified when the spins are large.
 
 The representation is
 
@@ -230,7 +230,7 @@ S^z &= \left(s - \adop \aop\right).
 \end{align}
 $$
 
-I'm going to leave it up to you to confirm that $[\aop,\adop]=1$ reproduces the spin commutation relations, and [Problem Set 1]({{ site.baseurl }}/problems/Problems1/) should demystify why this works to some extent. A rough understanding is as follows. $S^{\pm}$ and $\aop$, $\adop$ evidently have something in common in that they shift us up and down a ladder of states. That's why the relation between $S^z$ and the number of quanta in the oscillator is so simple. The oscillator ground state corresponds to $\ket{s,s}$.
+I'm going to leave it up to you to confirm that $[\aop,\adop]=1$ reproduces the spin commutation relations, and [Problem Set 1]({{< relref "../problem-set-1/index.md" >}}) should demystify why this works to some extent. A rough understanding is as follows. $S^{\pm}$ and $\aop$, $\adop$ evidently have something in common in that they shift us up and down a ladder of states. That's why the relation between $S^z$ and the number of quanta in the oscillator is so simple. The oscillator ground state corresponds to $\ket{s,s}$.
 
 The difference is that in the spin case the ladder is finite, while in the oscillator it is (semi-)infinte. Thus we can't just have $S^+\propto \aop$. We must have something that stops us lowering beyond $S^z=-s$. That's the function of the factor in the square root in $S^-$.
 
@@ -354,9 +354,9 @@ $$
 \label{spin_DepEval}
 $$
 
-It's then clear that this commutes with the harmonic Hamiltonian $\eqref{spin_H2FM}$. In fact, this is an exact statement not restricted to the harmonic approximation: the total number of Holstein--Primakoff bosons is conserved. The same is not true for the antiferromagnetic case $\eqref{spin_H2FM}$. If we had written this Hamiltonian in terms of the operators $\adop_j$, $\aop_j$, we would have found terms involving $\adop_j\adop_{j+1}$ and $\aop_j\aop_{j+1}$ that create pairs of bosons (see [Problem Set 1]({{ site.baseurl }}/problems/Problems1/)).
+It's then clear that this commutes with the harmonic Hamiltonian $\eqref{spin_H2FM}$. In fact, this is an exact statement not restricted to the harmonic approximation: the total number of Holstein--Primakoff bosons is conserved. The same is not true for the antiferromagnetic case $\eqref{spin_H2FM}$. If we had written this Hamiltonian in terms of the operators $\adop_j$, $\aop_j$, we would have found terms involving $\adop_j\adop_{j+1}$ and $\aop_j\aop_{j+1}$ that create pairs of bosons (see [Problem Set 1]({{< relref "../problem-set-1/index.md" >}}).
 
-Next we use the oscillator coordinates just as in [Lecture 3]({{ site.baseurl }}/lectures/ElasticChain/). Since we want to express $\eqref{spin_H2AFM}$ in terms of ladder operators, we have to adapt our definition accordingly. For $\eta\neq 0, \pi$ the operators
+Next we use the oscillator coordinates just as in [Lecture 3]({{< relref "../elastic-chain/index.md" >}}). Since we want to express $\eqref{spin_H2AFM}$ in terms of ladder operators, we have to adapt our definition accordingly. For $\eta\neq 0, \pi$ the operators
 
 $$
 \begin{align}

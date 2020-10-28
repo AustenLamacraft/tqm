@@ -98,7 +98,7 @@ $$
 E^{(1)}(\mathbf{N}) = \frac{U_0}{V} \sum_{\bk,\bk'} N_{\uparrow}(\bk)N_{\downarrow}(\bk') = \frac{U_0}{V}N_\uparrow N_\downarrow.
 $$
 
-This is just the energy we found when we discussed the Stoner criterion in [Lecture 6]({{ site.baseurl }}/lectures/MoreSecondQuantization/). For the second order correction we need the matrix element $\braket{\mathbf{N}'}{H_\text{int}}{\mathbf{N}}$, which is nonzero if
+This is just the energy we found when we discussed the Stoner criterion in [Lecture 6]({{< relref "../more-second-quantization/index.md" >}}). For the second order correction we need the matrix element $\braket{\mathbf{N}'}{H_\text{int}}{\mathbf{N}}$, which is nonzero if
 
 $$
 \begin{align}
