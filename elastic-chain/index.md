@@ -489,7 +489,7 @@ $$
 \end{split}
 \end{equation}
 $$
-{{< figure src="struct_fact.png" title="Numerical evaluation of $\bra{0} \rho\_q \rho\_{-q} \ket{0}$ for $\ell\_\text{osc}/a=0.2$, $N=51$. Note that the second Bragg peak is hardly visible." numbered="true" lightbox="true" >}}
+{{< figure src="struct_fact.png" title="Numerical evaluation of $\bra{0} \rho_q \rho_{-q} \ket{0}$ for $\ell_\text{osc}/a=0.2$, $N=51$. Note that the second Bragg peak is hardly visible." numbered="true" lightbox="true" >}}
 
 The second exponent modifies the classical prediction of Bragg peaks. We have encountered the expression in exponent before in $\eqref{coll_uvar}$. Taking the $N\to\infty$ limit with $\left\|j-k\right\|\gg 1$ as before, we find that in the vicinity of the first Bragg peak at $q=2\pi/a$ the summand has the form
 $$

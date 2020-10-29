@@ -82,7 +82,7 @@ $$
 H = J \sum_{j=1}^N \mathbf{s}_j \cdot \mathbf{s}_{j+1},
 $$
 
-and as usual we take $\mathbf{s}\_j=\mathbf{s}_{j+N}$ (periodic boundary conditions). Such a system is called a __spin chain__. Surprisingly enough, crystals do exist in which magnetic atoms are arranged in this way, with only weak coupling between neighbouring chains. So models of this type are a useful description, at least in some energy window, of real materials.
+and as usual we take $\mathbf{s}_j=\mathbf{s}_{j+N}$ (periodic boundary conditions). Such a system is called a __spin chain__. Surprisingly enough, crystals do exist in which magnetic atoms are arranged in this way, with only weak coupling between neighbouring chains. So models of this type are a useful description, at least in some energy window, of real materials.
 
 > What is the dimension of the Hilbert in which the Hamiltonian acts?
 
@@ -553,7 +553,7 @@ H_{AB} &= \frac{J}{\cN}\left[\left(\mathbf{S}_A + \mathbf{S}_B\right)^2 - \left(
 \end{align}
 $$
 
-(Note that $\tilde{\mathbf{s}}\_{(\pi,\ldots,\pi)}=\tilde{\mathbf{s}}\_{-(\pi,\ldots,\pi)}$) Relative to the original model, this has the unphysical feature that every sublattice $A$ spin is interacting with every sublattice $B$ spin. The factor of $N^{-d}$ does guarantee that we'll have an extensive energy, however.
+(Note that $\tilde{\mathbf{s}}_{(\pi,\ldots,\pi)}=\tilde{\mathbf{s}}_{-(\pi,\ldots,\pi)}$) Relative to the original model, this has the unphysical feature that every sublattice $A$ spin is interacting with every sublattice $B$ spin. The factor of $N^{-d}$ does guarantee that we'll have an extensive energy, however.
 
 What is the ground state of $H_{AB}$, assuming $J>0$? This is easily answered by writing the Hamiltonian as
 
