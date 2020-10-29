@@ -111,7 +111,7 @@ $$
 \label{eq:classicaljoint}
 $$
 
-This also follows from taking the square modulus of $ \eqref{quantum_statistics_ProductWavefunction}$. The result implied by the wavefunction $\eqref{quantum_statistics_sym}$ is
+This also follows from taking the square modulus of \eqref{quantum_statistics_ProductWavefunction}. The result implied by the wavefunction $\eqref{quantum_statistics_sym}$ is
 $$
 \begin{align}
 \rho_{12}(\br_1,\br_2) &= \frac{1}{2}\left[\rho_1(\br_1)\rho_2(\br_2)+\rho_1(\br_2)\rho_2(\br_1)\right] \\

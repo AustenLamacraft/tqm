@@ -580,9 +580,10 @@ $$
 
 The analog of the formula $\eqref{A_Aab}$ for the matrix elements of a two particle operator between two product states is
 $$
-\braket{\mathbf{N}}{\hat B}{\mathbf{N'}} = \sum_{\alpha\beta\gamma\delta} B_{\alpha\beta,\gamma\delta} \sqrt{N_\alpha N_\beta N'_\gamma N'_\delta}.
+\braket{\mathbf{N}}{\hat B}{\mathbf{N'}} = \sum_{\alpha\beta\gamma\delta} B_{\alpha\beta,\gamma\delta} \sqrt{N_\alpha N_\beta N'_\gamma N'_\delta},
 \label{A_Babcd}
 $$
+with $N_{\gamma,\delta} = N'_{\gamma,\delta}-1$ and $N_{\alpha,\beta} = N'_{\alpha,\beta}+1$
 
 > Strictly this formula is not correct when $\gamma=\delta$ or $\alpha=\beta$. In the former case $N'_\gamma N'_\delta \to N'_\gamma (N'_\gamma-1)$ and in the latter $N_\alpha N_\beta \to N_\alpha (N_\alpha-1)$.  In the thermodynamic limit these terms usually make a vanishing contribution when sums are replaced with integrals. There are exceptions: when a finite fraction of the particles are in one state (which occurs for Bose—Einstein condensates, for example). In those cases we end up neglecting $N_\alpha-1$ relative to $N_\alpha$, however!
 
@@ -606,7 +607,7 @@ $$
 
 The difference lies in the order of the operators, which prevents a particle from interacting with itself.
 
-> Check that $\eqref{A_VNotNormal}$ has a nonzero expectation value in a 1 particle state.
+> Check that $\eqref{A_VNotNormal}$ has a zero expectation value in a 1 particle state.
 
 As an example, let's write the Hamiltonian of interacting bosons that we met in [Lecture 1]({{< ref "many-body-wavefunctions" >}}) in our new formalism.
 
