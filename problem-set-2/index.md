@@ -50,7 +50,7 @@ $$
 
 ## $N$ Particle Hong--Ou--Mandel
 
-_[TP2, 2015]_ Let's reconsider the beam splitter discussed in [Lecture 1]({{< relref "../many-body-wavefunctions/index.md" >}}).
+_[TP2, 2015]_ Let's reconsider the beam splitter discussed in [Lecture 1]({{< ref "many-body-wavefunctions" >}}).
 
 $\adop_i$, $\aop_i$ ($i=1,2$) create and destroy particles in the incoming states, and $\bdop_i$, $\bop_i$ do the same for the outgoing states. The creation operators are related by the $S$-matrix
 

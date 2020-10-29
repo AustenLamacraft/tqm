@@ -90,7 +90,7 @@ $$
 H = H_\text{Hubbard} + \sum_j \left[\frac{p_j^2}{2m}+\frac{1}{2}m\omega^2 x_j^2 + \alpha x_j\left(N_{j,\uparrow}+N_{j,\downarrow}\right)\right].
 $$
 
-If the energy $\omega$ of the oscillators is larger than other scales, you can use the technique from [Lecture 7]({{< relref "../lattice-models/index.md" >}}) to derive an effective Hamiltonian. What form does this take?
+If the energy $\omega$ of the oscillators is larger than other scales, you can use the technique from [Lecture 7]({{< ref "lattice-models" >}}) to derive an effective Hamiltonian. What form does this take?
 
 The physics behind this mechanism is a very simple consequence of living in an elastic medium, and is not really a quantum effect at all. The fact that two heavy spheres on a stretched horizontal rubber sheet will roll towards each other is a nearly perfect analogy for this effect (as well as a very poor one for gravitational attraction in GR!).
 
@@ -114,15 +114,15 @@ Find the dynamical structure factor for a 1D Fermi gas, and verify the Onsager b
 
 ## $S_\rho(q)$ for the Elastic Chain
 
-In [Lecture 3]({{< relref "../elastic-chain/index.md" >}}) we found the static structure factor of the elastic chain. Verify the Onsager bound.
+In [Lecture 3]({{< ref "elastic-chain" >}}) we found the static structure factor of the elastic chain. Verify the Onsager bound.
 
 ## Ground State Energy of Jellium in Perturbation Theory
 
-In [Lecture 9]({{< relref "../fermi-gas/index.md" >}}) we found the corrections to the eigenenergies of a Fermi gas to second order in the interaction. Show that for Jellium the correction to the ground state energy has an infrared divergence.
+In [Lecture 9]({{< ref "fermi-gas" >}}) we found the corrections to the eigenenergies of a Fermi gas to second order in the interaction. Show that for Jellium the correction to the ground state energy has an infrared divergence.
 
 ## Limits of the Polarization
 
-Check the two limits for the polarization described at the end of [Lecture 12]({{< relref "../jellium/index.md" >}}).
+Check the two limits for the polarization described at the end of [Lecture 12]({{< ref "jellium" >}}).
 
 ## Explicit Evaluation of Green's Functions
 

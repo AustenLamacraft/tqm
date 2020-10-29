@@ -186,7 +186,7 @@ $$
 
 ### Solving the XY Model
 
-The XY model is a particular case of the anisotropic spin chain (see [Problem Set 1]({{< relref "../problem-set-1/index.md" >}}) in which only the $x$ and $y$ components of the spins are coupled (hence the name)
+The XY model is a particular case of the anisotropic spin chain (see [Problem Set 1]({{< ref "problem-set-1" >}}) in which only the $x$ and $y$ components of the spins are coupled (hence the name)
 
 $$
 \begin{align}
@@ -195,7 +195,7 @@ H &= -J\sum_j\left[s^x_js^x_{j+1}+s^y_js^y_{j+1}\right]\\
 \end{align}
 $$
 
-In [Lecture 4]({{< relref "../spin-models/index.md" >}}) we saw that the XY term can be interpreted as describing the hopping of magnons, or spin flips. Now, applying the mapping $\eqref{JW}$, we see that it can equally be interpreted in terms of fermion hopping
+In [Lecture 4]({{< ref "spin-models" >}}) we saw that the XY term can be interpreted as describing the hopping of magnons, or spin flips. Now, applying the mapping $\eqref{JW}$, we see that it can equally be interpreted in terms of fermion hopping
 
 $$
 \sigma_j^+\sigma_{j+1}^-=\adop_j e^{i\pi n_j}\aop_{j+1}=\adop_j\aop_{j+1}.
@@ -244,7 +244,7 @@ $$
 
 Since $S^z_\text{tot}=2N_a-N$, the filling is determined by the total magnetization. In particular $S^z_\text{tot}=0$ corresponds to half filling.
 
-We've actually met this before, albeit in a different guise. Recall that in [Lecture 1]({{< relref "../many-body-wavefunctions/index.md" >}}) we saw that the impenetrable Bose gas in one dimension can be understood in terms of noninteracting fermions. Spin-1/2 degrees of freedom are just a lattice version of hardcore fermions, and the Jordan--Wigner string serves to turn an antisymmetric fermionic wavefunction into a bosonic one. To formally recover the Bose gas without a lattice we would have to consider the limit of very low filling.
+We've actually met this before, albeit in a different guise. Recall that in [Lecture 1]({{< ref "many-body-wavefunctions" >}}) we saw that the impenetrable Bose gas in one dimension can be understood in terms of noninteracting fermions. Spin-1/2 degrees of freedom are just a lattice version of hardcore fermions, and the Jordan--Wigner string serves to turn an antisymmetric fermionic wavefunction into a bosonic one. To formally recover the Bose gas without a lattice we would have to consider the limit of very low filling.
 
 ### Spin Correlations
 
