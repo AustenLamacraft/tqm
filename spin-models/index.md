@@ -203,7 +203,7 @@ $$
 \label{spin_AFM}
 $$
 
-assuming $N$ is odd. Acting with the $H$ reveals that we are out of luck, however. The reason is simple: regarding the down spins as particles arranged on every other site, the spin flip terms of the Hamiltonian cause them to move about. This is Bethe's dense gas of interacting magnons.
+assuming $N$ is even. Acting with the $H$ reveals that we are out of luck, however. The reason is simple: regarding the down spins as particles arranged on every other site, the spin flip terms of the Hamiltonian cause them to move about. This is Bethe's dense gas of interacting magnons.
 
 But antiferromagnets, with the kind of alternating order described by $\eqref{spin_AFM}$ do exist! In fact, their existence was predicted  by [Louis Néel](https://en.wikipedia.org/wiki/Louis_Néel) in 1936 _before_ their experimental discovery. $\eqref{spin_AFM}$ is sometimes called a __Néel state__ for this reason.
 
@@ -262,7 +262,7 @@ where $x = \frac{1}{\sqrt{2}}(\aop+\adop)$ and $p = \frac{i}{\sqrt{2}}(\adop-\ao
 Doing this for each spin in our chain gives the Hamiltonian
 
 $$
-H\sim NJ s^2 - sJ- \overbrace{sJ \sum_{j=1}^N \left[x_j x_{j+1} + p_j p_{j+1}-x_j^2 - p_j^2\right]}^{\equiv H^{(2)}} + \ldots,
+H\sim NJ s^2 - sNJ- \overbrace{sJ \sum_{j=1}^N \left[x_j x_{j+1} + p_j p_{j+1}-x_j^2 - p_j^2\right]}^{\equiv H^{(2)}} + \ldots,
 \label{spin_Harmonic}
 $$
 
@@ -289,9 +289,11 @@ $$
 \omega_{\text{FM}}(\eta) = 4s\left|J\right|\sin^2(\eta/2)
 $$
 
-in agreement with $\eqref{spin_dispersion}$ for $s=1/2$. Incidentally, in order that the ground state energy is $NJ s^2$ with no correction at order $s$, the ground state energy of the oscillators must cancel the second term of $\eqref{spin_Harmonic}$.
-
-This approximation applies close to the ferromagnetic state, where there are few oscillator quanta and the effect of the anharmonic terms in the Hamiltonian is small. What about the case of antiferromagnetic coupling? There is a handy trick for modifying the above calculation to apply to this case. We rotate every other spin through $\pi$ about the $y$ axis, so that
+in agreement with $\eqref{spin_dispersion}$ for $s=1/2$. Incidentally, in order that the ground state energy is $NJ s^2$ with no correction at order $s$, the ground state energy of the oscillators must cancel the second term of $\eqref{spin_Harmonic}$. In other words,
+$$
+\sum_{|n| \leq (N-1)/2} \sin^2(\eta_n/2)\bra{0}\left[q_n q_{-n} + \pi_n\pi_{-n}\right]\ket{0}=\frac{N}{2}.
+$$
+The harmonic approximation applies close to the ferromagnetic state, where there are few oscillator quanta and the effect of the anharmonic terms in the Hamiltonian is small. What about the case of antiferromagnetic coupling? There is a handy trick for modifying the above calculation to apply to this case. We rotate every other spin through $\pi$ about the $y$ axis, so that
 
 $$
 (s^x_j,s^y_j,s^z_j)\longrightarrow (-s^x_j,s^y_j,-s^z_j),\quad j\text{ odd}.
@@ -354,7 +356,7 @@ $$
 \label{spin_DepEval}
 $$
 
-It's then clear that this commutes with the harmonic Hamiltonian $\eqref{spin_H2FM}$. In fact, this is an exact statement not restricted to the harmonic approximation: the total number of Holstein--Primakoff bosons is conserved. The same is not true for the antiferromagnetic case $\eqref{spin_H2FM}$. If we had written this Hamiltonian in terms of the operators $\adop_j$, $\aop_j$, we would have found terms involving $\adop_j\adop_{j+1}$ and $\aop_j\aop_{j+1}$ that create pairs of bosons (see [Problem Set 1]({{< relref "../problem-set-1/index.md" >}}).
+This commutes with the harmonic Hamiltonian $\eqref{spin_H2FM}$, and is zero in the ground state. In fact, this is an exact statement not restricted to the harmonic approximation: the total number of Holstein--Primakoff bosons is conserved. The same is not true for the antiferromagnetic case $\eqref{spin_H2FM}$. If we had written this Hamiltonian in terms of the operators $\adop_j$, $\aop_j$, we would have found terms involving $\adop_j\adop_{j+1}$ and $\aop_j\aop_{j+1}$ that create pairs of bosons (see [Problem Set 1]({{< relref "../problem-set-1/index.md" >}}).
 
 Next we use the oscillator coordinates just as in [Lecture 3]({{< relref "../elastic-chain/index.md" >}}). Since we want to express $\eqref{spin_H2AFM}$ in terms of ladder operators, we have to adapt our definition accordingly. For $\eta\neq 0, \pi$ the operators
 
@@ -383,7 +385,15 @@ $$
 \end{align}
 $$
 
-This represents an $O(s^0)$ correction to $\langle s^z_j\rangle = (-1)^j\left(s - \Delta s\right)$. However, the integral diverges logarithmically at $\eta=0$ and $\eta=\pi$. This indicates that our approach breaks down in the $N\to\infty$ limit: at finite $N$ the sums are all finite if $\eta=0, \pi$ are excluded.
+This represents an $O(s^0)$ correction to $\langle s^z_j\rangle = (-1)^j\left(s - \Delta s\right)$. However, the integral diverges logarithmically at $\eta=0$ and $\eta=\pi$. 
+
+We found a similar situation in our calculation of $\bra{0}(u_j-u_k)^2\ket{0}$ in the elastic chain, but in that case a factor of $1-\cos(\eta(j-k))$ came to our rescue. This arose because fluctuations of modes with a wavelength much larger than $|j-k|$  don’t contribute (much) to the relative displacement $u_j-u_k$. Now we are considering fluctuations at a single point and all modes contribute. We would have found the same thing
+
+
+
+
+
+This indicates that our approach breaks down in the $N\to\infty$ limit: at finite $N$ the sums are all finite if $\eta=0, \pi$ are excluded.
 
 >Why can we do this? Compare with the elastic chain.
 
