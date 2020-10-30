@@ -86,7 +86,7 @@ $$
 
 with $\mathsf{A}_\text{B}$ being given by the hermitian conjugate.
 
-> Check that $\eqref{car}$ is satisfied by this representation
+> Check that $\eqref{car}$ is satisfied by this representation, and that $A_\text{B}^\dagger A_\text{B}=N$, the number operator
 
 If we have _two_ bosons, $\aop$, $\adop$, and $\bop$, $\bdop$, they act independently on their occupation number states, for example
 
