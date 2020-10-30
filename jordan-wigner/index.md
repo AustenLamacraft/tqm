@@ -62,11 +62,18 @@ $$
 The action of $\adop$ on the occupation number eigenstate $\ket{n}$ is of course
 
 $$
-\adop\ket{n}=\sqrt{n}\ket{n+1}
+\adop\ket{n}=\sqrt{n+1}\ket{n+1}
 $$
 
-In this basis the creation operator therefore has the form
-
+In this basis we write a general state as $\ket{\psi}=\sum_{n=0}^\infty \psi_n\ket{n}$. Then we have
+$$
+\adop\ket{\psi} = \sum_{n=0}^\infty \psi_n \adop_n\ket{n}=\sum_{n=0}^\infty \psi_n \sqrt{n+1}\ket{n+1}.
+$$
+This tells us that the creation operator can be represented by a matrix $A_\text{B}^\dagger$ such that
+$$
+(A_\text{B}^\dagger \psi)_{n_a,n_b}=\sqrt{n_a}\psi_{n_a-1,n_b},
+$$
+or
 $$
 \mathsf{A}_\text{B}^\dagger = \begin{pmatrix}
 0 & 0 & 0 & 0 & \cdots & 0 \\
@@ -84,13 +91,16 @@ with $\mathsf{A}_\text{B}$ being given by the hermitian conjugate.
 If we have _two_ bosons, $\aop$, $\adop$, and $\bop$, $\bdop$, they act independently on their occupation number states, for example
 
 $$
-\adop \ket{n_a}_a\otimes\ket{n_b}_b = \left(\adop \ket{n_a}_a\right)\otimes\ket{n_b}_b = \sqrt{n_a}\ket{n_a}_a\otimes\ket{n_b}_b.
+\adop \ket{n_a}\otimes\ket{n_b} = \left(\adop \ket{n_a}\right)\otimes\ket{n_b} = \sqrt{n_a+1}\ket{n_a+1}\otimes\ket{n_b}.
 $$
 
-Thus we represent
-
+A two boson state is written $\ket{\psi}_2=\sum_{n_a,n_b=0}^\infty \psi_{n_a,n_b}\ket{n_a}_a\otimes \ket{n_b}_n$ using components $\psi_{n_a,n_b}$ labelled by a _pair_ of integer indices. The representation of $\adop$ ($\bdop$) acts only on the first (second) index. We have
 $$
-\adop = \mathsf{A}_\text{B}^\dagger\otimes\mathbb{1},\qquad \bdop = \mathbb{1}\otimes\mathsf{A}_\text{B}^\dagger
+(\adop \psi)_{n_a,n_b}=\sqrt{n_a}\psi_{n_a-1,n_b},\qquad (\bdop \psi)_{n_a,n_b}=\sqrt{n_b}\psi_{n_a,n_b-1},
+$$
+or more abstractly
+$$
+\adop = \mathsf{A}_\text{B}^\dagger\otimes\mathbb{1},\qquad \bdop = \mathbb{1}\otimes\mathsf{A}_\text{B}^\dagger.
 $$
 
 What about fermions? Here the occupancy of a state can only be zero or one, and it's not hard to show that the fundamental anticommutator
