@@ -81,25 +81,25 @@ $$
 \label{more_rho2evalFermi}
 $$
 
-Let's see how to reproduce this result using second quantization. First note that the definition $\eqref{more_pdf}$ can be written
-
-$$
-\rho_2(x,y) =\braket{\Psi}{\sum_{j\neq k}\delta(x-x_j)\delta(y-x_k)}{\Psi}.
-\label{more_rho21stquant}
-$$
-
-We recognize this as the expectation value of a two particle operator. From what we learnt last time, we can immediately write down the second quantized form
+Let's see how to reproduce this result using second quantization. $\rho_2(x,y)$ can be written in second quantized notation as 
 
 $$
 \rho_2(x,y) =\braket{\Psi}{\pdop(x)\pdop(y)\pop(y)\pop(x)}{\Psi}.
 \label{more_rho22ndquant}
 $$
 
-This differs from $\bra{\Psi}\rho(x)\rho(y)\ket{\Psi}$ by the ordering of operators. Using the canonical commutation relations for the fields gives the relation $\eqref{more_rhorhonorm}$ for both bosons and fermions.
+> Perhaps the simplest way to get this formula is to use the correspondence that we found in [Lecture 5]({{< ref "second-quantization" >}})
+> $$
+> \begin{align}
+> \ket{\Psi}&\longleftrightarrow \Psi(x_1,\ldots, x_N)\nonumber\\
+> \psi(X)\ket{\Psi}&\longleftrightarrow \sqrt{N}\Psi(X,x_1,\ldots, x_{N-1})\\
+> \end{align}
+> $$
+> Show that $\eqref{more_pdf}$ implies $\eqref{more_rho22ndquant}$.
 
-Operators in which all annihilation operators stand to the right of all creation operators are said to be __normal ordered__. Here, the normal ordering serves to ensure that a term with $j=k$ does not appear in $\eqref{more_rho21stquant}$. Two particle terms in the Hamiltonian are normal ordered for the same reason.
+$\eqref{more_rho22ndquant}$ differs from $\bra{\Psi}\rho(x)\rho(y)\ket{\Psi}$ by the ordering of operators. Using the canonical commutation relations for the fields gives the relation $\eqref{more_rhorhonorm}$ for both bosons and fermions.
 
-Now let's evaluate $\eqref{more_rho22ndquant}$ for the ground state of the Fermi gas. We will find the result for a general product state, using the same strategy as we used in the last lecture for the single particle density matrix. That is, we substitute the expansion of the fields $\pop(x)$ and $\pdop(x)$ in terms of the orthonormal single particle states making up the product state
+Let's evaluate $\eqref{more_rho22ndquant}$ for the ground state of the Fermi gas. We will find the result for a general product state, using the same strategy as we used in the last lecture for the single particle density matrix. That is, we substitute the expansion of the fields $\pop(x)$ and $\pdop(x)$ in terms of the orthonormal single particle states making up the product state
 
 $$
 \begin{align}
@@ -131,7 +131,7 @@ $$
 \braket{\mathbf{N}}{\adop_{\alpha}\adop_{\gamma}\aop_{\gamma}\aop_{\alpha}}{\mathbf{N}}&=N_{\alpha}N_{\gamma}\nonumber\\
 	\braket{\mathbf{N}}{\adop_{\alpha}\adop_{\gamma}\aop_{\alpha}\aop_{\gamma}}{\mathbf{N}}&=\pm N_{\alpha}N_{\gamma}\qquad\text{if }\alpha\neq\gamma,
 \end{align}
-$$  
+$$
 
 the $\pm$ corresponding to bosons and fermions respectively. Thus we have
 

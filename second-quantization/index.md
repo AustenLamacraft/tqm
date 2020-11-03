@@ -636,12 +636,11 @@ $$
 \label{A_VNotNormal}
 $$
 
-The difference lies in the order of the operators, which prevents a particle from interacting with itself.
+The difference lies in the order of the operators, which prevents a particle from interacting with itself. Operators in which all annihilation operators stand to the right of all creation operators are said to be __normal ordered__.
 
-> Check that $\eqref{A_VNotNormal}$ has a zero expectation value in a 1 particle state.
+> Check that $\eqref{A_VNotNormal}$ has a zero expectation value in a 1 particle state. 
 
 As an example, let's write the Hamiltonian of interacting bosons that we met in [Lecture 1]({{< ref "many-body-wavefunctions" >}}) in our new formalism.
-
 $$
 H = \int dx \left[\frac{1}{2}\partial_x\pdop(x)\partial_x\pop(x) + \frac{c}{2}\pdop(x)\pdop(x)\pop(x)\pop(x)\right],
 $$
