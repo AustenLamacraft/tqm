@@ -581,11 +581,11 @@ B_{\alpha\beta,\gamma\delta} &= \bra{\varphi_\alpha}\bra{\varphi_\beta} B_{12} \
 \end{align}
 $$
 
-In the first quantized representation we have
+Note that since $B_{12}=B_{21}$ we have $B_{\alpha\beta,\gamma\delta}=B_{\beta\alpha,\delta\gamma}$. In the first quantized representation we have
 $$
 B_{12} = \sum_{\alpha\beta\gamma\delta}B_{\alpha\beta,\gamma\delta}\ket{\varphi_\alpha}\ket{\varphi_\beta}\bra{\varphi_\gamma}\bra{\varphi_\delta}.
 $$
-The second quantized representation of $\hat B$ is
+Now we'll argue that the second quantized representation of $\hat B$ is
 $$
 \hat B = \frac{1}{2}\sum_{\alpha\beta\gamma\delta} B_{\alpha\beta,\gamma\delta}\adop_\alpha\adop_\beta\aop_\delta\aop_\gamma.
 \label{2part}
@@ -600,9 +600,19 @@ $$
 > $$
 > For example, in the first quantized picture we have
 > $$
-> B_{12}\frac{1}{\sqrt{2}}\left[\varphi_\gamma(\br_1)\varphi_\delta(\br_2)\pm \varphi_\delta(\br_1)\varphi_\gamma(\br_2)\right]=\frac{1}{\sqrt{2}}\sum_{\alpha\beta}\left[B_{\alpha\beta,\gamma\delta}\pm B_{\alpha\beta,\delta\gamma}\right]
+> \begin{align}
+> B_{12}\frac{1}{\sqrt{2}}\left[\varphi_\gamma(\br_1)\varphi_\delta(\br_2)\pm \varphi_\delta(\br_1)\varphi_\gamma(\br_2)\right]&=\frac{1}{\sqrt{2}}\sum_{\alpha\beta}\left[B_{\alpha\beta,\gamma\delta}\pm B_{\alpha\beta,\delta\gamma}\right]\varphi_\alpha(\br_1)\varphi_\beta(\br_2).
+> \end{align}
 > $$
-> 
+> Note that this is (anti-)symmetric for bosons (fermions) by virtue of $B_{\alpha\beta,\gamma\delta}=B_{\beta\alpha,\delta\gamma}$. In second quantized notation the resulting state is written
+> $$
+> \frac{1}{\sqrt{2}}\sum_{\alpha\beta}\left[B_{\alpha\beta,\gamma\delta}\pm B_{\alpha\beta,\delta\gamma}\right]\varphi_\alpha(\br_1)\varphi_\beta(\br_2)\longleftrightarrow\sum_{\alpha\beta}B_{\alpha\beta}\adop_\alpha\adop_\beta\ket{\text{VAC}}
+> $$
+> Which is the same as we get if we act with $\eqref{2part}$
+> $$
+> \left(\frac{1}{2}\sum_{\alpha\beta cd} B_{\alpha\beta,cd}\adop_\alpha\adop_\beta\aop_d\aop_c\right)\adop_\gamma \adop_\delta\ket{\text{VAC}}=\sum_{\alpha\beta}B_{\alpha\beta}\adop_\alpha\adop_\beta\ket{\text{VAC}}.
+> $$
+> Make sure to trace down factor of 2!
 
 The analog of the formula $\eqref{A_Aab}$ for the matrix elements of a two particle operator between two product states is
 $$
