@@ -360,16 +360,22 @@ $$
 \label{A_H1}
 $$
 
-Operators of this type are known as __single particle operators__. We want to use our creation and annihilation operators to represent these operators. First, we note that the action of the operator $A$ on one of the basis states $\ket{\varphi_\alpha}$ can be written in terms of the matrix elements $A_{\alpha\beta}=\braket{\varphi_\alpha}{A}{\varphi_\beta}$ as
+Operators of this type are known as __single particle operators__. We want to use our creation and annihilation operators to represent these operators. 
 
+First, the action of the operator $A$ on one of the basis states $\ket{\varphi_\beta}$ can be written in terms of the matrix elements $A_{\alpha\beta}=\braket{\varphi_\alpha}{A}{\varphi_\beta}$ by inserting a resolution of the identity $\sum_\alpha \ket{\alpha}\bra{\alpha}=1$ on the right
 $$
-A\ket{\varphi_\alpha} = \sum_{\beta} \ket{\varphi_\beta}\braket{\varphi_\beta}{A}{\varphi_\alpha} = \sum_\beta A_{\beta\alpha}\ket{\varphi_\beta}
+A\ket{\varphi_\beta} = \sum_{\alpha} \ket{\varphi_\alpha}\braket{\varphi_\alpha}{A}{\varphi_\beta} = \sum_\beta A_{\alpha\beta}\ket{\varphi_\alpha}.
 $$
+
+The same thing may be expressed slightly differently by inserting resolutions of the identity on the left _and_ right
+$$
+A= \sum_{\alpha\beta} \ket{\varphi_\alpha}\braket{\varphi_\alpha}{A}{\varphi_\beta}\bra{\varphi_\beta} = \sum_{\alpha\beta} A_{\alpha\beta}\ket{\varphi_\alpha}\bra{\varphi_\beta}.
+$$
+
 
 Therefore, the action of $\hat A$ on the product state $\ket{\Psi^{\text{S}}_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}}$ is
-
 $$
-\hat A \ket{\Psi^{\text{S}}_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}} = \sum_\beta \left[A_{\beta\alpha_1}\ket{\Psi^{\text{S}}_{\beta\alpha_{2}\cdots\alpha_{N}}} +A_{\beta\alpha_2}\ket{\Psi^{\text{S}}_{\alpha_1\beta\cdots\alpha_{N}}}+\cdots A_{\beta\alpha_N}\ket{\Psi^{\text{S}}_{\alpha_1\alpha_{2}\cdots\beta}}\right]
+\hat A \ket{\Psi^{\text{S}}_{\beta_{1}\beta_{2}\cdots\beta_{N}}} = \sum_\alpha \left[A_{\alpha\beta_1}\ket{\Psi^{\text{S}}_{\alpha\beta_{2}\cdots\beta_{N}}} +A_{\alpha\beta_2}\ket{\Psi^{\text{S}}_{\beta_1\alpha\cdots\beta_{N}}}+\cdots A_{\alpha\beta_N}\ket{\Psi^{\text{S}}_{\beta_1\beta_{2}\cdots\alpha}}\right]
 \label{A_1OpAct}
 $$
 
@@ -561,14 +567,25 @@ $$
 \hat B = \sum_{j<k} B_{jk}.
 $$
 
-(Note that $B_{jk}=B_{kj}$ for indistinguishable particles.) Similar to the single particle case, the action of $\hat B$ on a two particle product state $\ket{\varphi_{\alpha}}_1\ket{\varphi_{\beta}}_2$ can be expressed in terms of the matrix elements
-
+Note that $B_{jk}=B_{kj}$ for indistinguishable particles, and that $j=k$ is excluded. The most important two particle operator that we will encounter describes interactions between pairs of particles, usually of the form
 $$
-B_{\alpha\beta,\gamma\delta} = \bra{\varphi_\alpha}_1\bra{\varphi_\beta}_2 B_{12} \ket{\varphi_\gamma}_1\ket{\varphi_\delta}_2.
+\hat H_\text{int.} = \sum_{j<k} U(\br_j-\br_k).
+\label{eq:Hint}
 $$
 
+Similar to the single particle case, the action of $\hat B$ on a two particle product state $\ket{\varphi_{\alpha}}_1\ket{\varphi_{\beta}}_2$ can be expressed in terms of the matrix elements
+$$
+\begin{align}
+B_{\alpha\beta,\gamma\delta} &= \bra{\varphi_\alpha}\bra{\varphi_\beta} B_{12} \ket{\varphi_\gamma}\ket{\varphi_\delta}\\
+&=\int d\br d\br' \varphi_\alpha^*(\br)\varphi_\beta^*(\br')B_{12}\varphi_\gamma(\br)\varphi_\delta(\br')
+\end{align}
+$$
+
+In the first quantized representation we have
+$$
+B_{12} = \sum_{\alpha\beta\gamma\delta}B_{\alpha\beta,\gamma\delta}\ket{\varphi_\alpha}\ket{\varphi_\beta}\bra{\varphi_\gamma}\bra{\varphi_\delta}.
+$$
 The second quantized representation of $\hat B$ is
-
 $$
 \hat B = \frac{1}{2}\sum_{\alpha\beta\gamma\delta} B_{\alpha\beta,\gamma\delta}\adop_\alpha\adop_\beta\aop_\delta\aop_\gamma.
 \label{2part}
@@ -576,23 +593,27 @@ $$
 
 (Note the order, which is important for fermions!). 
 
-> Check that $\eqref{2part}$ has the correct action on product states, starting with two particles.
+> Check that $\eqref{2part}$ has the correct action on product states, starting with the two particle state 
+>
+> $$
+> \adop_\gamma \adop_\delta\ket{\text{VAC}}\longleftrightarrow \frac{1}{\sqrt{2}}\left[\varphi_\gamma(\br_1)\varphi_\delta(\br_2)\pm \varphi_\delta(\br_1)\varphi_\gamma(\br_2)\right]
+> $$
+> For example, in the first quantized picture we have
+> $$
+> B_{12}\frac{1}{\sqrt{2}}\left[\varphi_\gamma(\br_1)\varphi_\delta(\br_2)\pm \varphi_\delta(\br_1)\varphi_\gamma(\br_2)\right]=\frac{1}{\sqrt{2}}\sum_{\alpha\beta}\left[B_{\alpha\beta,\gamma\delta}\pm B_{\alpha\beta,\delta\gamma}\right]
+> $$
+> 
 
 The analog of the formula $\eqref{A_Aab}$ for the matrix elements of a two particle operator between two product states is
 $$
-\braket{\mathbf{N}}{\hat B}{\mathbf{N'}} = \sum_{\alpha\beta\gamma\delta} B_{\alpha\beta,\gamma\delta} \sqrt{N_\alpha N_\beta N'_\gamma N'_\delta},
+\braket{\mathbf{N}}{\hat B}{\mathbf{N'}} =\left[B_{\alpha\beta,\gamma\delta}\pm B_{\alpha\beta,\delta\gamma}\right] \sqrt{N_\alpha N_\beta N'_\gamma N'_\delta},
 \label{A_Babcd}
 $$
-with $N_{\gamma,\delta} = N'_{\gamma,\delta}-1$ and $N_{\alpha,\beta} = N'_{\alpha,\beta}+1$
+with $N_{\gamma,\delta} = N'_{\gamma,\delta}-1$ and $N_{\alpha,\beta} = N'_{\alpha,\beta}+1$. 
 
 > Strictly this formula is not correct when $\gamma=\delta$ or $\alpha=\beta$. In the former case $N'_\gamma N'_\delta \to N'_\gamma (N'_\gamma-1)$ and in the latter $N_\alpha N_\beta \to N_\alpha (N_\alpha-1)$.  In the thermodynamic limit these terms usually make a vanishing contribution when sums are replaced with integrals. There are exceptions: when a finite fraction of the particles are in one state (which occurs for Bose—Einstein condensates, for example). In those cases we end up neglecting $N_\alpha-1$ relative to $N_\alpha$, however!
 
-The most important two particle operator that we encounter is that describing interactions between pairs of particles, usually of the the form
-$$
-\hat H_\text{int.} = \sum_{j<k} U(\br_j-\br_k).
-$$
-
-Expressing this operator in the position basis gives
+Returning to the interaction $\eqref{eq:Hint}$, we can express this operator in the position basis as
 
 $$
 \hat H_\text{int.} = \frac{1}{2}\int d\br_1 d\br_2\, U(\br_1-\br_2)\pdop(\br_1)\pdop(\br_2)\pop(\br_2)\pop(\br_1).
