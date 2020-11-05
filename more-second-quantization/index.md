@@ -391,7 +391,7 @@ E_{\text{Fock}} &=-\frac{1}{4} \int d\br\, d\br'\,  U(\br-\br')\tr\left[g(\br,\b
 \end{align}
 $$
 
-Suppose we had a $\delta$-function interaction $U(\br)=U_0 \delta(\br)$. Then the Fock energy can be written
+Suppose we had a $\delta$-function interaction $U(\br)=V_0 \delta(\br)$. Then the Fock energy can be written
 
 $$
 \begin{align}
@@ -419,7 +419,7 @@ this is not too bad, as we are guaranteed to be working with plane wave single p
 
 ### Stoner Criterion for Ferromagnetism
 
-Let us try to put a bit more flesh on the idea that repulsive interactions favour ferromagnetism in fermionic systems. We will continue to use the model interaction $U(\br)=U_0\delta(\br)$ that we introduced in the previous section. Of course, this isn't a realistic interaction between electrons in a metal, say, but as we'll see in [Lecture 11]({{< ref "jellium" >}}), the long-ranged Coulomb interaction is screened and becomes finite-ranged. Thus our model is not a bad approximation to the _effective_ interaction between electrons in a metal.
+Let us try to put a bit more flesh on the idea that repulsive interactions favour ferromagnetism in fermionic systems. We will continue to use the model interaction $U(\br)=V_0\delta(\br)$ that we introduced in the previous section. Of course, this isn't a realistic interaction between electrons in a metal, say, but as we'll see in [Lecture 11]({{< ref "jellium" >}}), the long-ranged Coulomb interaction is screened and becomes finite-ranged. Thus our model is not a bad approximation to the _effective_ interaction between electrons in a metal.
 
 Polarizing the spins in a Fermi gas is not without cost (otherwise everything would be ferromagnetic!): there is a price to pay in increased kinetic energy. To understand why this is so, consider the ground state kinetic energy of $N$ (spinless) fermions in three dimensions, obtained from
 
