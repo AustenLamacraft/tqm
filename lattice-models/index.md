@@ -58,7 +58,7 @@ Models defined on discrete sites — so-called __tight binding models__ — prov
 A typical many body Hamiltonian consists of kinetic energy and interaction terms. We haven't yet had much to say about the situation where the particles additionally feel a potential that could arise from the crystal lattice, or impurity atoms, or both. In this lecture we will be concerned with systems in periodic potentials, so that the noninteracting part of the Hamiltonian is (taking the 1D case for simplicity)
 
 $$
-H = \sum_{j=1}^N \left[-\frac{1}{2m}\partial_i^2 +V(\br_i)\right] = \int \left[\frac{1}{2m}\partial_x\pdop\partial_x\pop + V(x)\pdop\pop\right] dx,
+H = \sum_{j=1}^N \left[-\frac{1}{2m}\partial_i^2 +V(x_i)\right] = \int \left[\frac{1}{2m}\partial_x\pdop\partial_x\pop + V(x)\pdop\pop\right] dx,
 $$
 
 with $V(x+a)=V(x)$. As you know, [Bloch's theorem](https://en.wikipedia.org/wiki/Bloch_wave) tells us that the eigenstates are labelled by a continuous index $k$ (__crystal momentum__) and discrete index $n$ (__band index__) and have the form
@@ -107,7 +107,7 @@ $$
 where $k(x) = \sqrt{2m(E-V(x))}$. In fact, we want to describe the part of the wavefunction with real exponents, where $k(x) = i\kappa(x)$ because $V(x)>E$. Substitution into the current $\eqref{latt_j}$ gives
 
 $$
-j = \frac{1}{m}\Im \alpha^*\beta^{}.
+j = \frac{1}{m}\text{Im}\, \alpha^*\beta^{}.
   \label{latt_jwkb}
 $$
 
@@ -269,7 +269,7 @@ $$
 \cE^{(N)}_\mu + UN - \mu -2dt(N+1).
 $$
 
-We see that for $t>\frac{UN-\mu}{2d(N+1)}$ the state with an extra particle actually has a _lower_ energy: the Mott states is not the ground state. Similarly, the energy of the ground state with one 'hole' in the $N+1$ Mott state is
+We see that for $t>\frac{UN-\mu}{2d(N+1)}$ the state with an extra particle actually has a _lower_ energy: the Mott state is not the ground state. Similarly, the energy of the ground state with one 'hole' in the $N+1$ Mott state is
 
 $$
 \cE^{(N+1)}_\mu - UN + \mu -2dt(N+1).
