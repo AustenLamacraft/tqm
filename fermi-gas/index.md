@@ -70,7 +70,7 @@ $$
 H =\sum_{\bk,s} \epsilon(\bk)\adop_{\bk,s}\aop_{\bk,s} + \overbrace{\frac{U_0}{V}\sum_{\bk_1+\bk_2=\bk_3+\bk_4} \adop_{\bk_1,\uparrow}\adop_{\bk_2,\downarrow}\aop_{\bk_3,\downarrow}\aop_{\bk_4,\uparrow}}^{\equiv H_\text{int}},
 $$
 
-with $\epsilon(\bk)=\bk^2/2m$, and $V$ the volume. At $U_0=0$ the eigenstates are of course the product states of singe particle momentum states specified by the occupancies $N_{s}(\bk) = 0,1$. The ground state is the Fermi sphere of radius $k_\text{F}$ in momentum space with $N_{s}(\bk) = \theta(k_F-\abs{\bk})$. Low energy excited states will have $N_{s}(\bk)=1$ for $\abs{\bk}\ll k_\text{F}$ and $N_{s}(\bk)=0$ for $\abs{\bk}\gg k_\text{F}$. In perturbation theory we may still _label_ the eigenstates by these occupation numbers even though the eigenstates are no longer occupation number eigenstates. Instead, we say that these labels give the occupation numbers of __quasiparticles__ with fermionic statistics. The energy of the eigenstates can then be expressed in terms of the quasiparticle distribution.
+with $\epsilon(\bk)=\bk^2/2m$, and $V$ the volume. At $U_0=0$ the eigenstates are of course the product states of single particle momentum states specified by the occupancies $N_{s}(\bk) = 0,1$. The ground state is the Fermi sphere of radius $k_\text{F}$ in momentum space with $N_{s}(\bk) = \theta(k_F-\abs{\bk})$. Low energy excited states will have $N_{s}(\bk)=1$ for $\abs{\bk}\ll k_\text{F}$ and $N_{s}(\bk)=0$ for $\abs{\bk}\gg k_\text{F}$. In perturbation theory we may still _label_ the eigenstates by these occupation numbers even though the eigenstates are no longer occupation number eigenstates. Instead, we say that these labels give the occupation numbers of __quasiparticles__ with fermionic statistics. The energy of the eigenstates can then be expressed in terms of the quasiparticle distribution.
 
 Without interactions the energy of a state $\ket{\mathbf{N}}$ is
 
@@ -376,24 +376,31 @@ $$
 \ket{\mathbf{N}^{(1)}} = \sum_{\mathbf{N}'\neq \mathbf N}\frac{\braket{\mathbf{N'}}{H_\text{int}}{\mathbf{N}}}{E^{(0)}(\mathbf{N})-E^{(0)}(\mathbf{N}')}\ket{\mathbf{N}'}.
 $$
 
-Let's consider the Fermi sea ground state \ket{\text{FS}}$. What states can appear in the above sum in this case? The only possibility is that the interaction creates two particle-hole pairs out of the Fermi sea, with total momentum zero.
+Let's consider the Fermi sea ground state $\ket{\text{FS}}$. What states can appear in the above sum in this case? The only possibility is that the interaction creates two particle-hole pairs out of the Fermi sea, with total momentum zero.
 
 {{< figure src="2ph.png" title="Two particle-hole pairs created out of the Fermi sea." numbered="true" lightbox="true" >}}
+$$
+\ket{0}=\ket{\text{FS}}+\text{two particle-hole pair states}+\cdots
+$$
 
-What about an excited state? If we consider the state
+
+What about an excited state? Consider the state
 
 $$
 \adop_{\bk,s}\ket{\text{FS}},
 $$
 
-two kinds of states can contribute. Either we create a pair of particle-hole pairs, as before, or we create a single particle-hole pair and scatter the particle at $\bk$ somewhere else
+having momentum $\bk$ and spin $s$. When the interactions are switched on, this state will be modified to a state we’ll denote $\ket{\bk,s}$. At first order, two kinds of states can contribute to the modifed state:
+
+1. States with a pair of particle-hole pairs, as before, but with the extra particle at $\bk$. The coefficients of these states are _the same_ as for the corresponding states in the correction for $\ket{0}$, as you should check.
+2. States with a single particle-hole pair and with the extra particle moved from $\bk$​ to another momentum.
 
 {{< figure src="phscatter.png" title="Particle scatters, creating a particle-hole pair." numbered="true" lightbox="true" >}}
 
-Consider the state $\adop_{\bk,s}\ket{0}$, creating a particle in the _exact_ ground state of the problem. Since $\ket{0}$ includes the first kind of state (2 particle-hole pair states), $\adop_{\bk,s}\ket{0}$ is only missing the second kind. Therefore to first order, the single quasiparticle state is
+Let’s compare $\ket{\bk,s}$ with $\adop_{\bk,s}\ket{0}$, the state obtained by creating a particle in the _exact_ ground state of the problem. In first order perturbation theory, $\ket{0}$ includes the first kind of state above (2 particle-hole pair states). The states only differ because of the contribution of the second kind. To first order, the single quasiparticle state is therefore
 
 $$
-\ket{\bk,s} = \sqrt{\frac{z_k}{\braket{0}{\aop_{\bk,s}\adop_{\bk,s}}{0}}}\adop_{\bk,s}\ket{\text{FS}} + \frac{U_0}{V}\sum_{\substack{\bk_1+\bk_2=\bk_3+\bk\\ s,s'}}\frac{\adop_{\bk_1,s}\adop_{\bk_2,s'}\aop_{\bk_3,s'}\ket{\text{FS}}}{\epsilon(\bk_1)+\epsilon(\bk_2)-\epsilon(\bk_3)-\epsilon(\bk)},
+\ket{\bk,s} = \sqrt{\frac{z_k}{\braket{0}{\aop_{\bk,s}\adop_{\bk,s}}{0}}}\adop_{\bk,s}\ket{0} + \frac{U_0}{V}\sum_{\substack{\bk_1+\bk_2=\bk_3+\bk\\ s,s'}}\frac{\adop_{\bk_1,s}\adop_{\bk_2,s'}\aop_{\bk_3,s'}\ket{\text{FS}}}{\epsilon(\bk_1)+\epsilon(\bk_2)-\epsilon(\bk_3)-\epsilon(\bk)},
 \label{fermi_phpeturb}
 $$
 

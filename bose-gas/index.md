@@ -341,7 +341,7 @@ $$
 Likewise
 
 $$
-\aop_\bk\adop_0\ket{\Psi'}\otimes\ket{N_0}_0 = \left(\aop_\bk \ket{\Psi'}\right)\otimes \adop_0\ket{N_0}_0 = \left(\adop_\bk \ket{\Psi'}\right)\otimes \sqrt{N_0+1}\ket{N_0+1}_0.
+\aop_\bk\adop_0\ket{\Psi'}\otimes\ket{N_0}_0 = \left(\aop_\bk \ket{\Psi'}\right)\otimes \adop_0\ket{N_0}_0 = \left(\aop_\bk \ket{\Psi'}\right)\otimes \sqrt{N_0+1}\ket{N_0+1}_0.
 $$
 
 Since $N_0$ is assumed to be large, we ignore the difference between $N_0$ and $N_0+1$. To be more precise, we are assuming that in the states we are going to find, $N_0$ will not fluctuate substantially. If this is the case, the _matrix elements_ of $H_\text{pair}$ are approximately unchanged when we make the replacement mentioned above, leaving us with the __Bogoliubov Hamiltonian__

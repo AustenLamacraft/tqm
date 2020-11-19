@@ -65,7 +65,7 @@ $$
 For a pair of particles of opposite spin, this is equivalent to
 
 $$
-H = -\frac{1}{2m}\left[\nabla_1^2+\nabla^2\right] + U_0\delta(\br_1-\br_2).
+H = -\frac{1}{2m}\left[\nabla_1^2+\nabla_2^2\right] + U_0\delta(\br_1-\br_2).
 $$
 
 For $U_0<0$ and sufficiently large, we expect a bound state to form with a symmetric spatial wavefunction and a spin singlet. Now consider a dilute gas of such bound pairs. 'Dilute' in this context means that the interparticle separation is large compared to the size of the bound state. In this limit, we expect to be able to treat the bound pairs as spinless bosons, which can then display all the usual phenomena associated with Bose gases.
@@ -92,7 +92,7 @@ We take the interaction between the two species to be attractive $U_0<0$. The gr
 of the non-interacting problem is
 
 $$
-\ket{\text{FS}}=\prod_{|\bp|<k_\text{F}} \adop_{\bp\uparrow}\adop_{\bp\downarrow}\ket{\text{VAC}}.
+\ket{\text{FS}}=\prod_{|\bp|<k_\text{F}} \adop_{\bp\uparrow}\adop_{-\bp\downarrow}\ket{\text{VAC}}.
 $$
 
 The application of the interaction Hamiltonian $H_\text{int}$ generates terms of the form
@@ -103,9 +103,8 @@ $$
 
 Note the difference from the Bose case: because the state $\bp=0$ plays no special role -- like every
 other state below the Fermi surface it is occupied with one fermion of each species -- we do not just
-create pair excitations with zero centre of mass momentum $\bq=0$. Nevertheless, the BCS theory starts
+create pair excitations with zero centre of mass momentum $\bq=0$. Nevertheless, the BCS theory
 makes the assumption that the ground state involves a superposition of zero momentum pairs only. We can write such a state very generally as
-
 $$
 \ket{\text{pair}}\equiv\sum_{\sum_\bp n^P_\bp=N/2} c_{\{n^P_{\bp}\}} \prod_{\bp}\left[\adop_{\bp\uparrow}\adop_{-\bp\downarrow}\right]^
 {n_{\bp}}\ket{\text{VAC}},
@@ -591,4 +590,4 @@ _$T_c$ in the mean-field theory (solid line), compared with the result of a trea
 References
 ----------
 
-{% bibliography --cited %}
+{% bibliography --cited %}l
