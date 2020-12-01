@@ -441,14 +441,13 @@ $$
 \frac{d\aop_k}{dt} = -i\omega_k \aop_k +i c_k f(t),
 $$
 
-so that the response of the oscillator is
+so that the response of the oscillator is $\aop_k(t) = e^{-i\omega_k t}\aop_k(0)+a_{k,f}(t)$ with the driven response  $a_{k,f}(t)$ being a number (not an operator) with Fourier components
 
 $$
-\adop_k(\omega) = \frac{c_k}{\omega_k-\omega-i0} f(\omega).
+\aop_{k,f}(\omega) \equiv \frac{c_k}{\omega_k-\omega-i0} f(\omega).
 $$
 
-Note the imaginary infinitesimal in the denominator. This is a notational device to remind us that, even though the normal mode has no damping, a causal (retarded) response is analytic in the upper half plane of $\omega$. The response of $y(\omega)$ is then
-
+Note the imaginary infinitesimal in the denominator. This is a notational device to remind us that, even though the normal mode has no damping, a causal (retarded) response is analytic in the upper half plane of $\omega$. The response of $y(\omega)$ is then obtained from $\eqref{res_ymode}$
 $$
 y(\omega) = \sum_k |c_k|^2\left[\frac{1}{\omega_k-\omega-i0}+\frac{1}{\omega_k+\omega+i0}\right]f(\omega).
 $$
@@ -465,7 +464,7 @@ but we also know the LHS from the classical calculation $\eqref{res_chi_SHO}$.
 $\eqref{res_QSHONoiseGen}$ and $\eqref{res_chi_modes}$ are rather similar. We can get an explicit relation by using the formula
 
 $$
-\Im \frac{1}{x\mp i0} = \pm\pi\delta(x),
+\text{Im}\, \frac{1}{x\mp i0} = \pm\pi\delta(x),
 $$
 
 which you can prove by allowing the infinitesimal to be finite, and then letting it go to zero. We can then show
@@ -492,7 +491,7 @@ This is a quantum fluctuation dissipation relation.
 
 ### Golden Rule and Dissipation
 
-We argued for the classical damped oscillator -- actually our discussion is true more generally -- that $\Im\chi(\omega)$ is related to the dissipation of energy. Now we have found a relation between this quantity and our quantum noise spectrum $S(\omega)$. Can we see directly how $S(\omega)$ is connected to energy dissipation?
+We argued for the classical damped oscillator -- actually our discussion is true more generally -- that $\text{Im}\,\chi(\omega)$ is related to the dissipation of energy. Now we have found a relation between this quantity and our quantum noise spectrum $S(\omega)$. Can we see directly how $S(\omega)$ is connected to energy dissipation?
 
 The key is to regard the driving force as a perturbation that can cause transition between energy eigenstates. The perturbation is
 
@@ -529,7 +528,7 @@ Our long discussion of the oscillator has laid the ground for some general defin
 
 ### Kubo Formula
 
-Suppose we want to determine how the expectation value of some obserable $A$ depends on some quantity $\lambda_t$, which appears (for small variations) linearly in the Hamiltonian
+Suppose we want to determine how the expectation value of some observable $A$ depends on some quantity $\lambda_t$, which appears (for small variations) linearly in the Hamiltonian
 
 $$
 H_t = H_0 - \lambda_t B.
@@ -664,7 +663,7 @@ $$
 
 > Use the spectral representation to prove the fluctuation dissipation relation $\eqref{res_FDTGen}$.
 
-The function $S_{AA}(\omega)$ can be interpreted in terms of the Fermi golden rule, as we saw in the case of the oscillator. Notice that $S_AA(\omega)>0$.
+The function $S_{AA}(\omega)$ can be interpreted in terms of the Fermi golden rule, as we saw in the case of the oscillator. Notice that $S_{AA}(\omega)>0$.
 
 ## Response of Matter
 
