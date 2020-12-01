@@ -65,7 +65,7 @@ $$
 For a pair of particles of opposite spin, this is equivalent to
 
 $$
-H = -\frac{1}{2m}\left[\nabla_1^2+\nabla^2\right] + U_0\delta(\br_1-\br_2).
+H = -\frac{1}{2m}\left[\nabla_1^2+\nabla_2^2\right] + U_0\delta(\br_1-\br_2).
 $$
 
 For $U_0<0$ and sufficiently large, we expect a bound state to form with a symmetric spatial wavefunction and a spin singlet. Now consider a dilute gas of such bound pairs. 'Dilute' in this context means that the interparticle separation is large compared to the size of the bound state. In this limit, we expect to be able to treat the bound pairs as spinless bosons, which can then display all the usual phenomena associated with Bose gases.
@@ -92,7 +92,7 @@ We take the interaction between the two species to be attractive $U_0<0$. The gr
 of the non-interacting problem is
 
 $$
-\ket{\text{FS}}=\prod_{|\bp|<k_\text{F}} \adop_{\bp\uparrow}\adop_{\bp\downarrow}\ket{\text{VAC}}.
+\ket{\text{FS}}=\prod_{|\bp|<k_\text{F}} \adop_{\bp\uparrow}\adop_{-\bp\downarrow}\ket{\text{VAC}}.
 $$
 
 The application of the interaction Hamiltonian $H_\text{int}$ generates terms of the form
@@ -103,44 +103,36 @@ $$
 
 Note the difference from the Bose case: because the state $\bp=0$ plays no special role -- like every
 other state below the Fermi surface it is occupied with one fermion of each species -- we do not just
-create pair excitations with zero centre of mass momentum $\bq=0$. Nevertheless, the BCS theory starts
+create pair excitations with zero centre of mass momentum $\bq=0$. Nevertheless, the BCS theory
 makes the assumption that the ground state involves a superposition of zero momentum pairs only. We can write such a state very generally as
-
 $$
 \ket{\text{pair}}\equiv\sum_{\sum_\bp n^P_\bp=N/2} c_{\{n^P_{\bp}\}} \prod_{\bp}\left[\adop_{\bp\uparrow}\adop_{-\bp\downarrow}\right]^
 {n_{\bp}}\ket{\text{VAC}},
 \label{pair_fermi}
 $$
 
-where the numbers $n_{\bp}^P$ are either $0$ or $1$ (why?). Note that in writing $\eqref{pair_fermi}$ the
-number of each species is assumed to be exactly $N/2$. Restricting ourselves to states of this form means that
-
+where the numbers $n_{\bp}^P$ are either $0$ or $1$ (why?). Note that in writing $\eqref{pair_fermi}$ the number of each species is assumed to be exactly $N/2$. Restricting ourselves to states of this form means that
 $$
-\braket{\text{pair}}{H}{\text{pair}} = \frac{U_0}{V}N_\uparrow N_\downarrow+\braket{\text{pair}}{H_{\text{pair}}}{\text{pair}},
+\braket{\text{pair}}{H_\text{int}}{\text{pair}} = \frac{U_0}{V}N_\uparrow N_\downarrow+\braket{\text{pair}}{\tilde H_{\text{int}}}{\text{pair}},
 $$
-
-where the first term is the Hartree--Fock energy and $H_{\text{pair}}$ is
-
+where the first term is the Hartree--Fock energy and
 $$
-H_{\text{pair}}=\sum_{\bp,s}\epsilon_{\bp}\adop_{\bp,s}\aop_{\bp, s}+\frac{U_0}{V}\sum_{\bp, \bp'}\adop_
-{\bp\uparrow}\adop_{-\bp\downarrow}\aop_{-\bp'\downarrow}\aop_{\bp'\uparrow}.
+\tilde H_{\text{int}}=\frac{U_0}{V}\sum_{\bp, \bp'}\adop_
+{\bp\uparrow}\adop_{-\bp\downarrow}\aop_{-\bp'\downarrow}\aop_{\bp'\uparrow},
 \label{super_bcsH}
 $$
 
-Now, can we solve $\eqref{super_bcsH}$? It's useful to introduce the operators $\bdop_\bp=\adop_{\bp\uparrow}\adop_{-\bp
-\downarrow}$ and its conjugate, that create and destroy a $\left(+\bp,-\bp\right)$ pair. Because our pair
-ansatz $\eqref{pair_fermi}$ only includes amplitudes for a given $\left(+\bp,-\bp\right)$ pair of momenta
-having either none or two fermions, the pair Hamiltonian can be written in terms of the pair operators $
-\bdop_\bp$, $\bop_\bp$ as
-
+It's useful to introduce the operator $\bdop_\bp=\adop_{\bp\uparrow}\adop_{-\bp
+\downarrow}$ and its conjugate $\bop_\bp=\aop_{-\bp,\downarrow}\aop_{\bp\uparrow}$, that respectively create and destroy a $\left(\bp\uparrow,-\bp\downarrow\right)$ pair. Because our pair ansatz $\eqref{pair_fermi}$ only includes amplitudes for a given $\left(+\bp,-\bp\right)$ pair of momenta having either none or two fermions, we can compute expectations using the pair Hamiltonian
 $$
-H_{\text{pair}}=2\sum_{\bp}\epsilon_{\bp}\bdop_\bp\bop_\bp+\frac{U_0}{V}\sum'_{\bp,\bp'} \bdop_\bp
-\bop_{\bp'}.
+H_{\text{pair}}=2\sum_{\bp}\epsilon_{\bp}\bdop_\bp\bop_\bp+\frac{U_0}{V}\sum_{\bp,\bp'} \bdop_\bp
+\bop_{\bp'},
 \label{pair_h}
 $$
+where $2\bdop_\bp\bop_\bp = \adop_{\bp,\uparrow}\aop_{\bp,\uparrow}+\adop_{-\bp,\uparrow}\aop_{-\bp,\uparrow}$ on paired states.
 
-This may now look like a quadratic problem, but the pair operators $\bop_\bp$, while commuting at different momenta
 
+Now, can we solve $\eqref{pair_h}$? This may now look like a quadratic problem, but the pair operators $\bop_\bp$, while commuting at different momenta
 $$
 [\bop_\bp,\bop_{\bp'}]=[\bdop_\bp,\bdop_{\bp'}]=[\bdop_\bp,\bop_{\bp'}]=0\qquad \bp\neq\bp',
 $$
@@ -591,4 +583,4 @@ _$T_c$ in the mean-field theory (solid line), compared with the result of a trea
 References
 ----------
 
-{% bibliography --cited %}
+{% bibliography --cited %}l

@@ -186,7 +186,7 @@ $$
 E_\text{shift} = -\langle f(t) y(t)\rangle  = -\frac{1}{2}\chi'(\omega)f_0^2
 $$
 
-For the damped oscillator, the sign of of $\chi'(\omega)$ changes at resonance. The drive lowers the energy beneath the resonance, and raises it above.
+For the damped oscillator, the sign of $\chi'(\omega)$ changes at resonance. The drive lowers the energy beneath the resonance, and raises it above.
 
 ### Mechanical Model of Dissipation
 
