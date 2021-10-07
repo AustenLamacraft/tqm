@@ -27,3 +27,7 @@ These are the materials for the Part III course Theories of Quantum Matter at th
 - [ ] Citations for Hugo
 
 - [ ] Make Typora template in the Academic style, allowing for sidenotes. Look into [Tufte CSS](https://edwardtufte.github.io/tufte-css/)
+
+## Content TODOs
+
+1. Nice idea for a second quantization problem: two particles hopping on a 2x2 square. Work out matrix elements for the cases of bosons and fermions, to show that fermions are not just impenetrable bosons. For fermions the configuration space is six dimensional

@@ -111,7 +111,7 @@ $$
 \label{eq:classicaljoint}
 $$
 
-This also follows from taking the square modulus of \eqref{quantum_statistics_ProductWavefunction}. The result implied by the wavefunction $\eqref{quantum_statistics_sym}$ is
+This also follows from taking the square modulus of $\eqref{quantum_statistics_ProductWavefunction}$. The result implied by the wavefunction $\eqref{quantum_statistics_sym}$ is
 $$
 \begin{align}
 \rho_{12}(\br_1,\br_2) &= \frac{1}{2}\left[\rho_1(\br_1)\rho_2(\br_2)+\rho_1(\br_2)\rho_2(\br_1)\right] \\
@@ -121,13 +121,20 @@ $$
 
 In particular, $\rho_{12}(\br,\br) = 0$ for fermions, and $\rho_{12}(\br,\br) = 2\rho_1(\br)\rho_2(\br)$ for bosons. The first result is natural from the  standpoint of the exclusion principle, while the second is perhaps more surprising. This shows that, because probabilities arise from the squares of amplitudes, identical particles in quantum mechanics are never truly independent.
 
+One dramatic illustration of this deviation from our classical intuition is provided by the [Hong–Ou–Mandel](https://en.wikipedia.org/wiki/Hong%E2%80%93Ou%E2%80%93Mandel_effect) effect in quantum optics. In simplified terms, we imagine wavepackets describing two photons (bosons) approaching a 50:50 beam splitter from either side.  Because of the unitarity of scattering, the two photons end up in orthogonal states. For example,
+$$
+\begin{align}
+\ket{\text{Left}}\to\frac{1}{\sqrt{2}}\left(\ket{\text{Left}}+ \ket{\text{Right}}\right)\\\\
+\ket{\text{Right}}\to\frac{1}{\sqrt{2}}\left(\ket{\text{Left}}- \ket{\text{Right}}\right)
+\end{align}
+$$
+> If we start in 
+> $$
+> \frac{1}{\sqrt{2}}[\varphi_\text{L}(\br_1)\varphi_\text{R}(\br_2)\pm \varphi_\text{R}(\br_1)\varphi_\text{L}(\br_2)]
+> $$
+> What state do we end up in?
+
 {{< figure src="HOM.png" title="Four possible outcomes after the passage of two bosons through a beam splitter." numbered="true" lightbox="true" >}}
-
-One dramatic illustration of this deviation from our classical intuition is provided by the Hong--Ou--Mandel effect in quantum optics. In simplified terms, we imagine wavepackets describing two photons (bosons) approaching a 50:50 beam splitter from either side.  Because of the unitarity of scattering, the two photons end up in orthogonal states. For example,
-
-$$
-\frac{1}{\sqrt{2}}\left(\ket{\text{Left}}\pm \ket{\text{Right}}\right)
-$$
 
 ### Product States
 
@@ -156,12 +163,20 @@ Such states are called __product states__. A general state will be expressed as 
 As we've just discussed, however, we should really be dealing with a totally symmetric or totally antisymmetric wavefunction, depending on whether our identical particles are bosons or fermions. To write these down we introduce the operators of _symmetrization_ and _antisymmetrization_
 
 $$
- \label{quantum_statistics_SymAntisym}
-   \mathcal{S}=\frac{1}{N!}\sum_{P} P, \qquad \mathcal{A}=\frac{1}{N!}\sum_{P} \sgn(P)P
+\label{quantum_statistics_SymAntisym}
+   \mathcal{S}=\frac{1}{N!}\sum_{\pi} P_\pi, \qquad \mathcal{A}=\frac{1}{N!}\sum_{\pi} \sgn(\pi)P_\pi
 $$
 
-The sums are over all $N!$ permutations of $N$ objects, $P$ denotes the corresponding permutation operator, and $\sgn(P)$ is the __signature__ of the permutation, equal to $+1$ for permutations involving an even number of exchanges, and $-1$ for an odd number. This allows us to write the totally symmetric and totally antisymmetric versions of $\eqref{quantum_statistics_disting}$ as
+Here's the definition of the various quantities in $\eqref{quantum_statistics_SymAntisym}$:
 
+- The sums are over all $N!$ permutations $\pi$ of $N$ objects. One way to think of a permutation $\pi$ Is as a one-to-one correspondence between the set $\{1,2,\ldots N\}$ and itself, so that 1 is mapped to $\pi(1)$, etc.. 
+- $P_\pi$ denotes the corresponding permutation operator
+$$
+P_\pi \Psi(\br_1,\br_2,\ldots \br_N) = \Psi(\br_{\pi(1)}, \br_{\pi(2)},\ldots \br_{\pi(N)})
+$$
+- $\sgn(\pi)$ is the [signature](https://en.wikipedia.org/wiki/Parity_of_a_permutation) of the permutation, equal to $+1$ for permutations involving an even number of exchanges, and $-1$ for an odd number. 
+
+$\eqref{quantum_statistics_SymAntisym}$ allows us to write the totally symmetric and totally antisymmetric versions of $\eqref{quantum_statistics_disting}$ as
 $$
 \begin{align}
  \ket{\Psi^{S}_{\alpha_{1}\alpha_{2}\cdots\alpha_{N}}}&=\sqrt{\frac{N!}{\prod_{\alpha}N_{\alpha}!}}\mathcal{S}\,\varphi_{\alpha_{1}}(\mathbf{r_{1}})\varphi_{\alpha_{2}}(\mathbf{r_{2}})\cdots\varphi_{\alpha_{N}}(\mathbf{r_{N}}) \nonumber \\
